@@ -62,7 +62,7 @@ const DoctorDashboardScreen = () => {
     },
     {
       id: 5,
-      title: 'Healthfeed',
+      title: 'Appointments',
       icon: <FileText size={24} color="#16a34a" />,
       route: 'Healthfeed' as const,
     },

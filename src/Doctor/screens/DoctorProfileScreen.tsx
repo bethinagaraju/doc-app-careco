@@ -16,6 +16,7 @@ import {
   Award,
   ChevronRight,
   ThumbsUp,
+  VerifiedIcon,
 } from 'lucide-react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -41,9 +42,9 @@ const DoctorProfileScreen = () => {
     },
     {
       id: 2,
-      title: 'Specializations',
-      subtitle: 'Manage your specialties and expertise',
-      icon: <Medal size={24} color="#16a34a" />,
+      title: 'KYC',
+      subtitle: 'Complete your Verification Process',
+      icon: <VerifiedIcon size={24} color="#16a34a" />,
       route: 'Specializations' as const,
     },
     {
