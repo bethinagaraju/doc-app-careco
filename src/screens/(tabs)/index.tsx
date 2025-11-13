@@ -151,15 +151,17 @@ const HomeScreen = () => {
   ];
 
   const specialties = [
-    { name: 'Physician', image: require('../Images/PopUpICons/general_physician.png') },
+    { name: 'General Physician', image: require('../Images/PopUpICons/general_physician.png') },
     { name: 'Skin & Hair', image: require('../Images/PopUpICons/spots.png') },
     { name: "Women's Health", image: require('../Images/PopUpICons/prenatal-care.png') },
     { name: 'Dental Care', image: require('../Images/PopUpICons/tooth.png') },
     { name: 'Cardiologist', image: require('../Images/PopUpICons/cardiology.png') },
-    // { name: 'Child Specialist', image: require('../Images/PopUpICons/skincare.png') },
     { name: 'ENT', image: require('../Images/PopUpICons/medical.png') },
     { name: 'Mental Health', image: require('../Images/PopUpICons/brain.png') },
-    { name: 'Orthopedic', image: require('../Images/PopUpICons/arthritis.png') },
+    // { name: 'Orthopedic', image: require('../Images/PopUpICons/arthritis.png') },
+    // { name: 'Neurology', image: require('../Images/PopUpICons/brain.png') },
+    // { name: 'Gastroenterology', image: require('../Images/PopUpICons/medical.png') },
+    // { name: 'Urology', image: require('../Images/PopUpICons/cardiology.png') },
   ];
 const cityList = [
   'Bangalore',
@@ -258,7 +260,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
   }) => {
     return (
       <TouchableOpacity
-        style={tw`w-[30%] mb-4 items-center justify-center`}
+        style={tw`w-[22%] mb-4 items-center justify-center`}
         onPress={onPress}
       >
         <View
@@ -281,7 +283,10 @@ const [showLocationModal, setShowLocationModal] = useState(false);
             </View>
           )}
         </View>
-        <Text style={tw`text-xs mt-2 text-center text-gray-600 font-medium`}>
+        {/* <Text style={tw`text-xs mt-2 text-center text-gray-600 font-medium`}> */}
+        <Text   style={tw`text-xs mt-2 text-center text-gray-600 font-medium h-10`}
+  numberOfLines={2}
+  ellipsizeMode="tail">
           {label}
         </Text>
       </TouchableOpacity>
@@ -635,7 +640,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
           source={img}
           style={{
             width: (screenWidth - 45) / 3,
-            height: 150,
+            height: 160,
             borderRadius: 10,
           }}
           resizeMode="cover"
@@ -695,17 +700,34 @@ const [showLocationModal, setShowLocationModal] = useState(false);
           </View>
         </View>
 
-
-
-
         {/* Specialties */}
         <View style={tw`mt-6 px-6`}>
-          <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left`}>
-            Find a Doctor for your Health Problems
+          
+{/* 
+          <View style={tw`flex-row justify-center mt-6 gap-x-6 max-w-xs`}>
+          <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left border border-blue-700 pb-1`}>
+            Find a Doctor
           </Text>
+
+          <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left border border-blue-700`}>
+            View All
+          </Text>
+          </View> */}
+
+          <View style={tw`flex-row items-center justify-between mt-6 px-0 pb-2`}>
+  <Text style={tw`text-lg font-semibold text-gray-900`}>
+    Find a Doctor for you
+  </Text>
+  <Text style={tw`text-lg font-semibold text-blue-800`}>
+    View All
+  </Text>
+</View>
+
+
+
           <View style={tw`mt-2`}>
             <View style={tw`flex-row flex-wrap justify-between`}>
-              {specialties.slice(0, 9).map((item, index) => (
+              {specialties.slice(0, 12).map((item, index) => (
                 <FeatureCard
                   key={index}
                   label={item.name}
@@ -715,17 +737,35 @@ const [showLocationModal, setShowLocationModal] = useState(false);
                   }
                 />
               ))}
+
+
+
+
+
+
               <TouchableOpacity
-                style={tw`w-[30%] mb-4 items-center`} 
+                style={[tw`w-[20%] mb-4 items-center justify-center pb-5`]} 
                 onPress={() => navigation.navigate('AllSpecialtiesScreen')}
               >
-                <View style={tw`bg-blue-100 w-[100px] h-[100px] rounded-[30px] items-center justify-center`}>
+                <View style={tw`bg-blue-100 w-[70px] h-[70px] rounded-[10px] items-center justify-center`}>
                   <ChevronRight size={18} color="#059669" />
                 </View>
                 <Text style={tw`text-xs mt-2 text-center text-blue-700 font-bold`}>
                   View More
                 </Text>
               </TouchableOpacity>
+
+
+
+
+
+
+
+
+
+
+
+              
             </View>
           </View>
         </View>
@@ -733,9 +773,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
 
 
 
-
-
-
+        
 
         {/* Explore Hospitals */}
         <View style={tw`mt-6 px-6`}>
@@ -757,7 +795,6 @@ const [showLocationModal, setShowLocationModal] = useState(false);
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={tw`px-2`}
           >
-
 
             {hospitals.map((hospital) => (
               <TouchableOpacity
