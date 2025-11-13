@@ -151,7 +151,7 @@ const HomeScreen = () => {
   ];
 
   const specialties = [
-    { name: 'General Physician', image: require('../Images/PopUpICons/general_physician.png') },
+    { name: 'Physician', image: require('../Images/PopUpICons/general_physician.png') },
     { name: 'Skin & Hair', image: require('../Images/PopUpICons/spots.png') },
     { name: "Women's Health", image: require('../Images/PopUpICons/prenatal-care.png') },
     { name: 'Dental Care', image: require('../Images/PopUpICons/tooth.png') },
@@ -262,7 +262,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
         onPress={onPress}
       >
         <View
-          style={tw`relative bg-blue-50 w-[100px] h-[100px] rounded-[30px] items-center justify-center overflow-hidden shadow-sm`}
+          style={tw`relative bg-blue-50 w-[70px] h-[70px] rounded-[10px] items-center justify-center overflow-hidden shadow-sm`}
         >
           {image ? (
             <Image
@@ -289,7 +289,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
   };
 
   return (
-    <SafeAreaView style={tw`flex-1 bg-orange-50`}>
+    <SafeAreaView style={tw`flex-1 bg-orange-30`}>
       <ScrollView
         contentContainerStyle={tw`pb-20`}
         showsVerticalScrollIndicator={false}
@@ -298,15 +298,16 @@ const [showLocationModal, setShowLocationModal] = useState(false);
 ////////////////////////////////////////////////////////////      */}
 <View
   style={[
-    tw`px-4 pb-4 bg-[#0066E3]`,
+    // tw`px-4 pb-4 bg-[#0066E3]`,
+    tw`px-4 pb-4 bg-[#0052CC]`,
     {
-      position: 'absolute',
+      
       top: 0,
       left: 0,
       right: 0,
       zIndex: 10,
-      borderBottomLeftRadius: 35,
-      borderBottomRightRadius: 35,
+      borderBottomLeftRadius: 25,
+      borderBottomRightRadius: 25,
       paddingTop: Platform.OS === 'android' ? 35 : 60,
       height: Platform.OS === 'android' ? 170 : 180,
     },
@@ -444,9 +445,14 @@ const [showLocationModal, setShowLocationModal] = useState(false);
 {/* 
 ////////////////////////////////////////////////////////////      */}
 
+
+
+{/* /////////////////////////////////////  ------> QUICK ACTIONS <----- /////////////////////////////////////////// */}
+
+
   {/* Quick Actions Grid - Images only */}
-<View style={tw`flex-row flex-wrap justify-between mx-4 mt-6 gap-2`}>
-  {/* Online Consultation */}
+{/* <View style={tw`flex-row flex-wrap justify-between mx-4 mt-6 gap-2`}>
+
   <TouchableOpacity
     onPress={() => {
       user.setConsultationMode('online');
@@ -459,10 +465,10 @@ const [showLocationModal, setShowLocationModal] = useState(false);
       style={tw`w-[${(screenWidth - 48) / 2}px] h-30 rounded-3xl`}
       resizeMode="contain"
     />
-    {/* <View style={tw`absolute bottom-2 left-2`}>
+    <View style={tw`absolute bottom-2 left-2`}>
       <Text style={tw`text-white font-bold text-lg`}>Video Consult</Text>
       <Text style={tw`text-white text-sm`}>Consult Online Now</Text>
-    </View> */}
+    </View>
   </TouchableOpacity>
 
 
@@ -479,10 +485,10 @@ const [showLocationModal, setShowLocationModal] = useState(false);
       style={tw`w-[${(screenWidth - 48) / 2}px] h-30 rounded-3xl`}
       resizeMode="contain"
     />
-    {/* <View style={tw`absolute bottom-2 left-2`}>
+    <View style={tw`absolute bottom-2 left-2`}>
       <Text style={tw`text-white font-bold text-lg`}>Video Consult</Text>
       <Text style={tw`text-white text-sm`}>Consult Online Now</Text>
-    </View> */}
+    </View>
   </TouchableOpacity>
 
 
@@ -499,10 +505,10 @@ const [showLocationModal, setShowLocationModal] = useState(false);
       style={tw`w-[${(screenWidth - 48) / 2}px] h-30 rounded-3xl`}
       resizeMode="contain"
     />
-    {/* <View style={tw`absolute bottom-2 left-2`}>
+    <View style={tw`absolute bottom-2 left-2`}>
       <Text style={tw`text-white font-bold text-lg`}>Video Consult</Text>
       <Text style={tw`text-white text-sm`}>Consult Online Now</Text>
-    </View> */}
+    </View>
   </TouchableOpacity>
 
 
@@ -520,10 +526,10 @@ const [showLocationModal, setShowLocationModal] = useState(false);
       style={tw`w-[${(screenWidth - 48) / 2}px] h-30 rounded-3xl`}
       resizeMode="contain"
     />
-    {/* <View style={tw`absolute bottom-2 left-2`}>
+    <View style={tw`absolute bottom-2 left-2`}>
       <Text style={tw`text-white font-bold text-lg`}>Video Consult</Text>
       <Text style={tw`text-white text-sm`}>Consult Online Now</Text>
-    </View> */}
+    </View>
   </TouchableOpacity>
 
 
@@ -539,16 +545,16 @@ const [showLocationModal, setShowLocationModal] = useState(false);
       style={tw`w-[${(screenWidth - 48) / 2}px] h-30 rounded-3xl`}
       resizeMode="contain"
     />
-    {/* <View style={tw`absolute bottom-2 left-2`}>
+    <View style={tw`absolute bottom-2 left-2`}>
       <Text style={tw`text-white font-bold text-lg`}>Video Consult</Text>
       <Text style={tw`text-white text-sm`}>Consult Online Now</Text>
-    </View> */}
+    </View>
   </TouchableOpacity>
 
 
 
 
-  {/* In-Clinic Consultation */}
+
   <TouchableOpacity
     onPress={() => {
       user.setConsultationMode('offline');
@@ -561,10 +567,10 @@ const [showLocationModal, setShowLocationModal] = useState(false);
       style={tw`w-[${(screenWidth - 48) / 2}px] h-30 rounded-3xl`}
       resizeMode="cover"
     />
-    {/* <View style={tw`absolute bottom-2 left-2`}>
+    <View style={tw`absolute bottom-2 left-2`}>
       <Text style={tw`text-white font-bold text-lg`}>Visit Clinic</Text>
       <Text style={tw`text-white text-sm`}>Book Appointment</Text>
-    </View> */}
+    </View>
   </TouchableOpacity>
 
   <TouchableOpacity onPress={() => navigation.navigate('LabTestCategoriesScreen')}>
@@ -582,7 +588,75 @@ const [showLocationModal, setShowLocationModal] = useState(false);
       resizeMode="cover"
     />
   </TouchableOpacity>
+</View> */}
+
+
+
+
+<View style={tw`flex-row flex-wrap justify-between mx-4 mt-6`}>
+  {/* Top Row - 2 items */}
+  {[require('../../assets/images/homecare.jpg'), require('../../assets/images/tele.jpg')].map((img, index) => (
+    <TouchableOpacity
+      key={index}
+      style={tw`mb-2 relative`}
+      onPress={() => {
+        user.setConsultationMode('online');
+        navigation.navigate('AllSpecialtiesScreen', { mode: 'video' });
+      }}
+    >
+      <Image
+        source={img}
+        style={{
+          width: (screenWidth - 40) / 2,
+          height: 130,
+          borderRadius: 10,
+        }}
+        resizeMode="cover"
+      />
+    </TouchableOpacity>
+  ))}
+
+  {/* Bottom Row - 3 items */}
+  <View style={tw`flex-row justify-between w-full`}>
+    {[require('../../assets/images/secondopi.jpg'), require('../../assets/images/homecares.jpg'), require('../../assets/images/insurances.jpg')].map((img, index) => (
+      
+      
+      
+      <TouchableOpacity
+        key={index}
+        style={tw`relative`}
+        onPress={() => {
+          // user.setConsultationMode('online');
+          // navigation.navigate('AllSpecialtiesScreen', { mode: 'video' });
+          navigation.navigate('pharmacytestcategories')
+        }}
+      >
+        <Image
+          source={img}
+          style={{
+            width: (screenWidth - 45) / 3,
+            height: 150,
+            borderRadius: 10,
+          }}
+          resizeMode="cover"
+        />
+      </TouchableOpacity>
+    ))}
+  </View>
 </View>
+
+
+
+
+
+
+
+
+
+{/* Quick Actions Grid - Images only */}
+
+
+
 
 
         {/* Banner Section */}
@@ -621,6 +695,9 @@ const [showLocationModal, setShowLocationModal] = useState(false);
           </View>
         </View>
 
+
+
+
         {/* Specialties */}
         <View style={tw`mt-6 px-6`}>
           <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left`}>
@@ -652,6 +729,13 @@ const [showLocationModal, setShowLocationModal] = useState(false);
             </View>
           </View>
         </View>
+
+
+
+
+
+
+
 
         {/* Explore Hospitals */}
         <View style={tw`mt-6 px-6`}>
