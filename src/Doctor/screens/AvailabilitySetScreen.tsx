@@ -29,8 +29,8 @@ const AvailabilityScreen = () => {
 
   return (
     <ScrollView contentContainerStyle={tw`p-4 pb-10`}>
-      <Text style={tw`text-2xl font-bold text-green-700 mb-2 text-center`}>Schedule</Text>
-      <Text style={tw`text-base text-green-600 mb-6 text-center`}>Manage your availability</Text>
+      <Text style={tw`text-2xl font-bold text-blue-700 mb-2 text-center`}>Schedule</Text>
+      <Text style={tw`text-base text-blue-600 mb-6 text-center`}>Manage your availability</Text>
       {/* ...rest of the component... */}
     </ScrollView>
   );

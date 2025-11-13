@@ -16,7 +16,7 @@ interface PageHeaderProps {
 
 const PageHeader: React.FC<PageHeaderProps> = ({
   title,
-  backgroundColor = '#1b5e20', // Dark green
+  backgroundColor = '#1b5e20', // Dark blue
   textColor = '#ffffff',        // White
   onBackPress,
   rightComponent,

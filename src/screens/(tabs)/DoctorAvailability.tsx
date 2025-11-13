@@ -120,14 +120,14 @@ const DoctorAvailabilityScreen = () => {
             return (
               <TouchableOpacity
                 key={idx}
-                               style={tw`border ${available ? 'border-green-500' : 'border-green-200'} 
+                               style={tw`border ${available ? 'border-blue-500' : 'border-blue-200'} 
                                         px-4 py-2 rounded-lg mb-2 mr-2 
-                                        ${available ? 'bg-green-50' : 'bg-green-100'}`}
+                                        ${available ? 'bg-blue-50' : 'bg-blue-100'}`}
                 activeOpacity={0.85}
                 onPress={() => available && handleSlotSelection(slot)}
                 disabled={!available}
               >
-                <Text style={tw`${available ? 'text-green-700' : 'text-gray-400'} text-base font-semibold`}>
+                <Text style={tw`${available ? 'text-blue-700' : 'text-gray-400'} text-base font-semibold`}>
                   {slot}
                 </Text>
               </TouchableOpacity>
@@ -142,7 +142,7 @@ const DoctorAvailabilityScreen = () => {
     <View style={[tw`flex-1 bg-white`, { paddingTop: insets.top }]}> 
       <PageHeader
         title=""
-        backgroundColor="#059669" // Tailwind green-600
+        backgroundColor="#059669" // Tailwind blue-600
         textColor="#fff" // Tailwind white
         onBackPress={() => navigation.goBack()}
         leftComponent={
@@ -165,14 +165,14 @@ const DoctorAvailabilityScreen = () => {
         {consultationType === 'video' ? (
           <>
             <Video size={24} color="#059669" />
-            <Text style={tw`ml-3 text-green-800 font-semibold text-base`}>
+            <Text style={tw`ml-3 text-blue-800 font-semibold text-base`}>
               Available Video Consultation Slots
             </Text>
           </>
         ) : (
           <>
             <BriefcaseMedical size={24} color="#059669" />
-            <Text style={tw`ml-3 text-green-800 font-semibold text-base`}>
+            <Text style={tw`ml-3 text-blue-800 font-semibold text-base`}>
               Available In-Clinic Visit Slots
             </Text>
           </>
@@ -187,16 +187,16 @@ const DoctorAvailabilityScreen = () => {
               style={[
                 tw`flex-1 px-2 py-2 rounded-lg mx-1 border`,
                 selectedDate === tab.label
-                  ? tw`border-green-500 bg-green-50`
+                  ? tw`border-blue-500 bg-blue-50`
                   : tw`border-gray-300 bg-white`
               ]}
               onPress={() => setSelectedDate(tab.label)}
               activeOpacity={0.85}
             >
-              <Text style={tw`${selectedDate === tab.label ? 'text-green-700 font-bold' : 'text-gray-700'} text-center text-sm`}>
+              <Text style={tw`${selectedDate === tab.label ? 'text-blue-700 font-bold' : 'text-gray-700'} text-center text-sm`}>
                 {tab.label}
               </Text>
-              <Text style={tw`text-center text-xs mt-1 ${tab.slots === 0 ? 'text-gray-400' : 'text-green-600'}`}>
+              <Text style={tw`text-center text-xs mt-1 ${tab.slots === 0 ? 'text-gray-400' : 'text-blue-600'}`}>
                 {tab.slots === 0 ? 'No slots available' : `${tab.slots} slots available`}
               </Text>
             </TouchableOpacity>

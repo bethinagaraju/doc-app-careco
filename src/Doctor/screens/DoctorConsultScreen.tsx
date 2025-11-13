@@ -302,10 +302,10 @@
 // //   // Render horizontal date item
 // //   const renderDateItem = ({ item }: { item: string }) => (
 // //     <TouchableOpacity
-// //       style={tw`${selectedDate === item ? 'bg-green-600' : 'bg-green-100'} rounded-xl p-3 mx-2`}
+// //       style={tw`${selectedDate === item ? 'bg-blue-600' : 'bg-blue-100'} rounded-xl p-3 mx-2`}
 // //       onPress={() => handleDateSelect(item)}
 // //     >
-// //       <Text style={tw`${selectedDate === item ? 'text-white' : 'text-green-700'} font-bold`}>
+// //       <Text style={tw`${selectedDate === item ? 'text-white' : 'text-blue-700'} font-bold`}>
 // //         {new Date(item).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
 // //       </Text>
 // //     </TouchableOpacity>
@@ -313,16 +313,16 @@
 
 // //   // Render weekly availability item
 // //   const renderWeeklyDay = ({ item }: { item: AvailabilitySlot }) => (
-// //     <Card style={tw`bg-green-100 rounded-xl p-3 mx-2 w-40`}>
-// //       <Text style={tw`text-green-700 font-bold`}>{item.day.charAt(0).toUpperCase() + item.day.slice(1)}</Text>
-// //       <Text style={tw`text-green-600 text-sm`}>{item.mode ? item.mode.charAt(0).toUpperCase() + item.mode.slice(1) : 'Unavailable'}</Text>
+// //     <Card style={tw`bg-blue-100 rounded-xl p-3 mx-2 w-40`}>
+// //       <Text style={tw`text-blue-700 font-bold`}>{item.day.charAt(0).toUpperCase() + item.day.slice(1)}</Text>
+// //       <Text style={tw`text-blue-600 text-sm`}>{item.mode ? item.mode.charAt(0).toUpperCase() + item.mode.slice(1) : 'Unavailable'}</Text>
 // //       {item.loginTime && item.logoutTime ? (
 // //         <>
-// //           <Text style={tw`text-green-600 text-sm`}>{`${item.loginTime} - ${item.logoutTime}`}</Text>
-// //           <Text style={tw`text-green-600 text-sm`}>Breaks: {item.breaks?.join(', ') || 'None'}</Text>
+// //           <Text style={tw`text-blue-600 text-sm`}>{`${item.loginTime} - ${item.logoutTime}`}</Text>
+// //           <Text style={tw`text-blue-600 text-sm`}>Breaks: {item.breaks?.join(', ') || 'None'}</Text>
 // //         </>
 // //       ) : (
-// //         <Text style={tw`text-green-600 text-sm`}>No schedule</Text>
+// //         <Text style={tw`text-blue-600 text-sm`}>No schedule</Text>
 // //       )}
 // //     </Card>
 // //   );
@@ -342,7 +342,7 @@
 // //         <Text style={tw`text-white text-lg text-center px-4`}>{error}</Text>
 // //         <Button
 // //           mode="contained"
-// //           style={tw`mt-4 bg-green-600 rounded-2xl`}
+// //           style={tw`mt-4 bg-blue-600 rounded-2xl`}
 // //           onPress={retryFetch}
 // //         >
 // //           <Text style={tw`text-white font-bold`}>Retry</Text>
@@ -358,14 +358,14 @@
 // //           <Text style={tw`text-3xl text-white font-bold mb-4`}>{doctorName}'s Dashboard</Text>
 // //           <Button
 // //             mode="contained"
-// //             style={tw`bg-green-600 rounded-2xl mb-6 w-full max-w-[420px]`}
+// //             style={tw`bg-blue-600 rounded-2xl mb-6 w-full max-w-[420px]`}
 // //             onPress={() => setModalVisible(true)}
 // //           >
 // //             <Text style={tw`text-white font-bold text-base`}>Manage Availability</Text>
 // //           </Button>
-// //           <Card style={tw`w-full max-w-[420px] bg-green-100 rounded-2xl mb-6 shadow-lg`}>
+// //           <Card style={tw`w-full max-w-[420px] bg-blue-100 rounded-2xl mb-6 shadow-lg`}>
 // //             <Card.Content>
-// //               <Text style={tw`text-2xl text-green-700 font-bold mb-4`}>Available Dates</Text>
+// //               <Text style={tw`text-2xl text-blue-700 font-bold mb-4`}>Available Dates</Text>
 // //               {availableDates.length > 0 ? (
 // //                 <FlatList
 // //                   data={availableDates}
@@ -376,13 +376,13 @@
 // //                   contentContainerStyle={tw`px-2`}
 // //                 />
 // //               ) : (
-// //                 <Text style={tw`text-green-700 text-base`}>No available dates</Text>
+// //                 <Text style={tw`text-blue-700 text-base`}>No available dates</Text>
 // //               )}
 // //             </Card.Content>
 // //           </Card>
-// //           <Card style={tw`w-full max-w-[420px] bg-green-100 rounded-2xl mb-6 shadow-lg`}>
+// //           <Card style={tw`w-full max-w-[420px] bg-blue-100 rounded-2xl mb-6 shadow-lg`}>
 // //             <Card.Content>
-// //               <Text style={tw`text-2xl text-green-700 font-bold mb-4`}>Weekly Availability</Text>
+// //               <Text style={tw`text-2xl text-blue-700 font-bold mb-4`}>Weekly Availability</Text>
 // //               <FlatList
 // //                 data={availabilitySchedule}
 // //                 renderItem={renderWeeklyDay}
@@ -393,22 +393,22 @@
 // //               />
 // //             </Card.Content>
 // //           </Card>
-// //           <Card style={tw`w-full max-w-[420px] bg-green-100 rounded-2xl mb-6 shadow-lg`}>
+// //           <Card style={tw`w-full max-w-[420px] bg-blue-100 rounded-2xl mb-6 shadow-lg`}>
 // //             <Card.Content>
-// //               <Text style={tw`text-2xl text-green-700 font-bold mb-4`}>Slots for {selectedDate}</Text>
+// //               <Text style={tw`text-2xl text-blue-700 font-bold mb-4`}>Slots for {selectedDate}</Text>
 // //               {filteredSlots.length > 0 ? (
 // //   <View style={tw`flex-row flex-wrap justify-between`}>
 // //     {filteredSlots.map((daySlot, index) =>
 // //       daySlot.slots.map((slot, slotIndex) => (
 // //         <Card
 // //           key={`${index}-${slotIndex}`}
-// //           style={tw`bg-green-50 rounded-xl p-4 mb-3 w-[31%]`}
+// //           style={tw`bg-blue-50 rounded-xl p-4 mb-3 w-[31%]`}
 // //         >
 // //          <View style={tw`flex-1`}>
-// //   <Text style={tw`text-green-700 font-bold text-sm`}>
+// //   <Text style={tw`text-blue-700 font-bold text-sm`}>
 // //     {daySlot.mode.charAt(0).toUpperCase() + daySlot.mode.slice(1)}
 // //   </Text>
-// //   <Text style={tw`text-green-600 text-xs`}>
+// //   <Text style={tw`text-blue-600 text-xs`}>
 // //     {`${slot.start} - ${slot.end}`}
 // //   </Text>
 // // </View>
@@ -417,7 +417,7 @@
 // //     )}
 // //   </View>
 // // ) : (
-// //   <Text style={tw`text-green-700 text-base`}>No slots available for this date</Text>
+// //   <Text style={tw`text-blue-700 text-base`}>No slots available for this date</Text>
 // // )}
 // //             </Card.Content>
 // //           </Card>
@@ -433,10 +433,10 @@
 // //         onRequestClose={() => setModalVisible(false)}
 // //       >
 // //         <View style={tw`flex-1 justify-center items-center bg-black bg-opacity-50`}>
-// //           <Card style={tw`w-11/12 max-w-[400px] bg-green-100 rounded-2xl p-4`}>
+// //           <Card style={tw`w-11/12 max-w-[400px] bg-blue-100 rounded-2xl p-4`}>
 // //             <Card.Content>
 // //               <View style={tw`flex-row justify-between items-center mb-4`}>
-// //                 <Text style={tw`text-2xl text-green-700 font-bold`}>Add Availability Slot</Text>
+// //                 <Text style={tw`text-2xl text-blue-700 font-bold`}>Add Availability Slot</Text>
 // //                 <IconButton
 // //                   icon="close"
 // //                   color="#059669"
@@ -445,38 +445,38 @@
 // //                 />
 // //               </View>
 // //               <TextInput
-// //                 style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+// //                 style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
 // //                 placeholder="Day (e.g., monday)"
 // //                 value={newSlotDay}
 // //                 onChangeText={setNewSlotDay}
 // //               />
 // //               <TextInput
-// //                 style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+// //                 style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
 // //                 placeholder="Login Time (e.g., 09:00)"
 // //                 value={newSlotLoginTime}
 // //                 onChangeText={setNewSlotLoginTime}
 // //               />
 // //               <TextInput
-// //                 style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+// //                 style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
 // //                 placeholder="Logout Time (e.g., 17:00)"
 // //                 value={newSlotLogoutTime}
 // //                 onChangeText={setNewSlotLogoutTime}
 // //               />
 // //               <TextInput
-// //                 style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+// //                 style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
 // //                 placeholder="Breaks (e.g., 12:00-12:30,13:00-13:30)"
 // //                 value={newSlotBreaks}
 // //                 onChangeText={setNewSlotBreaks}
 // //               />
 // //               <TextInput
-// //                 style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+// //                 style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
 // //                 placeholder="Mode (online/offline/hybrid)"
 // //                 value={newSlotMode}
 // //                 onChangeText={setNewSlotMode}
 // //               />
 // //               <Button
 // //                 mode="contained"
-// //                 style={tw`bg-green-600 rounded-2xl mt-4`}
+// //                 style={tw`bg-blue-600 rounded-2xl mt-4`}
 // //                 onPress={handleAddSlot}
 // //               >
 // //                 <Text style={tw`text-white font-bold text-base`}>Add Slot</Text>
@@ -489,7 +489,7 @@
 // //       {/* Success Toast */}
 // //       {success && (
 // //         <View style={tw`absolute bottom-10 w-full items-center`}>
-// //           <Card style={tw`bg-green-600 rounded-xl p-3`}>
+// //           <Card style={tw`bg-blue-600 rounded-xl p-3`}>
 // //             <Text style={tw`text-white font-bold`}>{success}</Text>
 // //           </Card>
 // //         </View>
@@ -838,10 +838,10 @@
 //   // Render horizontal date item
 //   const renderDateItem = ({ item }: { item: string }) => (
 //     <TouchableOpacity
-//       style={tw`${selectedDate === item ? 'bg-green-600' : 'bg-green-100'} rounded-xl p-3 mx-2`}
+//       style={tw`${selectedDate === item ? 'bg-blue-600' : 'bg-blue-100'} rounded-xl p-3 mx-2`}
 //       onPress={() => handleDateSelect(item)}
 //     >
-//       <Text style={tw`${selectedDate === item ? 'text-white' : 'text-green-700'} font-bold`}>
+//       <Text style={tw`${selectedDate === item ? 'text-white' : 'text-blue-700'} font-bold`}>
 //         {new Date(item).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
 //       </Text>
 //     </TouchableOpacity>
@@ -849,16 +849,16 @@
 
 //   // Render weekly availability item
 //   const renderWeeklyDay = ({ item }: { item: AvailabilitySlot }) => (
-//     <Card style={tw`bg-green-100 rounded-xl p-3 mx-2 w-40`}>
-//       <Text style={tw`text-green-700 font-bold`}>{item.day.charAt(0).toUpperCase() + item.day.slice(1)}</Text>
-//       <Text style={tw`text-green-600 text-sm`}>{item.mode ? item.mode.charAt(0).toUpperCase() + item.mode.slice(1) : 'Unavailable'}</Text>
+//     <Card style={tw`bg-blue-100 rounded-xl p-3 mx-2 w-40`}>
+//       <Text style={tw`text-blue-700 font-bold`}>{item.day.charAt(0).toUpperCase() + item.day.slice(1)}</Text>
+//       <Text style={tw`text-blue-600 text-sm`}>{item.mode ? item.mode.charAt(0).toUpperCase() + item.mode.slice(1) : 'Unavailable'}</Text>
 //       {item.loginTime && item.logoutTime ? (
 //         <>
-//           <Text style={tw`text-green-600 text-sm`}>{`${item.loginTime} - ${item.logoutTime}`}</Text>
-//           <Text style={tw`text-green-600 text-sm`}>Breaks: {item.breaks?.join(', ') || 'None'}</Text>
+//           <Text style={tw`text-blue-600 text-sm`}>{`${item.loginTime} - ${item.logoutTime}`}</Text>
+//           <Text style={tw`text-blue-600 text-sm`}>Breaks: {item.breaks?.join(', ') || 'None'}</Text>
 //         </>
 //       ) : (
-//         <Text style={tw`text-green-600 text-sm`}>No schedule</Text>
+//         <Text style={tw`text-blue-600 text-sm`}>No schedule</Text>
 //       )}
 //     </Card>
 //   );
@@ -878,7 +878,7 @@
 //         <Text style={tw`text-white text-lg text-center px-4`}>{error}</Text>
 //         <Button
 //           mode="contained"
-//           style={tw`mt-4 bg-green-600 rounded-2xl`}
+//           style={tw`mt-4 bg-blue-600 rounded-2xl`}
 //           onPress={retryFetch} // <-- This now correctly calls fetchData
 //         >
 //           <Text style={tw`text-white font-bold`}>Retry</Text>
@@ -894,7 +894,7 @@
 //           <Text style={tw`text-3xl text-white font-bold mb-4`}>{doctorName}'s Dashboard</Text>
 //           <Button
 //             mode="contained"
-//             style={tw`bg-green-600 rounded-2xl mb-6 w-full max-w-[420px]`}
+//             style={tw`bg-blue-600 rounded-2xl mb-6 w-full max-w-[420px]`}
 //             onPress={() => setModalVisible(true)}
 //             disabled={loading} // Disable button while loading
 //           >
@@ -906,9 +906,9 @@
 //              <Text style={tw`text-red-100 text-base text-center px-4 mb-4`}>{error}</Text>
 //           )}
 
-//           <Card style={tw`w-full max-w-[420px] bg-green-100 rounded-2xl mb-6 shadow-lg`}>
+//           <Card style={tw`w-full max-w-[420px] bg-blue-100 rounded-2xl mb-6 shadow-lg`}>
 //             <Card.Content>
-//               <Text style={tw`text-2xl text-green-700 font-bold mb-4`}>Available Dates</Text>
+//               <Text style={tw`text-2xl text-blue-700 font-bold mb-4`}>Available Dates</Text>
 //               {availableDates.length > 0 ? (
 //                 <FlatList
 //                   data={availableDates}
@@ -919,13 +919,13 @@
 //                   contentContainerStyle={tw`px-2`}
 //                 />
 //               ) : (
-//                 <Text style={tw`text-green-700 text-base`}>No available dates</Text>
+//                 <Text style={tw`text-blue-700 text-base`}>No available dates</Text>
 //               )}
 //             </Card.Content>
 //           </Card>
-//           <Card style={tw`w-full max-w-[420px] bg-green-100 rounded-2xl mb-6 shadow-lg`}>
+//           <Card style={tw`w-full max-w-[420px] bg-blue-100 rounded-2xl mb-6 shadow-lg`}>
 //             <Card.Content>
-//               <Text style={tw`text-2xl text-green-700 font-bold mb-4`}>Weekly Availability</Text>
+//               <Text style={tw`text-2xl text-blue-700 font-bold mb-4`}>Weekly Availability</Text>
 //               <FlatList
 //                 data={availabilitySchedule}
 //                 renderItem={renderWeeklyDay}
@@ -936,22 +936,22 @@
 //               />
 //             </Card.Content>
 //           </Card>
-//           <Card style={tw`w-full max-w-[420px] bg-green-100 rounded-2xl mb-6 shadow-lg`}>
+//           <Card style={tw`w-full max-w-[420px] bg-blue-100 rounded-2xl mb-6 shadow-lg`}>
 //             <Card.Content>
-//               <Text style={tw`text-2xl text-green-700 font-bold mb-4`}>Slots for {selectedDate}</Text>
+//               <Text style={tw`text-2xl text-blue-700 font-bold mb-4`}>Slots for {selectedDate}</Text>
 //               {filteredSlots.length > 0 ? (
 //                 <View style={tw`flex-row flex-wrap justify-between`}>
 //                   {filteredSlots.map((daySlot, index) =>
 //                     daySlot.slots.map((slot, slotIndex) => (
 //                       <Card
 //                         key={`${index}-${slotIndex}`}
-//                         style={tw`bg-green-50 rounded-xl p-4 mb-3 w-[31%]`}
+//                         style={tw`bg-blue-50 rounded-xl p-4 mb-3 w-[31%]`}
 //                       >
 //                         <View style={tw`flex-1`}>
-//                           <Text style={tw`text-green-700 font-bold text-sm`}>
+//                           <Text style={tw`text-blue-700 font-bold text-sm`}>
 //                             {daySlot.mode.charAt(0).toUpperCase() + daySlot.mode.slice(1)}
 //                           </Text>
-//                           <Text style={tw`text-green-600 text-xs`}>
+//                           <Text style={tw`text-blue-600 text-xs`}>
 //                             {`${slot.start} - ${slot.end}`}
 //                           </Text>
 //                         </View>
@@ -960,7 +960,7 @@
 //                   )}
 //                 </View>
 //               ) : (
-//                 <Text style={tw`text-green-700 text-base`}>No slots available for this date</Text>
+//                 <Text style={tw`text-blue-700 text-base`}>No slots available for this date</Text>
 //               )}
 //             </Card.Content>
 //           </Card>
@@ -976,10 +976,10 @@
 //         onRequestClose={() => setModalVisible(false)}
 //       >
 //         <View style={tw`flex-1 justify-center items-center bg-black bg-opacity-50`}>
-//           <Card style={tw`w-11/12 max-w-[400px] bg-green-100 rounded-2xl p-4`}>
+//           <Card style={tw`w-11/12 max-w-[400px] bg-blue-100 rounded-2xl p-4`}>
 //             <Card.Content>
 //               <View style={tw`flex-row justify-between items-center mb-4`}>
-//                 <Text style={tw`text-2xl text-green-700 font-bold`}>Add Availability Slot</Text>
+//                 <Text style={tw`text-2xl text-blue-700 font-bold`}>Add Availability Slot</Text>
 //                 <IconButton
 //                   icon="close"
 //                   color="#059669"
@@ -988,35 +988,35 @@
 //                 />
 //               </View>
 //               <TextInput
-//                 style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+//                 style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
 //                 placeholder="Day (e.g., monday)"
 //                 placeholderTextColor="#34d399"
 //                 value={newSlotDay}
 //                 onChangeText={setNewSlotDay}
 //               />
 //               <TextInput
-//                 style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+//                 style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
 //                 placeholder="Login Time (HH:mm)"
 //                 placeholderTextColor="#34d399"
 //                 value={newSlotLoginTime}
 //                 onChangeText={setNewSlotLoginTime}
 //               />
 //               <TextInput
-//                 style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+//                 style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
 //                 placeholder="Logout Time (HH:mm)"
 //                 placeholderTextColor="#34d399"
 //                 value={newSlotLogoutTime}
 //                 onChangeText={setNewSlotLogoutTime}
 //               />
 //               <TextInput
-//                 style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+//                 style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
 //                 placeholder="Breaks (e.g., 12:00-12:30,13:00-13:30)"
 //                 placeholderTextColor="#34d399"
 //                 value={newSlotBreaks}
 //                 onChangeText={setNewSlotBreaks}
 //               />
 //               <TextInput
-//                 style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+//                 style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
 //                 placeholder="Mode (online/offline/hybrid)"
 //                 placeholderTextColor="#34d399"
 //                 value={newSlotMode}
@@ -1024,7 +1024,7 @@
 //               />
 //               <Button
 //                 mode="contained"
-//                 style={tw`bg-green-600 rounded-2xl mt-4`}
+//                 style={tw`bg-blue-600 rounded-2xl mt-4`}
 //                 onPress={handleAddSlot}
 //                 disabled={loading}
 //               >
@@ -1042,7 +1042,7 @@
 //       {/* Success Toast */}
 //       {success && (
 //         <View style={tw`absolute bottom-10 w-full items-center`}>
-//           <Card style={tw`bg-green-600 rounded-xl p-3`}>
+//           <Card style={tw`bg-blue-600 rounded-xl p-3`}>
 //             <Text style={tw`text-white font-bold`}>{success}</Text>
 //           </Card>
 //         </View>
@@ -1396,10 +1396,10 @@ const DoctorConsultScreen: React.FC = () => {
   // Render horizontal date item
   const renderDateItem = ({ item }: { item: string }) => (
     <TouchableOpacity
-      style={tw`${selectedDate === item ? 'bg-green-600' : 'bg-green-100'} rounded-xl p-3 mx-2`}
+      style={tw`${selectedDate === item ? 'bg-blue-600' : 'bg-blue-100'} rounded-xl p-3 mx-2`}
       onPress={() => handleDateSelect(item)}
     >
-      <Text style={tw`${selectedDate === item ? 'text-white' : 'text-green-700'} font-bold`}>
+      <Text style={tw`${selectedDate === item ? 'text-white' : 'text-blue-700'} font-bold`}>
         {new Date(item).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
       </Text>
     </TouchableOpacity>
@@ -1408,16 +1408,16 @@ const DoctorConsultScreen: React.FC = () => {
   // Render weekly availability item (NOW PRESSABLE)
   const renderWeeklyDay = ({ item }: { item: AvailabilitySlot }) => (
     <TouchableOpacity onPress={() => openModal(item)}> {/* <-- Make item pressable */}
-      <Card style={tw`bg-green-100 rounded-xl p-3 mx-2 w-40`}>
-        <Text style={tw`text-green-700 font-bold`}>{item.day.charAt(0).toUpperCase() + item.day.slice(1)}</Text>
-        <Text style={tw`text-green-600 text-sm`}>{item.mode ? item.mode.charAt(0).toUpperCase() + item.mode.slice(1) : 'Unavailable'}</Text>
+      <Card style={tw`bg-blue-100 rounded-xl p-3 mx-2 w-40`}>
+        <Text style={tw`text-blue-700 font-bold`}>{item.day.charAt(0).toUpperCase() + item.day.slice(1)}</Text>
+        <Text style={tw`text-blue-600 text-sm`}>{item.mode ? item.mode.charAt(0).toUpperCase() + item.mode.slice(1) : 'Unavailable'}</Text>
         {item.loginTime && item.logoutTime ? (
           <>
-            <Text style={tw`text-green-600 text-sm`}>{`${item.loginTime} - ${item.logoutTime}`}</Text>
-            <Text style={tw`text-green-600 text-sm`}>Breaks: {item.breaks?.join(', ') || 'None'}</Text>
+            <Text style={tw`text-blue-600 text-sm`}>{`${item.loginTime} - ${item.logoutTime}`}</Text>
+            <Text style={tw`text-blue-600 text-sm`}>Breaks: {item.breaks?.join(', ') || 'None'}</Text>
           </>
         ) : (
-          <Text style={tw`text-green-600 text-sm`}>No schedule</Text>
+          <Text style={tw`text-blue-600 text-sm`}>No schedule</Text>
         )}
       </Card>
     </TouchableOpacity>
@@ -1438,7 +1438,7 @@ const DoctorConsultScreen: React.FC = () => {
         <Text style={tw`text-white text-lg text-center px-4`}>{error}</Text>
         <Button
           mode="contained"
-          style={tw`mt-4 bg-green-600 rounded-2xl`}
+          style={tw`mt-4 bg-blue-600 rounded-2xl`}
           onPress={retryFetch}
         >
           <Text style={tw`text-white font-bold`}>Retry</Text>
@@ -1454,7 +1454,7 @@ const DoctorConsultScreen: React.FC = () => {
           <Text style={tw`text-3xl text-white font-bold mb-4`}>{doctorName}'s Dashboard</Text>
           <Button
             mode="contained"
-            style={tw`bg-green-600 rounded-2xl mb-6 w-full max-w-[420px]`}
+            style={tw`bg-blue-600 rounded-2xl mb-6 w-full max-w-[420px]`}
             onPress={() => openModal()} // <-- Use new open function (no args)
             disabled={loading}
           >
@@ -1466,9 +1466,9 @@ const DoctorConsultScreen: React.FC = () => {
             <Text style={tw`text-red-100 text-base text-center px-4 mb-4`}>{error}</Text>
           )}
 
-          <Card style={tw`w-full max-w-[420px] bg-green-100 rounded-2xl mb-6 shadow-lg`}>
+          <Card style={tw`w-full max-w-[420px] bg-blue-100 rounded-2xl mb-6 shadow-lg`}>
             <Card.Content>
-              <Text style={tw`text-2xl text-green-700 font-bold mb-4`}>Available Dates</Text>
+              <Text style={tw`text-2xl text-blue-700 font-bold mb-4`}>Available Dates</Text>
               {availableDates.length > 0 ? (
                 <FlatList
                   data={availableDates}
@@ -1479,13 +1479,13 @@ const DoctorConsultScreen: React.FC = () => {
                   contentContainerStyle={tw`px-2`}
                 />
               ) : (
-                <Text style={tw`text-green-700 text-base`}>No available dates</Text>
+                <Text style={tw`text-blue-700 text-base`}>No available dates</Text>
               )}
             </Card.Content>
           </Card>
-          <Card style={tw`w-full max-w-[420px] bg-green-100 rounded-2xl mb-6 shadow-lg`}>
+          <Card style={tw`w-full max-w-[420px] bg-blue-100 rounded-2xl mb-6 shadow-lg`}>
             <Card.Content>
-              <Text style={tw`text-2xl text-green-700 font-bold mb-4`}>Weekly Availability</Text>
+              <Text style={tw`text-2xl text-blue-700 font-bold mb-4`}>Weekly Availability</Text>
               <FlatList
                 data={availabilitySchedule}
                 renderItem={renderWeeklyDay} // <-- This now renders pressable items
@@ -1496,22 +1496,22 @@ const DoctorConsultScreen: React.FC = () => {
               />
             </Card.Content>
           </Card>
-          <Card style={tw`w-full max-w-[420px] bg-green-100 rounded-2xl mb-6 shadow-lg`}>
+          <Card style={tw`w-full max-w-[420px] bg-blue-100 rounded-2xl mb-6 shadow-lg`}>
             <Card.Content>
-              <Text style={tw`text-2xl text-green-700 font-bold mb-4`}>Slots for {selectedDate}</Text>
+              <Text style={tw`text-2xl text-blue-700 font-bold mb-4`}>Slots for {selectedDate}</Text>
               {filteredSlots.length > 0 ? (
                 <View style={tw`flex-row flex-wrap justify-between`}>
                   {filteredSlots.map((daySlot, index) =>
                     daySlot.slots.map((slot, slotIndex) => (
                       <Card
                         key={`${index}-${slotIndex}`}
-                        style={tw`bg-green-50 rounded-xl p-4 mb-3 w-[31%]`}
+                        style={tw`bg-blue-50 rounded-xl p-4 mb-3 w-[31%]`}
                       >
                         <View style={tw`flex-1`}>
-                          <Text style={tw`text-green-700 font-bold text-sm`}>
+                          <Text style={tw`text-blue-700 font-bold text-sm`}>
                             {daySlot.mode.charAt(0).toUpperCase() + daySlot.mode.slice(1)}
                           </Text>
-                          <Text style={tw`text-green-600 text-xs`}>
+                          <Text style={tw`text-blue-600 text-xs`}>
                             {`${slot.start} - ${slot.end}`}
                           </Text>
                         </View>
@@ -1520,7 +1520,7 @@ const DoctorConsultScreen: React.FC = () => {
                   )}
                 </View>
               ) : (
-                <Text style={tw`text-green-700 text-base`}>No slots available for this date</Text>
+                <Text style={tw`text-blue-700 text-base`}>No slots available for this date</Text>
               )}
             </Card.Content>
           </Card>
@@ -1536,10 +1536,10 @@ const DoctorConsultScreen: React.FC = () => {
         onRequestClose={closeModal} // <-- Use new close function
       >
         <View style={tw`flex-1 justify-center items-center bg-black bg-opacity-50`}>
-          <Card style={tw`w-11/12 max-w-[400px] bg-green-100 rounded-2xl p-4`}>
+          <Card style={tw`w-11/12 max-w-[400px] bg-blue-100 rounded-2xl p-4`}>
             <Card.Content>
               <View style={tw`flex-row justify-between items-center mb-4`}>
-                <Text style={tw`text-2xl text-green-700 font-bold`}>
+                <Text style={tw`text-2xl text-blue-700 font-bold`}>
                   {isEditing ? 'Update Slot' : 'Add/Update Slot'}
                 </Text>
                 <IconButton
@@ -1556,7 +1556,7 @@ const DoctorConsultScreen: React.FC = () => {
               )}
 
               <TextInput
-                style={tw`rounded-xl p-3 mb-3 text-green-700 ${isEditing ? 'bg-green-200 text-gray-500' : 'bg-green-50'}`}
+                style={tw`rounded-xl p-3 mb-3 text-blue-700 ${isEditing ? 'bg-blue-200 text-gray-500' : 'bg-blue-50'}`}
                 placeholder="Day (e.g., monday)"
                 placeholderTextColor="#34d399"
                 value={newSlotDay}
@@ -1565,28 +1565,28 @@ const DoctorConsultScreen: React.FC = () => {
                 autoCapitalize="none"
               />
               <TextInput
-                style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+                style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
                 placeholder="Login Time (HH:mm)"
                 placeholderTextColor="#34d399"
                 value={newSlotLoginTime}
                 onChangeText={setNewSlotLoginTime}
               />
               <TextInput
-                style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+                style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
                 placeholder="Logout Time (HH:mm)"
                 placeholderTextColor="#34d399"
                 value={newSlotLogoutTime}
                 onChangeText={setNewSlotLogoutTime}
               />
               <TextInput
-                style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+                style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
                 placeholder="Breaks (e.g., 12:00-12:30,13:00-13:30)"
                 placeholderTextColor="#34d399"
                 value={newSlotBreaks}
                 onChangeText={setNewSlotBreaks}
               />
               <TextInput
-                style={tw`bg-green-50 rounded-xl p-3 mb-3 text-green-700`}
+                style={tw`bg-blue-50 rounded-xl p-3 mb-3 text-blue-700`}
                 placeholder="Mode (online/offline/hybrid)"
                 placeholderTextColor="#34d399"
                 value={newSlotMode}
@@ -1595,7 +1595,7 @@ const DoctorConsultScreen: React.FC = () => {
               />
               <Button
                 mode="contained"
-                style={tw`bg-green-600 rounded-2xl mt-4`}
+                style={tw`bg-blue-600 rounded-2xl mt-4`}
                 onPress={handleSaveSlot} // <-- Renamed from handleAddSlot
                 disabled={loading}
               >
@@ -1615,7 +1615,7 @@ const DoctorConsultScreen: React.FC = () => {
       {/* Success Toast */}
       {success && (
         <View style={tw`absolute bottom-10 w-full items-center`}>
-          <Card style={tw`bg-green-600 rounded-xl p-3`}>
+          <Card style={tw`bg-blue-600 rounded-xl p-3`}>
             <Text style={tw`text-white font-bold`}>{success}</Text>
           </Card>
         </View>

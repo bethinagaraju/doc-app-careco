@@ -155,24 +155,24 @@
 
 // // // // // // // // //   if (loading) {
 // // // // // // // // //     return (
-// // // // // // // // //       <SafeAreaView style={tw`flex-1 bg-green-50`}>
+// // // // // // // // //       <SafeAreaView style={tw`flex-1 bg-blue-50`}>
 // // // // // // // // //         <StatusBar backgroundColor="#059669" barStyle="light-content" />
 // // // // // // // // //         <DoctorHeader title="APPOINTMENT MANAGEMENT" showDoctorInfo />
 // // // // // // // // //         <View style={tw`flex-1 justify-center items-center`}>
-// // // // // // // // //           <ActivityIndicator size="large" color="#16a34a" />
-// // // // // // // // //           <Text style={tw`text-green-700 mt-4`}>Loading slots...</Text>
+// // // // // // // // //           <ActivityIndicator size="large" color="#164aa3ff" />
+// // // // // // // // //           <Text style={tw`text-blue-700 mt-4`}>Loading slots...</Text>
 // // // // // // // // //         </View>
 // // // // // // // // //       </SafeAreaView>
 // // // // // // // // //     );
 // // // // // // // // //   }
 
 // // // // // // // // //   return (
-// // // // // // // // //     <SafeAreaView style={tw`flex-1 bg-green-50`}>
+// // // // // // // // //     <SafeAreaView style={tw`flex-1 bg-blue-50`}>
 // // // // // // // // //       <StatusBar backgroundColor="#059669" barStyle="light-content" />
 // // // // // // // // //       <DoctorHeader title="APPOINTMENT MANAGEMENT" showDoctorInfo />
 
 // // // // // // // // //       <ScrollView style={tw`flex-1 p-4`} showsVerticalScrollIndicator={false}>
-// // // // // // // // //         <Text style={tw`text-lg font-bold text-green-700 mb-4`}>
+// // // // // // // // //         <Text style={tw`text-lg font-bold text-blue-700 mb-4`}>
 // // // // // // // // //           Your Available Slots
 // // // // // // // // //         </Text>
 
@@ -191,16 +191,16 @@
 // // // // // // // // //               key={`${slot.date}-${index}`}
 // // // // // // // // //               style={tw`bg-white rounded-2xl p-4 mb-4 shadow-sm`}
 // // // // // // // // //             >
-// // // // // // // // //               <Text style={tw`text-lg font-semibold text-green-700 mb-2`}>
+// // // // // // // // //               <Text style={tw`text-lg font-semibold text-blue-700 mb-2`}>
 // // // // // // // // //                 {new Date(slot.date).toDateString()}
 // // // // // // // // //               </Text>
 // // // // // // // // //               <View style={tw`flex-row flex-wrap`}>
 // // // // // // // // //                 {slot.slots.map((timeSlot, slotIndex) => (
 // // // // // // // // //                   <View
 // // // // // // // // //                     key={`${timeSlot.start}-${timeSlot.end}-${slotIndex}`}
-// // // // // // // // //                     style={tw`bg-green-100 rounded-lg px-3 py-2 mr-2 mb-2`}
+// // // // // // // // //                     style={tw`bg-blue-100 rounded-lg px-3 py-2 mr-2 mb-2`}
 // // // // // // // // //                   >
-// // // // // // // // //                     <Text style={tw`text-green-700 text-sm font-medium`}>
+// // // // // // // // //                     <Text style={tw`text-blue-700 text-sm font-medium`}>
 // // // // // // // // //                       {timeSlot.start} - {timeSlot.end}
 // // // // // // // // //                     </Text>
 // // // // // // // // //                   </View>
@@ -210,7 +210,7 @@
 // // // // // // // // //           ))
 // // // // // // // // //         )}
 
-// // // // // // // // //         <Text style={tw`text-lg font-bold text-green-700 mb-4 mt-6`}>
+// // // // // // // // //         <Text style={tw`text-lg font-bold text-blue-700 mb-4 mt-6`}>
 // // // // // // // // //           Set Your Weekly Schedule
 // // // // // // // // //         </Text>
 
@@ -219,24 +219,24 @@
 // // // // // // // // //             key={item.day}
 // // // // // // // // //             style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}
 // // // // // // // // //           >
-// // // // // // // // //             <Text style={tw`text-green-700 font-bold mb-2 capitalize`}>
+// // // // // // // // //             <Text style={tw`text-blue-700 font-bold mb-2 capitalize`}>
 // // // // // // // // //               {item.day}
 // // // // // // // // //             </Text>
 
 // // // // // // // // //             <TextInput
 // // // // // // // // //               placeholder="Login Time (e.g., 09:00)"
-// // // // // // // // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // // // // // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // // // // // //               value={item.loginTime}
 // // // // // // // // //               onChangeText={(val) => handleChange(index, 'loginTime', val)}
 // // // // // // // // //             />
 // // // // // // // // //             <TextInput
 // // // // // // // // //               placeholder="Logout Time (e.g., 17:00)"
-// // // // // // // // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // // // // // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // // // // // //               value={item.logoutTime}
 // // // // // // // // //               onChangeText={(val) => handleChange(index, 'logoutTime', val)}
 // // // // // // // // //             />
 
-// // // // // // // // //             <Text style={tw`text-sm text-green-600 mb-1`}>Breaks:</Text>
+// // // // // // // // //             <Text style={tw`text-sm text-blue-600 mb-1`}>Breaks:</Text>
 // // // // // // // // //             {item.breaks.map((brk, brkIndex) => (
 // // // // // // // // //               <View
 // // // // // // // // //                 key={brkIndex}
@@ -244,7 +244,7 @@
 // // // // // // // // //               >
 // // // // // // // // //                 <TextInput
 // // // // // // // // //                   placeholder="e.g., 12:00-12:30"
-// // // // // // // // //                   style={tw`border border-green-300 p-2 rounded flex-1 mr-2`}
+// // // // // // // // //                   style={tw`border border-blue-300 p-2 rounded flex-1 mr-2`}
 // // // // // // // // //                   value={brk}
 // // // // // // // // //                   onChangeText={(val) =>
 // // // // // // // // //                     handleBreakChange(index, brkIndex, val)
@@ -263,14 +263,14 @@
 
 // // // // // // // // //             <TouchableOpacity
 // // // // // // // // //               onPress={() => addBreak(index)}
-// // // // // // // // //               style={tw`bg-green-100 border border-green-400 px-3 py-1 rounded mb-2`}
+// // // // // // // // //               style={tw`bg-blue-100 border border-blue-400 px-3 py-1 rounded mb-2`}
 // // // // // // // // //             >
-// // // // // // // // //               <Text style={tw`text-green-700 text-center`}>+ Add Break</Text>
+// // // // // // // // //               <Text style={tw`text-blue-700 text-center`}>+ Add Break</Text>
 // // // // // // // // //             </TouchableOpacity>
 
-// // // // // // // // //             <Text style={tw`text-sm text-green-600 mb-1`}>Mode:</Text>
+// // // // // // // // //             <Text style={tw`text-sm text-blue-600 mb-1`}>Mode:</Text>
 // // // // // // // // //             <View
-// // // // // // // // //               style={tw`border border-green-300 rounded mb-2 bg-green-50`}
+// // // // // // // // //               style={tw`border border-blue-300 rounded mb-2 bg-blue-50`}
 // // // // // // // // //             >
 // // // // // // // // //               <Picker
 // // // // // // // // //                 selectedValue={item.mode}
@@ -287,21 +287,21 @@
 
 // // // // // // // // //         <TextInput
 // // // // // // // // //           placeholder="Consultation Fee"
-// // // // // // // // //           style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // // // // // //           style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // // // // // //           value={consultationFee}
 // // // // // // // // //           onChangeText={setConsultationFee}
 // // // // // // // // //           keyboardType="numeric"
 // // // // // // // // //         />
 // // // // // // // // //         <TextInput
 // // // // // // // // //           placeholder="Experience (in years)"
-// // // // // // // // //           style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // // // // // //           style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // // // // // //           value={experienceYears}
 // // // // // // // // //           onChangeText={setExperienceYears}
 // // // // // // // // //           keyboardType="numeric"
 // // // // // // // // //         />
 // // // // // // // // //         <TextInput
 // // // // // // // // //           placeholder="Appointment Slot (in minutes)"
-// // // // // // // // //           style={tw`border border-green-300 p-2 rounded mb-4`}
+// // // // // // // // //           style={tw`border border-blue-300 p-2 rounded mb-4`}
 // // // // // // // // //           value={appointmentSlot}
 // // // // // // // // //           onChangeText={setAppointmentSlot}
 // // // // // // // // //           keyboardType="numeric"
@@ -309,7 +309,7 @@
 
 // // // // // // // // //         <TouchableOpacity
 // // // // // // // // //           onPress={handleSubmit}
-// // // // // // // // //           style={tw`bg-green-600 py-3 rounded-xl mb-6`}
+// // // // // // // // //           style={tw`bg-blue-600 py-3 rounded-xl mb-6`}
 // // // // // // // // //         >
 // // // // // // // // //           <Text style={tw`text-white text-center font-semibold text-lg`}>
 // // // // // // // // //             Save Schedule
@@ -399,7 +399,7 @@
 // // // // // // // //   };
 
 // // // // // // // //   return (
-// // // // // // // //     <SafeAreaView style={tw`flex-1 bg-green-50`}>
+// // // // // // // //     <SafeAreaView style={tw`flex-1 bg-blue-50`}>
 // // // // // // // //       <StatusBar backgroundColor="#059669" barStyle="light-content" />
 // // // // // // // //       <DoctorHeader title="APPOINTMENT MANAGEMENT" showDoctorInfo />
 
@@ -409,7 +409,7 @@
 // // // // // // // //             key={item.day}
 // // // // // // // //             style={tw`bg-white rounded-2xl p-4 mb-4 shadow-md`}
 // // // // // // // //           >
-// // // // // // // //             <Text style={tw`text-lg font-semibold text-green-700 mb-2 capitalize`}>
+// // // // // // // //             <Text style={tw`text-lg font-semibold text-blue-700 mb-2 capitalize`}>
 // // // // // // // //               {item.day}
 // // // // // // // //             </Text>
 
@@ -476,7 +476,7 @@
 
 // // // // // // // //         <TouchableOpacity
 // // // // // // // //           onPress={handleSubmit}
-// // // // // // // //           style={tw`bg-green-600 py-3 rounded-xl`}
+// // // // // // // //           style={tw`bg-blue-600 py-3 rounded-xl`}
 // // // // // // // //         >
 // // // // // // // //           <Text style={tw`text-center text-white text-lg font-semibold`}>
 // // // // // // // //             Save Schedule
@@ -633,25 +633,25 @@
 // // // // // // //   };
 
 // // // // // // //   return (
-// // // // // // //     <SafeAreaView style={tw`flex-1 bg-green-50`}>
+// // // // // // //     <SafeAreaView style={tw`flex-1 bg-blue-50`}>
 // // // // // // //       <StatusBar backgroundColor="#059669" barStyle="light-content" />
 // // // // // // //       <DoctorHeader title="APPOINTMENT MANAGEMENT" showDoctorInfo />
 
 // // // // // // //       <ScrollView style={tw`p-4`}>
-// // // // // // //         <Text style={tw`text-lg text-green-800 font-bold mb-4`}>
+// // // // // // //         <Text style={tw`text-lg text-blue-800 font-bold mb-4`}>
 // // // // // // //           Set Your Weekly Schedule
 // // // // // // //         </Text>
 
 // // // // // // //         {schedule.map((item, index) => (
 // // // // // // //           <View key={item.day} style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}>
-// // // // // // //             <Text style={tw`text-green-700 font-bold mb-2 capitalize`}>
+// // // // // // //             <Text style={tw`text-blue-700 font-bold mb-2 capitalize`}>
 // // // // // // //               {item.day}
 // // // // // // //             </Text>
 
 // // // // // // //             {/* Login Time */}
 // // // // // // //             <TouchableOpacity
 // // // // // // //               onPress={() => openTimePicker(index, 'loginTime')}
-// // // // // // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // // // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // // // //             >
 // // // // // // //               <Text style={tw`text-gray-700`}>
 // // // // // // //                 {item.loginTime ? `Login: ${item.loginTime}` : 'Select Login Time'}
@@ -661,7 +661,7 @@
 // // // // // // //             {/* Logout Time */}
 // // // // // // //             <TouchableOpacity
 // // // // // // //               onPress={() => openTimePicker(index, 'logoutTime')}
-// // // // // // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // // // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // // // //             >
 // // // // // // //               <Text style={tw`text-gray-700`}>
 // // // // // // //                 {item.logoutTime ? `Logout: ${item.logoutTime}` : 'Select Logout Time'}
@@ -669,7 +669,7 @@
 // // // // // // //             </TouchableOpacity>
 
 // // // // // // //             {/* Breaks */}
-// // // // // // //             <Text style={tw`text-sm text-green-600 mb-1`}>Breaks:</Text>
+// // // // // // //             <Text style={tw`text-sm text-blue-600 mb-1`}>Breaks:</Text>
 // // // // // // //             {item.breaks.map((brk, brkIndex) => (
 // // // // // // //               <View
 // // // // // // //                 key={brkIndex}
@@ -677,7 +677,7 @@
 // // // // // // //               >
 // // // // // // //                 <TouchableOpacity
 // // // // // // //                   onPress={() => openTimePicker(index, 'breaks', brkIndex)}
-// // // // // // //                   style={tw`border border-green-300 p-2 rounded flex-1 mr-2`}
+// // // // // // //                   style={tw`border border-blue-300 p-2 rounded flex-1 mr-2`}
 // // // // // // //                 >
 // // // // // // //                   <Text style={tw`text-gray-700`}>
 // // // // // // //                     {brk ? brk : 'Select Break Time'}
@@ -697,14 +697,14 @@
 
 // // // // // // //             <TouchableOpacity
 // // // // // // //               onPress={() => addBreak(index)}
-// // // // // // //               style={tw`bg-green-100 border border-green-400 px-3 py-1 rounded mb-2`}
+// // // // // // //               style={tw`bg-blue-100 border border-blue-400 px-3 py-1 rounded mb-2`}
 // // // // // // //             >
-// // // // // // //               <Text style={tw`text-green-700 text-center`}>+ Add Break</Text>
+// // // // // // //               <Text style={tw`text-blue-700 text-center`}>+ Add Break</Text>
 // // // // // // //             </TouchableOpacity>
 
 // // // // // // //             {/* Mode Picker */}
-// // // // // // //             <Text style={tw`text-sm text-green-600 mb-1`}>Mode:</Text>
-// // // // // // //             <View style={tw`border border-green-300 rounded mb-2 bg-green-50`}>
+// // // // // // //             <Text style={tw`text-sm text-blue-600 mb-1`}>Mode:</Text>
+// // // // // // //             <View style={tw`border border-blue-300 rounded mb-2 bg-blue-50`}>
 // // // // // // //               <Picker
 // // // // // // //                 selectedValue={item.mode}
 // // // // // // //                 onValueChange={(val) => handleChange(index, 'mode', val)}
@@ -719,8 +719,8 @@
 // // // // // // //         ))}
 
 // // // // // // //         {/* Slot Picker */}
-// // // // // // //         <Text style={tw`text-sm text-green-600 mb-1`}>Appointment Slot:</Text>
-// // // // // // //         <View style={tw`border border-green-300 rounded mb-2 bg-green-50`}>
+// // // // // // //         <Text style={tw`text-sm text-blue-600 mb-1`}>Appointment Slot:</Text>
+// // // // // // //         <View style={tw`border border-blue-300 rounded mb-2 bg-blue-50`}>
 // // // // // // //           <Picker
 // // // // // // //             selectedValue={appointmentSlot}
 // // // // // // //             onValueChange={(val) => setAppointmentSlot(val)}
@@ -735,7 +735,7 @@
 // // // // // // //         {/* Consultation Fee */}
 // // // // // // //         <TouchableOpacity
 // // // // // // //           onPress={handleSubmit}
-// // // // // // //           style={tw`bg-green-600 py-3 rounded-xl mt-4`}
+// // // // // // //           style={tw`bg-blue-600 py-3 rounded-xl mt-4`}
 // // // // // // //         >
 // // // // // // //           <Text style={tw`text-white text-center font-semibold text-lg`}>
 // // // // // // //             Save Schedule
@@ -845,12 +845,12 @@
 // // // // // //   };
 
 // // // // // //   return (
-// // // // // //     <SafeAreaView style={tw`flex-1 bg-green-50`}>
+// // // // // //     <SafeAreaView style={tw`flex-1 bg-blue-50`}>
 // // // // // //       <StatusBar backgroundColor="#059669" barStyle="light-content" />
 // // // // // //       <DoctorHeader title="APPOINTMENT MANAGEMENT" showDoctorInfo />
 
 // // // // // //       <ScrollView style={tw`p-4`}>
-// // // // // //         <Text style={tw`text-lg text-green-800 font-bold mb-4`}>
+// // // // // //         <Text style={tw`text-lg text-blue-800 font-bold mb-4`}>
 // // // // // //           Set Your Weekly Schedule
 // // // // // //         </Text>
 
@@ -859,24 +859,24 @@
 // // // // // //             key={item.day}
 // // // // // //             style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}
 // // // // // //           >
-// // // // // //             <Text style={tw`text-green-700 font-bold mb-2 capitalize`}>
+// // // // // //             <Text style={tw`text-blue-700 font-bold mb-2 capitalize`}>
 // // // // // //               {item.day}
 // // // // // //             </Text>
 
 // // // // // //             <TextInput
 // // // // // //               placeholder="Login Time (e.g., 09:00)"
-// // // // // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // // //               value={item.loginTime}
 // // // // // //               onChangeText={(val) => handleChange(index, 'loginTime', val)}
 // // // // // //             />
 // // // // // //             <TextInput
 // // // // // //               placeholder="Logout Time (e.g., 17:00)"
-// // // // // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // // //               value={item.logoutTime}
 // // // // // //               onChangeText={(val) => handleChange(index, 'logoutTime', val)}
 // // // // // //             />
 
-// // // // // //             <Text style={tw`text-sm text-green-600 mb-1`}>Breaks:</Text>
+// // // // // //             <Text style={tw`text-sm text-blue-600 mb-1`}>Breaks:</Text>
 // // // // // //             {item.breaks.map((brk, brkIndex) => (
 // // // // // //               <View
 // // // // // //                 key={brkIndex}
@@ -884,7 +884,7 @@
 // // // // // //               >
 // // // // // //                 <TextInput
 // // // // // //                   placeholder="e.g., 12:00-12:30"
-// // // // // //                   style={tw`border border-green-300 p-2 rounded flex-1 mr-2`}
+// // // // // //                   style={tw`border border-blue-300 p-2 rounded flex-1 mr-2`}
 // // // // // //                   value={brk}
 // // // // // //                   onChangeText={(val) =>
 // // // // // //                     handleBreakChange(index, brkIndex, val)
@@ -903,14 +903,14 @@
 
 // // // // // //             <TouchableOpacity
 // // // // // //               onPress={() => addBreak(index)}
-// // // // // //               style={tw`bg-green-100 border border-green-400 px-3 py-1 rounded mb-2`}
+// // // // // //               style={tw`bg-blue-100 border border-blue-400 px-3 py-1 rounded mb-2`}
 // // // // // //             >
-// // // // // //               <Text style={tw`text-green-700 text-center`}>+ Add Break</Text>
+// // // // // //               <Text style={tw`text-blue-700 text-center`}>+ Add Break</Text>
 // // // // // //             </TouchableOpacity>
 
-// // // // // //             <Text style={tw`text-sm text-green-600 mb-1`}>Mode:</Text>
+// // // // // //             <Text style={tw`text-sm text-blue-600 mb-1`}>Mode:</Text>
 // // // // // //             <View
-// // // // // //               style={tw`border border-green-300 rounded mb-2 bg-green-50`}
+// // // // // //               style={tw`border border-blue-300 rounded mb-2 bg-blue-50`}
 // // // // // //             >
 // // // // // //               <Picker
 // // // // // //                 selectedValue={item.mode}
@@ -927,21 +927,21 @@
 
 // // // // // //         <TextInput
 // // // // // //           placeholder="Consultation Fee"
-// // // // // //           style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // // //           style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // // //           value={consultationFee}
 // // // // // //           onChangeText={setConsultationFee}
 // // // // // //           keyboardType="numeric"
 // // // // // //         />
 // // // // // //         <TextInput
 // // // // // //           placeholder="Experience (in years)"
-// // // // // //           style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // // //           style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // // //           value={experienceYears}
 // // // // // //           onChangeText={setExperienceYears}
 // // // // // //           keyboardType="numeric"
 // // // // // //         />
 // // // // // //         <TextInput
 // // // // // //           placeholder="Appointment Slot (in minutes)"
-// // // // // //           style={tw`border border-green-300 p-2 rounded mb-4`}
+// // // // // //           style={tw`border border-blue-300 p-2 rounded mb-4`}
 // // // // // //           value={appointmentSlot}
 // // // // // //           onChangeText={setAppointmentSlot}
 // // // // // //           keyboardType="numeric"
@@ -949,7 +949,7 @@
 
 // // // // // //         <TouchableOpacity
 // // // // // //           onPress={handleSubmit}
-// // // // // //           style={tw`bg-green-600 py-3 rounded-xl`}
+// // // // // //           style={tw`bg-blue-600 py-3 rounded-xl`}
 // // // // // //         >
 // // // // // //           <Text style={tw`text-white text-center font-semibold text-lg`}>
 // // // // // //             Save Schedule
@@ -1098,31 +1098,31 @@
 // // // // //     return (
 // // // // //       <SafeAreaView style={tw`flex-1 items-center justify-center`}>
 // // // // //         <ActivityIndicator size="large" color="#059669" />
-// // // // //         <Text style={tw`text-green-700 mt-2`}>Loading Doctor Data...</Text>
+// // // // //         <Text style={tw`text-blue-700 mt-2`}>Loading Doctor Data...</Text>
 // // // // //       </SafeAreaView>
 // // // // //     );
 // // // // //   }
 
 // // // // //   return (
-// // // // //     <SafeAreaView style={tw`flex-1 bg-green-50`}>
+// // // // //     <SafeAreaView style={tw`flex-1 bg-blue-50`}>
 // // // // //       <StatusBar backgroundColor="#059669" barStyle="light-content" />
 // // // // //       <DoctorHeader title="APPOINTMENT MANAGEMENT" showDoctorInfo />
 
 // // // // //       <ScrollView style={tw`p-4`}>
 // // // // //         {/* ✅ Current Details Display */}
 // // // // //         <View style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}>
-// // // // //           <Text style={tw`text-lg font-bold text-green-700 mb-2`}>
+// // // // //           <Text style={tw`text-lg font-bold text-blue-700 mb-2`}>
 // // // // //             Current Appointment Info
 // // // // //           </Text>
-// // // // //           <Text style={tw`text-green-800`}>
+// // // // //           <Text style={tw`text-blue-800`}>
 // // // // //             💰 Consultation Fee:{' '}
 // // // // //             <Text style={tw`font-semibold`}>₹{consultationFee || 'Not Set'}</Text>
 // // // // //           </Text>
-// // // // //           <Text style={tw`text-green-800`}>
+// // // // //           <Text style={tw`text-blue-800`}>
 // // // // //             🎓 Experience:{' '}
 // // // // //             <Text style={tw`font-semibold`}>{experienceYears || 0} years</Text>
 // // // // //           </Text>
-// // // // //           <Text style={tw`text-green-800`}>
+// // // // //           <Text style={tw`text-blue-800`}>
 // // // // //             ⏱️ Appointment Slot:{' '}
 // // // // //             <Text style={tw`font-semibold`}>
 // // // // //               {appointmentSlot || 'Not Set'} minutes
@@ -1130,30 +1130,30 @@
 // // // // //           </Text>
 // // // // //         </View>
 
-// // // // //         <Text style={tw`text-lg text-green-800 font-bold mb-4`}>
+// // // // //         <Text style={tw`text-lg text-blue-800 font-bold mb-4`}>
 // // // // //           Set Your Weekly Schedule
 // // // // //         </Text>
 
 // // // // //         {schedule.map((item, index) => (
 // // // // //           <View key={item.day} style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}>
-// // // // //             <Text style={tw`text-green-700 font-bold mb-2 capitalize`}>
+// // // // //             <Text style={tw`text-blue-700 font-bold mb-2 capitalize`}>
 // // // // //               {item.day}
 // // // // //             </Text>
 
 // // // // //             <TextInput
 // // // // //               placeholder="Login Time (e.g., 09:00)"
-// // // // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // //               value={item.loginTime}
 // // // // //               onChangeText={(val) => handleChange(index, 'loginTime', val)}
 // // // // //             />
 // // // // //             <TextInput
 // // // // //               placeholder="Logout Time (e.g., 17:00)"
-// // // // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // //               value={item.logoutTime}
 // // // // //               onChangeText={(val) => handleChange(index, 'logoutTime', val)}
 // // // // //             />
 
-// // // // //             <Text style={tw`text-sm text-green-600 mb-1`}>Breaks:</Text>
+// // // // //             <Text style={tw`text-sm text-blue-600 mb-1`}>Breaks:</Text>
 // // // // //             {item.breaks.map((brk, brkIndex) => (
 // // // // //               <View
 // // // // //                 key={brkIndex}
@@ -1161,7 +1161,7 @@
 // // // // //               >
 // // // // //                 <TextInput
 // // // // //                   placeholder="e.g., 12:00-12:30"
-// // // // //                   style={tw`border border-green-300 p-2 rounded flex-1 mr-2`}
+// // // // //                   style={tw`border border-blue-300 p-2 rounded flex-1 mr-2`}
 // // // // //                   value={brk}
 // // // // //                   onChangeText={(val) =>
 // // // // //                     handleBreakChange(index, brkIndex, val)
@@ -1180,13 +1180,13 @@
 
 // // // // //             <TouchableOpacity
 // // // // //               onPress={() => addBreak(index)}
-// // // // //               style={tw`bg-green-100 border border-green-400 px-3 py-1 rounded mb-2`}
+// // // // //               style={tw`bg-blue-100 border border-blue-400 px-3 py-1 rounded mb-2`}
 // // // // //             >
-// // // // //               <Text style={tw`text-green-700 text-center`}>+ Add Break</Text>
+// // // // //               <Text style={tw`text-blue-700 text-center`}>+ Add Break</Text>
 // // // // //             </TouchableOpacity>
 
-// // // // //             <Text style={tw`text-sm text-green-600 mb-1`}>Mode:</Text>
-// // // // //             <View style={tw`border border-green-300 rounded mb-2 bg-green-50`}>
+// // // // //             <Text style={tw`text-sm text-blue-600 mb-1`}>Mode:</Text>
+// // // // //             <View style={tw`border border-blue-300 rounded mb-2 bg-blue-50`}>
 // // // // //               <Picker
 // // // // //                 selectedValue={item.mode}
 // // // // //                 onValueChange={(val) => handleChange(index, 'mode', val)}
@@ -1202,21 +1202,21 @@
 
 // // // // //         <TextInput
 // // // // //           placeholder="Consultation Fee"
-// // // // //           style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // //           style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // //           value={consultationFee}
 // // // // //           onChangeText={setConsultationFee}
 // // // // //           keyboardType="numeric"
 // // // // //         />
 // // // // //         <TextInput
 // // // // //           placeholder="Experience (in years)"
-// // // // //           style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // // //           style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // // //           value={experienceYears}
 // // // // //           onChangeText={setExperienceYears}
 // // // // //           keyboardType="numeric"
 // // // // //         />
 // // // // //         <TextInput
 // // // // //           placeholder="Appointment Slot (in minutes)"
-// // // // //           style={tw`border border-green-300 p-2 rounded mb-4`}
+// // // // //           style={tw`border border-blue-300 p-2 rounded mb-4`}
 // // // // //           value={appointmentSlot}
 // // // // //           onChangeText={setAppointmentSlot}
 // // // // //           keyboardType="numeric"
@@ -1224,7 +1224,7 @@
 
 // // // // //         <TouchableOpacity
 // // // // //           onPress={handleSubmit}
-// // // // //           style={tw`bg-green-600 py-3 rounded-xl`}
+// // // // //           style={tw`bg-blue-600 py-3 rounded-xl`}
 // // // // //         >
 // // // // //           <Text style={tw`text-white text-center font-semibold text-lg`}>
 // // // // //             Save Schedule
@@ -1398,65 +1398,65 @@
 // // // //     return (
 // // // //       <SafeAreaView style={tw`flex-1 items-center justify-center`}>
 // // // //         <ActivityIndicator size="large" color="#059669" />
-// // // //         <Text style={tw`text-green-700 mt-2`}>Loading Doctor Data...</Text>
+// // // //         <Text style={tw`text-blue-700 mt-2`}>Loading Doctor Data...</Text>
 // // // //       </SafeAreaView>
 // // // //     );
 // // // //   }
 
 // // // //   return (
-// // // //     <SafeAreaView style={tw`flex-1 bg-green-50`}>
+// // // //     <SafeAreaView style={tw`flex-1 bg-blue-50`}>
 // // // //       <StatusBar backgroundColor="#059669" barStyle="light-content" />
 // // // //       <DoctorHeader title="APPOINTMENT MANAGEMENT" showDoctorInfo />
 
 // // // //       <ScrollView style={tw`p-4`}>
 // // // //         {/* ✅ Display Current Info */}
 // // // //         <View style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}>
-// // // //           <Text style={tw`text-lg font-bold text-green-700 mb-2`}>
+// // // //           <Text style={tw`text-lg font-bold text-blue-700 mb-2`}>
 // // // //             Current Appointment Info
 // // // //           </Text>
-// // // //           <Text style={tw`text-green-800`}>
+// // // //           <Text style={tw`text-blue-800`}>
 // // // //             💰 Consultation Fee: <Text style={tw`font-semibold`}>₹{consultationFee || 'Not Set'}</Text>
 // // // //           </Text>
-// // // //           <Text style={tw`text-green-800`}>
+// // // //           <Text style={tw`text-blue-800`}>
 // // // //             🎓 Experience: <Text style={tw`font-semibold`}>{experienceYears || 0} years</Text>
 // // // //           </Text>
-// // // //           <Text style={tw`text-green-800`}>
+// // // //           <Text style={tw`text-blue-800`}>
 // // // //             ⏱️ Appointment Slot: <Text style={tw`font-semibold`}>{appointmentSlot || 'Not Set'} minutes</Text>
 // // // //           </Text>
 // // // //         </View>
 
-// // // //         <Text style={tw`text-lg text-green-800 font-bold mb-4`}>
+// // // //         <Text style={tw`text-lg text-blue-800 font-bold mb-4`}>
 // // // //           Set Your Weekly Schedule
 // // // //         </Text>
 
 // // // //         {schedule.map((item, index) => (
 // // // //           <View key={item.day} style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}>
-// // // //             <Text style={tw`text-green-700 font-bold mb-2 capitalize`}>
+// // // //             <Text style={tw`text-blue-700 font-bold mb-2 capitalize`}>
 // // // //               {item.day}
 // // // //             </Text>
 
 // // // //             <TouchableOpacity
-// // // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // //               onPress={() => openTimePicker(index, 'loginTime')}
 // // // //             >
 // // // //               <Text>{item.loginTime ? `Login Time: ${item.loginTime}` : 'Set Login Time'}</Text>
 // // // //             </TouchableOpacity>
 
 // // // //             <TouchableOpacity
-// // // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // // //               onPress={() => openTimePicker(index, 'logoutTime')}
 // // // //             >
 // // // //               <Text>{item.logoutTime ? `Logout Time: ${item.logoutTime}` : 'Set Logout Time'}</Text>
 // // // //             </TouchableOpacity>
 
-// // // //             <Text style={tw`text-sm text-green-600 mb-1`}>Breaks:</Text>
+// // // //             <Text style={tw`text-sm text-blue-600 mb-1`}>Breaks:</Text>
 // // // //             {item.breaks.map((brk, brkIndex) => (
 // // // //               <View
 // // // //                 key={brkIndex}
 // // // //                 style={tw`flex-row items-center mb-2 justify-between`}
 // // // //               >
 // // // //                 <TouchableOpacity
-// // // //                   style={tw`border border-green-300 p-2 rounded flex-1 mr-2`}
+// // // //                   style={tw`border border-blue-300 p-2 rounded flex-1 mr-2`}
 // // // //                   onPress={() => openTimePicker(index, 'break', brkIndex)}
 // // // //                 >
 // // // //                   <Text>{brk ? `Break: ${brk}` : 'Set Break Time'}</Text>
@@ -1475,13 +1475,13 @@
 
 // // // //             <TouchableOpacity
 // // // //               onPress={() => addBreak(index)}
-// // // //               style={tw`bg-green-100 border border-green-400 px-3 py-1 rounded mb-2`}
+// // // //               style={tw`bg-blue-100 border border-blue-400 px-3 py-1 rounded mb-2`}
 // // // //             >
-// // // //               <Text style={tw`text-green-700 text-center`}>+ Add Break</Text>
+// // // //               <Text style={tw`text-blue-700 text-center`}>+ Add Break</Text>
 // // // //             </TouchableOpacity>
 
-// // // //             <Text style={tw`text-sm text-green-600 mb-1`}>Mode:</Text>
-// // // //             <View style={tw`border border-green-300 rounded mb-2 bg-green-50`}>
+// // // //             <Text style={tw`text-sm text-blue-600 mb-1`}>Mode:</Text>
+// // // //             <View style={tw`border border-blue-300 rounded mb-2 bg-blue-50`}>
 // // // //               <Picker
 // // // //                 selectedValue={item.mode}
 // // // //                 onValueChange={(val) => handleChange(index, 'mode', val)}
@@ -1496,7 +1496,7 @@
 // // // //             {/* ✅ Save Button per Day */}
 // // // //             <TouchableOpacity
 // // // //               onPress={() => handleSubmitDay(index)}
-// // // //               style={tw`bg-green-600 py-2 rounded-lg mt-2`}
+// // // //               style={tw`bg-blue-600 py-2 rounded-lg mt-2`}
 // // // //             >
 // // // //               <Text style={tw`text-white text-center font-semibold`}>
 // // // //                 Save {item.day.charAt(0).toUpperCase() + item.day.slice(1)} Schedule
@@ -1670,46 +1670,46 @@
 // // //     return (
 // // //       <SafeAreaView style={tw`flex-1 items-center justify-center`}>
 // // //         <ActivityIndicator size="large" color="#059669" />
-// // //         <Text style={tw`text-green-700 mt-2`}>Loading Doctor Data...</Text>
+// // //         <Text style={tw`text-blue-700 mt-2`}>Loading Doctor Data...</Text>
 // // //       </SafeAreaView>
 // // //     );
 // // //   }
 
 // // //   return (
-// // //     <SafeAreaView style={tw`flex-1 bg-green-50`}>
+// // //     <SafeAreaView style={tw`flex-1 bg-blue-50`}>
 // // //       <StatusBar backgroundColor="#059669" barStyle="light-content" />
 // // //       <DoctorHeader title="APPOINTMENT MANAGEMENT" showDoctorInfo />
 
 // // //       <ScrollView style={tw`p-4`}>
-// // //         <Text style={tw`text-lg text-green-800 font-bold mb-4`}>
+// // //         <Text style={tw`text-lg text-blue-800 font-bold mb-4`}>
 // // //           Set Your Weekly Schedule
 // // //         </Text>
 
 // // //         {schedule.map((item, index) => (
 // // //           <View key={item.day} style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}>
-// // //             <Text style={tw`text-green-700 font-bold mb-2 capitalize`}>
+// // //             <Text style={tw`text-blue-700 font-bold mb-2 capitalize`}>
 // // //               {item.day}
 // // //             </Text>
 
 // // //             <TouchableOpacity
-// // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // //               onPress={() => openTimePicker(index, 'loginTime')}
 // // //             >
 // // //               <Text>{item.loginTime ? `Login Time: ${item.loginTime}` : 'Set Login Time'}</Text>
 // // //             </TouchableOpacity>
 
 // // //             <TouchableOpacity
-// // //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// // //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // // //               onPress={() => openTimePicker(index, 'logoutTime')}
 // // //             >
 // // //               <Text>{item.logoutTime ? `Logout Time: ${item.logoutTime}` : 'Set Logout Time'}</Text>
 // // //             </TouchableOpacity>
 
-// // //             <Text style={tw`text-sm text-green-600 mb-1`}>Breaks:</Text>
+// // //             <Text style={tw`text-sm text-blue-600 mb-1`}>Breaks:</Text>
 // // //             {item.breaks.map((brk, brkIndex) => (
 // // //               <View key={brkIndex} style={tw`flex-row items-center mb-2 justify-between`}>
 // // //                 <TouchableOpacity
-// // //                   style={tw`border border-green-300 p-2 rounded flex-1 mr-2`}
+// // //                   style={tw`border border-blue-300 p-2 rounded flex-1 mr-2`}
 // // //                   onPress={() => openTimePicker(index, 'breaks', brkIndex)}
 // // //                 >
 // // //                   <Text>{brk ? `Break: ${brk}` : 'Set Break Time'}</Text>
@@ -1727,12 +1727,12 @@
 
 // // //             <TouchableOpacity
 // // //               onPress={() => addBreak(index)}
-// // //               style={tw`bg-green-100 border border-green-400 px-3 py-1 rounded mb-2`}
+// // //               style={tw`bg-blue-100 border border-blue-400 px-3 py-1 rounded mb-2`}
 // // //             >
-// // //               <Text style={tw`text-green-700 text-center`}>+ Add Break</Text>
+// // //               <Text style={tw`text-blue-700 text-center`}>+ Add Break</Text>
 // // //             </TouchableOpacity>
 
-// // //             <View style={tw`border border-green-300 rounded mb-2 bg-green-50`}>
+// // //             <View style={tw`border border-blue-300 rounded mb-2 bg-blue-50`}>
 // // //               <Picker
 // // //                 selectedValue={item.mode}
 // // //                 onValueChange={(val) => handleChange(index, 'mode', val)}
@@ -1746,7 +1746,7 @@
 
 // // //             <TouchableOpacity
 // // //               onPress={() => handleSubmitDay(index)}
-// // //               style={tw`bg-green-600 py-2 rounded-lg mt-2`}
+// // //               style={tw`bg-blue-600 py-2 rounded-lg mt-2`}
 // // //             >
 // // //               <Text style={tw`text-white text-center font-semibold`}>
 // // //                 Save {item.day.charAt(0).toUpperCase() + item.day.slice(1)} Schedule
@@ -1962,29 +1962,29 @@
 // //     return (
 // //       <SafeAreaView style={tw`flex-1 items-center justify-center`}>
 // //         <ActivityIndicator size="large" color="#059669" />
-// //         <Text style={tw`text-green-700 mt-2`}>Loading Doctor Data...</Text>
+// //         <Text style={tw`text-blue-700 mt-2`}>Loading Doctor Data...</Text>
 // //       </SafeAreaView>
 // //     );
 // //   }
 
 // //   return (
-// //     <SafeAreaView style={tw`flex-1 bg-green-50`}>
+// //     <SafeAreaView style={tw`flex-1 bg-blue-50`}>
 // //       <StatusBar backgroundColor="#059669" barStyle="light-content" />
 // //       <DoctorHeader title="APPOINTMENT MANAGEMENT" showDoctorInfo />
 
 // //       <ScrollView style={tw`p-4`}>
-// //         <Text style={tw`text-lg text-green-800 font-bold mb-4`}>
+// //         <Text style={tw`text-lg text-blue-800 font-bold mb-4`}>
 // //           Set Your Weekly Schedule
 // //         </Text>
 
 // //         {schedule.map((item, index) => (
 // //           <View key={item.day} style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}>
-// //             <Text style={tw`text-green-700 font-bold mb-2 capitalize`}>
+// //             <Text style={tw`text-blue-700 font-bold mb-2 capitalize`}>
 // //               {item.day}
 // //             </Text>
 
 // //             <TouchableOpacity
-// //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // //               onPress={() => openTimePicker(index, 'loginTime')}
 // //             >
 // //               <Text>
@@ -1993,7 +1993,7 @@
 // //             </TouchableOpacity>
 
 // //             <TouchableOpacity
-// //               style={tw`border border-green-300 p-2 rounded mb-2`}
+// //               style={tw`border border-blue-300 p-2 rounded mb-2`}
 // //               onPress={() => openTimePicker(index, 'logoutTime')}
 // //             >
 // //               <Text>
@@ -2001,19 +2001,19 @@
 // //               </Text>
 // //             </TouchableOpacity>
 
-// //             <Text style={tw`text-sm text-green-600 mb-1`}>Breaks:</Text>
+// //             <Text style={tw`text-sm text-blue-600 mb-1`}>Breaks:</Text>
 // //             {item.breaks.map((brk, brkIndex) => (
 // //               <View key={brkIndex} style={tw`mb-2`}>
 // //                 <View style={tw`flex-row justify-between items-center mb-1`}>
 // //                   <TouchableOpacity
-// //                     style={tw`border border-green-300 p-2 rounded flex-1 mr-1`}
+// //                     style={tw`border border-blue-300 p-2 rounded flex-1 mr-1`}
 // //                     onPress={() => openTimePicker(index, 'breaks', brkIndex, 'start')}
 // //                   >
 // //                     <Text>{brk.start ? `Start: ${brk.start}` : 'Set Start'}</Text>
 // //                   </TouchableOpacity>
 
 // //                   <TouchableOpacity
-// //                     style={tw`border border-green-300 p-2 rounded flex-1 ml-1`}
+// //                     style={tw`border border-blue-300 p-2 rounded flex-1 ml-1`}
 // //                     onPress={() => openTimePicker(index, 'breaks', brkIndex, 'end')}
 // //                   >
 // //                     <Text>{brk.end ? `End: ${brk.end}` : 'Set End'}</Text>
@@ -2033,12 +2033,12 @@
 
 // //             <TouchableOpacity
 // //               onPress={() => addBreak(index)}
-// //               style={tw`bg-green-100 border border-green-400 px-3 py-1 rounded mb-2`}
+// //               style={tw`bg-blue-100 border border-blue-400 px-3 py-1 rounded mb-2`}
 // //             >
-// //               <Text style={tw`text-green-700 text-center`}>+ Add Break</Text>
+// //               <Text style={tw`text-blue-700 text-center`}>+ Add Break</Text>
 // //             </TouchableOpacity>
 
-// //             <View style={tw`border border-green-300 rounded mb-2 bg-green-50`}>
+// //             <View style={tw`border border-blue-300 rounded mb-2 bg-blue-50`}>
 // //               <Picker
 // //                 selectedValue={item.mode}
 // //                 onValueChange={(val) => handleChange(index, 'mode', val)}
@@ -2052,7 +2052,7 @@
 
 // //             <TouchableOpacity
 // //               onPress={() => handleSubmitDay(index)}
-// //               style={tw`bg-green-600 py-2 rounded-lg mt-2`}
+// //               style={tw`bg-blue-600 py-2 rounded-lg mt-2`}
 // //             >
 // //               <Text style={tw`text-white text-center font-semibold`}>
 // //                 Save {item.day.charAt(0).toUpperCase() + item.day.slice(1)} Schedule
@@ -2287,29 +2287,29 @@
 //     return (
 //       <SafeAreaView style={tw`flex-1 items-center justify-center`}>
 //         <ActivityIndicator size="large" color="#059669" />
-//         <Text style={tw`text-green-700 mt-2`}>Loading Doctor Data...</Text>
+//         <Text style={tw`text-blue-700 mt-2`}>Loading Doctor Data...</Text>
 //       </SafeAreaView>
 //     );
 //   }
 
 //   return (
-//     <SafeAreaView style={tw`flex-1 bg-green-50`}>
+//     <SafeAreaView style={tw`flex-1 bg-blue-50`}>
 //       <StatusBar backgroundColor="#059669" barStyle="light-content" />
 //       <DoctorHeader title="APPOINTMENT MANAGEMENT" showDoctorInfo />
 
 //       <ScrollView style={tw`p-4`}>
-//         <Text style={tw`text-lg text-green-800 font-bold mb-4`}>
+//         <Text style={tw`text-lg text-blue-800 font-bold mb-4`}>
 //           Set Your Weekly Schedule
 //         </Text>
 
 //         {schedule.map((item, index) => (
 //           <View key={item.day} style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}>
-//             <Text style={tw`text-green-700 font-bold mb-2 capitalize`}>
+//             <Text style={tw`text-blue-700 font-bold mb-2 capitalize`}>
 //               {item.day}
 //             </Text>
 
 //             <TouchableOpacity
-//               style={tw`border border-green-300 p-2 rounded mb-2`}
+//               style={tw`border border-blue-300 p-2 rounded mb-2`}
 //               onPress={() => openTimePicker(index, 'loginTime')}
 //             >
 //               <Text>
@@ -2318,7 +2318,7 @@
 //             </TouchableOpacity>
 
 //             <TouchableOpacity
-//               style={tw`border border-green-300 p-2 rounded mb-2`}
+//               style={tw`border border-blue-300 p-2 rounded mb-2`}
 //               onPress={() => openTimePicker(index, 'logoutTime')}
 //             >
 //               <Text>
@@ -2326,18 +2326,18 @@
 //               </Text>
 //             </TouchableOpacity>
 
-//             <Text style={tw`text-sm text-green-600 mb-1`}>Breaks:</Text>
+//             <Text style={tw`text-sm text-blue-600 mb-1`}>Breaks:</Text>
 //             {item.breaks.map((brk, brkIndex) => (
 //               <View key={brkIndex} style={tw`flex-row items-center mb-2 justify-between`}>
 //                 <TouchableOpacity
-//                   style={tw`border border-green-300 p-2 rounded flex-1 mr-1`}
+//                   style={tw`border border-blue-300 p-2 rounded flex-1 mr-1`}
 //                   onPress={() => openTimePicker(index, 'breaks', brkIndex, 'start')}
 //                 >
 //                   <Text>{brk.start ? `Start: ${brk.start}` : 'Set Start'}</Text>
 //                 </TouchableOpacity>
 
 //                 <TouchableOpacity
-//                   style={tw`border border-green-300 p-2 rounded flex-1 ml-1`}
+//                   style={tw`border border-blue-300 p-2 rounded flex-1 ml-1`}
 //                   onPress={() => openTimePicker(index, 'breaks', brkIndex, 'end')}
 //                 >
 //                   <Text>{brk.end ? `End: ${brk.end}` : 'Set End'}</Text>
@@ -2356,12 +2356,12 @@
 
 //             <TouchableOpacity
 //               onPress={() => addBreak(index)}
-//               style={tw`bg-green-100 border border-green-400 px-3 py-1 rounded mb-2`}
+//               style={tw`bg-blue-100 border border-blue-400 px-3 py-1 rounded mb-2`}
 //             >
-//               <Text style={tw`text-green-700 text-center`}>+ Add Break</Text>
+//               <Text style={tw`text-blue-700 text-center`}>+ Add Break</Text>
 //             </TouchableOpacity>
 
-//             <View style={tw`border border-green-300 rounded mb-2 bg-green-50`}>
+//             <View style={tw`border border-blue-300 rounded mb-2 bg-blue-50`}>
 //               <Picker
 //                 selectedValue={item.mode}
 //                 onValueChange={(val) => handleChange(index, 'mode', val)}
@@ -2377,7 +2377,7 @@
 
 //         <TouchableOpacity
 //           onPress={handleSubmitAll}
-//           style={tw`bg-green-600 py-3 rounded-lg mt-4`}
+//           style={tw`bg-blue-600 py-3 rounded-lg mt-4`}
 //         >
 //           <Text style={tw`text-white text-center font-semibold text-lg`}>
 //             Save Full Weekly Schedule
@@ -2640,82 +2640,82 @@ const AppointmentManagementScreen = () => {
     return (
       <SafeAreaView style={tw`flex-1 items-center justify-center`}>
         <ActivityIndicator size="large" color="#059669" />
-        <Text style={tw`text-green-700 mt-2`}>Loading Doctor Data...</Text>
+        <Text style={tw`text-blue-700 mt-2`}>Loading Doctor Data...</Text>
       </SafeAreaView>
     );
   }
 
   return (
-    <SafeAreaView style={tw`flex-1 bg-green-50`}>
+    <SafeAreaView style={tw`flex-1 bg-blue-50`}>
       <StatusBar backgroundColor="#059669" barStyle="light-content" />
       <DoctorHeader title="APPOINTMENT MANAGEMENT" showDoctorInfo />
 
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'} style={tw`flex-1`}>
         <ScrollView style={tw`p-4`}>
-          <Text style={tw`text-lg text-green-800 font-bold mb-4`}>Doctor Info</Text>
+          <Text style={tw`text-lg text-blue-800 font-bold mb-4`}>Doctor Info</Text>
 
           <View style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}>
-            <Text style={tw`text-sm text-green-700 mb-2 font-semibold`}>Consultation Fee (₹)</Text>
+            <Text style={tw`text-sm text-blue-700 mb-2 font-semibold`}>Consultation Fee (₹)</Text>
             <TextInput
               value={consultationFee}
               onChangeText={setConsultationFee}
               keyboardType="numeric"
               placeholder="e.g., 540"
-              style={tw`border border-green-200 p-2 rounded mb-3`}
+              style={tw`border border-blue-200 p-2 rounded mb-3`}
             />
 
-            <Text style={tw`text-sm text-green-700 mb-2 font-semibold`}>Experience (years)</Text>
+            <Text style={tw`text-sm text-blue-700 mb-2 font-semibold`}>Experience (years)</Text>
             <TextInput
               value={experienceYears}
               onChangeText={setExperienceYears}
               keyboardType="numeric"
               placeholder="e.g., 2"
-              style={tw`border border-green-200 p-2 rounded mb-3`}
+              style={tw`border border-blue-200 p-2 rounded mb-3`}
             />
 
-            <Text style={tw`text-sm text-green-700 mb-2 font-semibold`}>Appointment Slot (minutes)</Text>
+            <Text style={tw`text-sm text-blue-700 mb-2 font-semibold`}>Appointment Slot (minutes)</Text>
             <TextInput
               value={appointmentSlot}
               onChangeText={setAppointmentSlot}
               keyboardType="numeric"
               placeholder="e.g., 30"
-              style={tw`border border-green-200 p-2 rounded`}
+              style={tw`border border-blue-200 p-2 rounded`}
             />
           </View>
 
-          <Text style={tw`text-lg text-green-800 font-bold mb-4`}>Set Your Weekly Schedule</Text>
+          <Text style={tw`text-lg text-blue-800 font-bold mb-4`}>Set Your Weekly Schedule</Text>
 
           {schedule.map((item, index) => (
             <View key={item.day} style={tw`bg-white p-4 mb-4 rounded-2xl shadow`}>
-              <Text style={tw`text-green-700 font-bold mb-2 capitalize`}>{item.day}</Text>
+              <Text style={tw`text-blue-700 font-bold mb-2 capitalize`}>{item.day}</Text>
 
               <TouchableOpacity
-                style={tw`border border-green-300 p-2 rounded mb-2`}
+                style={tw`border border-blue-300 p-2 rounded mb-2`}
                 onPress={() => openTimePicker(index, 'loginTime')}
               >
                 <Text>{item.loginTime ? `Login Time: ${item.loginTime}` : 'Set Login Time'}</Text>
               </TouchableOpacity>
 
               <TouchableOpacity
-                style={tw`border border-green-300 p-2 rounded mb-2`}
+                style={tw`border border-blue-300 p-2 rounded mb-2`}
                 onPress={() => openTimePicker(index, 'logoutTime')}
               >
                 <Text>{item.logoutTime ? `Logout Time: ${item.logoutTime}` : 'Set Logout Time'}</Text>
               </TouchableOpacity>
 
-              <Text style={tw`text-sm text-green-600 mb-1`}>Breaks:</Text>
+              <Text style={tw`text-sm text-blue-600 mb-1`}>Breaks:</Text>
               {item.breaks.map((brk, brkIndex) => (
                 <View key={brkIndex} style={tw`mb-2`}>
                   <View style={tw`flex-row justify-between items-center mb-1`}>
                     <TouchableOpacity
-                      style={tw`border border-green-300 p-2 rounded flex-1 mr-1`}
+                      style={tw`border border-blue-300 p-2 rounded flex-1 mr-1`}
                       onPress={() => openTimePicker(index, 'breaks', brkIndex, 'start')}
                     >
                       <Text>{brk.start ? `Start: ${brk.start}` : 'Set Start'}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity
-                      style={tw`border border-green-300 p-2 rounded flex-1 ml-1`}
+                      style={tw`border border-blue-300 p-2 rounded flex-1 ml-1`}
                       onPress={() => openTimePicker(index, 'breaks', brkIndex, 'end')}
                     >
                       <Text>{brk.end ? `End: ${brk.end}` : 'Set End'}</Text>
@@ -2735,12 +2735,12 @@ const AppointmentManagementScreen = () => {
 
               <TouchableOpacity
                 onPress={() => addBreak(index)}
-                style={tw`bg-green-100 border border-green-400 px-3 py-1 rounded mb-2`}
+                style={tw`bg-blue-100 border border-blue-400 px-3 py-1 rounded mb-2`}
               >
-                <Text style={tw`text-green-700 text-center`}>+ Add Break</Text>
+                <Text style={tw`text-blue-700 text-center`}>+ Add Break</Text>
               </TouchableOpacity>
 
-              <View style={tw`border border-green-300 rounded mb-2 bg-green-50`}>
+              <View style={tw`border border-blue-300 rounded mb-2 bg-blue-50`}>
                 <Picker
                   selectedValue={item.mode}
                   onValueChange={(val) => handleChange(index, 'mode', val)}
@@ -2754,7 +2754,7 @@ const AppointmentManagementScreen = () => {
             </View>
           ))}
 
-          <TouchableOpacity onPress={handleSubmitAll} style={tw`bg-green-600 py-3 rounded-lg mt-4 mb-8`}>
+          <TouchableOpacity onPress={handleSubmitAll} style={tw`bg-blue-600 py-3 rounded-lg mt-4 mb-8`}>
             <Text style={tw`text-white text-center font-semibold text-lg`}>Save Full Weekly Schedule</Text>
           </TouchableOpacity>
         </ScrollView>

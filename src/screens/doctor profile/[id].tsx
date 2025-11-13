@@ -113,39 +113,39 @@
 
 
 // // // //   return (
-// // // //     <View style={tw`flex-1 bg-green-50`}>
-// // // //       <PageHeader title="Doctor Profile" backgroundColor="#16a34a" textColor="#fff" />
+// // // //     <View style={tw`flex-1 bg-blue-50`}>
+// // // //       <PageHeader title="Doctor Profile" backgroundColor="#164aa3ff" textColor="#fff" />
 // // // //       <ScrollView contentContainerStyle={tw`p-5 pb-32`}>
 // // // //         {/* Doctor Card */}
-// // // //         <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
+// // // //         <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
 // // // //           <View style={tw`flex-row items-center mb-4`}>
 // // // //             <Image
 // // // //               source={{ uri: doctor.profile_picture || 'https://via.placeholder.com/150' }}
-// // // //               style={tw`w-24 h-24 rounded-full border-4 border-green-200 mr-4`}
+// // // //               style={tw`w-24 h-24 rounded-full border-4 border-blue-200 mr-4`}
 // // // //             />
 // // // //             <View style={tw`flex-1`}>
-// // // //               <Text style={tw`text-xl font-bold text-green-900`}>{doctor.user?.username}</Text>
-// // // //               <Text style={tw`text-base text-green-600 font-semibold mt-1`}>{doctor.specialization}</Text>
+// // // //               <Text style={tw`text-xl font-bold text-blue-900`}>{doctor.user?.username}</Text>
+// // // //               <Text style={tw`text-base text-blue-600 font-semibold mt-1`}>{doctor.specialization}</Text>
 // // // //               <View style={tw`flex-row items-center mt-2`}>
 // // // //                 <Briefcase size={16} color="#6b7280" />
-// // // //                 <Text style={tw`text-sm text-green-600 ml-2`}>
+// // // //                 <Text style={tw`text-sm text-blue-600 ml-2`}>
 // // // //                   {doctor.experience_years} years experience
 // // // //                 </Text>
-// // // //                 <Text style={tw`text-green-600 mx-2`}>{doctor.user_id} years experience</Text>
+// // // //                 <Text style={tw`text-blue-600 mx-2`}>{doctor.user_id} years experience</Text>
 // // // //               </View>
 // // // //             </View>
 // // // //           </View>
 
-// // // //           <View style={tw`flex-row justify-between bg-green-50 rounded-xl px-4 py-3`}>
+// // // //           <View style={tw`flex-row justify-between bg-blue-50 rounded-xl px-4 py-3`}>
 // // // //             <View style={tw`flex-row items-center`}>
 // // // //               <IndianRupee size={16} color="#059669" />
-// // // //               <Text style={tw`text-sm font-semibold text-green-700 ml-2`}>
+// // // //               <Text style={tw`text-sm font-semibold text-blue-700 ml-2`}>
 // // // //                 ₹{doctor.consultation_fee}
 // // // //               </Text>
 // // // //             </View>
 // // // //             <View style={tw`flex-row items-center`}>
 // // // //               <ShieldCheck size={16} color="#059669" />
-// // // //               <Text style={tw`text-sm font-semibold text-green-700 ml-2`}>
+// // // //               <Text style={tw`text-sm font-semibold text-blue-700 ml-2`}>
 // // // //                 {doctor.license_number}
 // // // //               </Text>
 // // // //             </View>
@@ -153,9 +153,9 @@
 // // // //         </View>
 
 // // // //  {selectedMode === 'offline' && Array.isArray(doctor?.user?.address) && doctor.user.address.length > 0 && (
-// // // //   <View style={tw`mt-4 bg-green-50 p-4 rounded-xl`}>
-// // // //     <Text style={tw`text-green-800 font-semibold mb-1`}>Clinic Address:</Text>
-// // // //     <Text style={tw`text-green-700`}>
+// // // //   <View style={tw`mt-4 bg-blue-50 p-4 rounded-xl`}>
+// // // //     <Text style={tw`text-blue-800 font-semibold mb-1`}>Clinic Address:</Text>
+// // // //     <Text style={tw`text-blue-700`}>
 // // // //       {[
 // // // //         doctor.user.address[0]?.house_no,
 // // // //         doctor.user.address[0]?.street,
@@ -174,18 +174,18 @@
 
 // // // //         {/* Mode Selector */}
 // // // //         {!initialMode && (
-// // // //           <View style={tw`flex-row bg-green-100 rounded-xl p-2 mb-4`}>
+// // // //           <View style={tw`flex-row bg-blue-100 rounded-xl p-2 mb-4`}>
 // // // //             {['online', 'offline'].map((mode) => (
 // // // //               <TouchableOpacity
 // // // //                 key={mode}
-// // // //                 style={tw`flex-1 py-2 rounded-lg ${selectedMode === mode ? 'bg-green-600' : 'bg-transparent'}`}
+// // // //                 style={tw`flex-1 py-2 rounded-lg ${selectedMode === mode ? 'bg-blue-600' : 'bg-transparent'}`}
 // // // //                 onPress={() => {
 // // // //                   setSelectedMode(mode);
 // // // //                   setSelectedConsultType(null);
 // // // //                   setSelectedSlot('');
 // // // //                 }}
 // // // //               >
-// // // //                 <Text style={tw`text-center font-semibold ${selectedMode === mode ? 'text-white' : 'text-green-800'}`}>
+// // // //                 <Text style={tw`text-center font-semibold ${selectedMode === mode ? 'text-white' : 'text-blue-800'}`}>
 // // // //                   {mode === 'online' ? 'Online' : 'Offline'}
 // // // //                 </Text>
 // // // //               </TouchableOpacity>
@@ -194,14 +194,14 @@
 // // // //         )}
 
 // // // //         {/* Tab Selector */}
-// // // //         <View style={tw`flex-row bg-green-50 rounded-2xl shadow-md p-2 mb-6`}>
+// // // //         <View style={tw`flex-row bg-blue-50 rounded-2xl shadow-md p-2 mb-6`}>
 // // // //           {['Availability', 'Reviews', 'About'].map((tab) => (
 // // // //             <TouchableOpacity
 // // // //               key={tab}
-// // // //               style={tw`flex-1 py-3 rounded-xl ${selectedTab === tab ? 'bg-green-600' : 'bg-transparent'}`}
+// // // //               style={tw`flex-1 py-3 rounded-xl ${selectedTab === tab ? 'bg-blue-600' : 'bg-transparent'}`}
 // // // //               onPress={() => setSelectedTab(tab as typeof selectedTab)}
 // // // //             >
-// // // //               <Text style={tw`text-center text-base font-semibold ${selectedTab === tab ? 'text-white' : 'text-green-700'}`}>
+// // // //               <Text style={tw`text-center text-base font-semibold ${selectedTab === tab ? 'text-white' : 'text-blue-700'}`}>
 // // // //                 {tab}
 // // // //               </Text>
 // // // //             </TouchableOpacity>
@@ -210,20 +210,20 @@
 
 // // // //         {/* Availability Tab */}
 // // // //         {selectedTab === 'Availability' && (
-// // // //           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-// // // //             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>Available Dates</Text>
+// // // //           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+// // // //             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>Available Dates</Text>
 // // // //             <ScrollView horizontal showsHorizontalScrollIndicator={false} style={tw`mb-4`}>
 // // // //               {Object.keys(slotsByDate).map((date) => (
 // // // //                 <TouchableOpacity
 // // // //                   key={date}
-// // // //                   style={tw`px-5 py-3 mr-3 rounded-xl ${selectedDate === date ? 'bg-green-600' : 'bg-green-100'}`}
+// // // //                   style={tw`px-5 py-3 mr-3 rounded-xl ${selectedDate === date ? 'bg-blue-600' : 'bg-blue-100'}`}
 // // // //                   onPress={() => {
 // // // //                     setSelectedDate(date);
 // // // //                     setSelectedSlot('');
 // // // //                     setSelectedConsultType(null);
 // // // //                   }}
 // // // //                 >
-// // // //                   <Text style={tw`text-base font-semibold ${selectedDate === date ? 'text-white' : 'text-green-800'}`}>
+// // // //                   <Text style={tw`text-base font-semibold ${selectedDate === date ? 'text-white' : 'text-blue-800'}`}>
 // // // //                     {new Date(date).toLocaleDateString('en-US', {
 // // // //                       weekday: 'short',
 // // // //                       month: 'short',
@@ -234,9 +234,9 @@
 // // // //               ))}
 // // // //             </ScrollView>
 
-// // // //             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>Available Slots</Text>
+// // // //             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>Available Slots</Text>
 // // // //             {loadingSlots ? (
-// // // //               <ActivityIndicator size="large" color="#16a34a" />
+// // // //               <ActivityIndicator size="large" color="#164aa3ff" />
 // // // //             ) : slotsByDate[selectedDate]?.length > 0 ? (
 // // // //               <FlatList
 // // // //                 data={slotsByDate[selectedDate]}
@@ -253,10 +253,10 @@
 // // // //                         setSelectedConsultType(null);
 // // // //                       }}
 // // // //                       style={tw`px-3 py-2 rounded-xl flex-1 mx-1 border ${
-// // // //                         isSelected ? 'bg-green-600 border-green-700' : 'bg-green-100 border-green-300'
+// // // //                         isSelected ? 'bg-blue-600 border-blue-700' : 'bg-blue-100 border-blue-300'
 // // // //                       }`}
 // // // //                     >
-// // // //                       <Text style={tw`${isSelected ? 'text-white' : 'text-green-800'} font-semibold text-xs text-center`}>
+// // // //                       <Text style={tw`${isSelected ? 'text-white' : 'text-blue-800'} font-semibold text-xs text-center`}>
 // // // //                         {item}
 // // // //                       </Text>
 // // // //                     </TouchableOpacity>
@@ -264,7 +264,7 @@
 // // // //                 }}
 // // // //               />
 // // // //             ) : (
-// // // //               <Text style={tw`text-green-400 text-base`}>No slots available for this date.</Text>
+// // // //               <Text style={tw`text-blue-400 text-base`}>No slots available for this date.</Text>
 // // // //             )}
 
 // // // //             {/* Online consult type selection */}
@@ -275,11 +275,11 @@
 // // // //                     key={type}
 // // // //                     onPress={() => setSelectedConsultType(type as any)}
 // // // //                     style={tw`px-4 py-2 mx-2 rounded-xl border ${
-// // // //                       selectedConsultType === type ? 'bg-green-600 border-green-700' : 'bg-green-100 border-green-300'
+// // // //                       selectedConsultType === type ? 'bg-blue-600 border-blue-700' : 'bg-blue-100 border-blue-300'
 // // // //                     }`}
 // // // //                   >
 // // // //                     <Text
-// // // //                       style={tw`${selectedConsultType === type ? 'text-white' : 'text-green-800'} font-semibold text-sm`}
+// // // //                       style={tw`${selectedConsultType === type ? 'text-white' : 'text-blue-800'} font-semibold text-sm`}
 // // // //                     >
 // // // //                       {type === 'online_video' ? 'Video Call' : 'Audio Call'}
 // // // //                     </Text>
@@ -290,7 +290,7 @@
 
 // // // //             {selectedSlot && (selectedMode === 'offline' || selectedConsultType) && (
 // // // //               <TouchableOpacity
-// // // //                 style={tw`bg-green-600 py-4 px-8 rounded-xl items-center shadow-md mt-6`}
+// // // //                 style={tw`bg-blue-600 py-4 px-8 rounded-xl items-center shadow-md mt-6`}
 // // // //                 onPress={handleBookAppointment}
 // // // //               >
 // // // //                 <Text style={tw`text-white text-lg font-bold`}>Book Appointment</Text>
@@ -301,13 +301,13 @@
 
 // // // //         {/* Reviews */}
 // // // //         {selectedTab === 'Reviews' && (
-// // // //           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-// // // //             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>Patient Reviews</Text>
+// // // //           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+// // // //             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>Patient Reviews</Text>
 // // // //             {reviews.map((review, index) => (
-// // // //               <View key={index} style={tw`border-b border-green-100 py-4`}>
-// // // //                 <Text style={tw`text-base font-bold text-green-900`}>{review.name}</Text>
+// // // //               <View key={index} style={tw`border-b border-blue-100 py-4`}>
+// // // //                 <Text style={tw`text-base font-bold text-blue-900`}>{review.name}</Text>
 // // // //                 <Text style={tw`text-yellow-500 text-lg my-1`}>{'★'.repeat(review.rating)}</Text>
-// // // //                 <Text style={tw`text-green-600`}>{review.comment}</Text>
+// // // //                 <Text style={tw`text-blue-600`}>{review.comment}</Text>
 // // // //               </View>
 // // // //             ))}
 // // // //           </View>
@@ -315,9 +315,9 @@
 
 // // // //         {/* About */}
 // // // //         {selectedTab === 'About' && (
-// // // //           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-// // // //             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>About {doctor.name}</Text>
-// // // //             <Text style={tw`text-green-600 text-base`}>
+// // // //           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+// // // //             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>About {doctor.name}</Text>
+// // // //             <Text style={tw`text-blue-600 text-base`}>
 // // // //               Dr. {doctor.name} is a skilled {doctor.specialization} with over {doctor.experience_years} years of experience.
 // // // //               He/she is known for providing compassionate and personalized care.
 // // // //             </Text>
@@ -447,41 +447,41 @@
 // // //   };
 
 // // //   return (
-// // //     <View style={tw`flex-1 bg-green-50`}>
-// // //       <PageHeader title="Doctor Profile" backgroundColor="#16a34a" textColor="#fff" />
+// // //     <View style={tw`flex-1 bg-blue-50`}>
+// // //       <PageHeader title="Doctor Profile" backgroundColor="#164aa3ff" textColor="#fff" />
 // // //       <ScrollView contentContainerStyle={tw`p-5 pb-32`}>
 // // //         {/* Doctor Card */}
-// // //         <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
+// // //         <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
 // // //           <View style={tw`flex-row items-center mb-4`}>
 // // //             <Image
 // // //               source={{ uri: doctor.profile_picture || 'https://via.placeholder.com/150' }}
-// // //               style={tw`w-24 h-24 rounded-full border-4 border-green-200 mr-4`}
+// // //               style={tw`w-24 h-24 rounded-full border-4 border-blue-200 mr-4`}
 // // //             />
 // // //             <View style={tw`flex-1`}>
-// // //               <Text style={tw`text-xl font-bold text-green-900`}>{doctor.user?.username}</Text>
-// // //               <Text style={tw`text-base text-green-600 font-semibold mt-1`}>{doctor.specialization}</Text>
+// // //               <Text style={tw`text-xl font-bold text-blue-900`}>{doctor.user?.username}</Text>
+// // //               <Text style={tw`text-base text-blue-600 font-semibold mt-1`}>{doctor.specialization}</Text>
 // // //               <View style={tw`flex-row items-center mt-2`}>
 // // //                 <Briefcase size={16} color="#6b7280" />
-// // //                 <Text style={tw`text-sm text-green-600 ml-2`}>
+// // //                 <Text style={tw`text-sm text-blue-600 ml-2`}>
 // // //                   {doctor.experience_years} years experience
 // // //                 </Text>
-// // //                 <Text style={tw`text-sm text-green-600 ml-2`}>
+// // //                 <Text style={tw`text-sm text-blue-600 ml-2`}>
 // // //                   {consultationMode} years experience
 // // //                 </Text>
 // // //               </View>
 // // //             </View>
 // // //           </View>
 
-// // //           <View style={tw`flex-row justify-between bg-green-50 rounded-xl px-4 py-3`}>
+// // //           <View style={tw`flex-row justify-between bg-blue-50 rounded-xl px-4 py-3`}>
 // // //             <View style={tw`flex-row items-center`}>
 // // //               <IndianRupee size={16} color="#059669" />
-// // //               <Text style={tw`text-sm font-semibold text-green-700 ml-2`}>
+// // //               <Text style={tw`text-sm font-semibold text-blue-700 ml-2`}>
 // // //                 ₹{doctor.consultation_fee}
 // // //               </Text>
 // // //             </View>
 // // //             <View style={tw`flex-row items-center`}>
 // // //               <ShieldCheck size={16} color="#059669" />
-// // //               <Text style={tw`text-sm font-semibold text-green-700 ml-2`}>
+// // //               <Text style={tw`text-sm font-semibold text-blue-700 ml-2`}>
 // // //                 {doctor.license_number}
 // // //               </Text>
 // // //             </View>
@@ -490,18 +490,18 @@
 
 // // //         {/* Mode Selector */}
 // // //         {!initialMode && (
-// // //           <View style={tw`flex-row bg-green-100 rounded-xl p-2 mb-4`}>
+// // //           <View style={tw`flex-row bg-blue-100 rounded-xl p-2 mb-4`}>
 // // //             {['online', 'offline'].map((mode) => (
 // // //               <TouchableOpacity
 // // //                 key={mode}
-// // //                 style={tw`flex-1 py-2 rounded-lg ${selectedMode === mode ? 'bg-green-600' : 'bg-transparent'}`}
+// // //                 style={tw`flex-1 py-2 rounded-lg ${selectedMode === mode ? 'bg-blue-600' : 'bg-transparent'}`}
 // // //                 onPress={() => {
 // // //                   setSelectedMode(mode);
 // // //                   setSelectedConsultType(null);
 // // //                   setSelectedSlot('');
 // // //                 }}
 // // //               >
-// // //                 <Text style={tw`text-center font-semibold ${selectedMode === mode ? 'text-white' : 'text-green-800'}`}>
+// // //                 <Text style={tw`text-center font-semibold ${selectedMode === mode ? 'text-white' : 'text-blue-800'}`}>
 // // //                   {mode === 'online' ? 'Online' : 'Offline'}
 // // //                 </Text>
 // // //               </TouchableOpacity>
@@ -510,14 +510,14 @@
 // // //         )}
 
 // // //         {/* Tab Selector */}
-// // //         <View style={tw`flex-row bg-green-50 rounded-2xl shadow-md p-2 mb-6`}>
+// // //         <View style={tw`flex-row bg-blue-50 rounded-2xl shadow-md p-2 mb-6`}>
 // // //           {['Availability', 'Reviews', 'About'].map((tab) => (
 // // //             <TouchableOpacity
 // // //               key={tab}
-// // //               style={tw`flex-1 py-3 rounded-xl ${selectedTab === tab ? 'bg-green-600' : 'bg-transparent'}`}
+// // //               style={tw`flex-1 py-3 rounded-xl ${selectedTab === tab ? 'bg-blue-600' : 'bg-transparent'}`}
 // // //               onPress={() => setSelectedTab(tab as typeof selectedTab)}
 // // //             >
-// // //               <Text style={tw`text-center text-base font-semibold ${selectedTab === tab ? 'text-white' : 'text-green-700'}`}>
+// // //               <Text style={tw`text-center text-base font-semibold ${selectedTab === tab ? 'text-white' : 'text-blue-700'}`}>
 // // //                 {tab}
 // // //               </Text>
 // // //             </TouchableOpacity>
@@ -526,39 +526,39 @@
 
 // // //         {/* Availability Tab */}
 // // //         {selectedTab === 'Availability' && (
-// // //           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-// // //             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>Available Dates</Text>
+// // //           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+// // //             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>Available Dates</Text>
 // // //             <ScrollView horizontal showsHorizontalScrollIndicator={false} style={tw`mb-4`}>
 // // //               {Object.keys(slotsByDate).map((date) => (
 // // //                 <TouchableOpacity
 // // //                   key={date}
-// // //                   style={tw`px-5 py-3 mr-3 rounded-xl ${selectedDate === date ? 'bg-green-600' : 'bg-green-100'}`}
+// // //                   style={tw`px-5 py-3 mr-3 rounded-xl ${selectedDate === date ? 'bg-blue-600' : 'bg-blue-100'}`}
 // // //                   onPress={() => {
 // // //                     setSelectedDate(date);
 // // //                     setSelectedSlot('');
 // // //                     setSelectedConsultType(null);
 // // //                   }}
 // // //                 >
-// // //                   <Text style={tw`text-base font-semibold ${selectedDate === date ? 'text-white' : 'text-green-800'}`}>
+// // //                   <Text style={tw`text-base font-semibold ${selectedDate === date ? 'text-white' : 'text-blue-800'}`}>
 // // //                     {new Date(date).toLocaleDateString('en-US', {
 // // //                       weekday: 'short',
 // // //                       month: 'short',
 // // //                       day: 'numeric',
 // // //                     })}
 // // //                   </Text>
-// // //                   <Text style={tw`text-xs ${selectedDate === date ? 'text-green-100' : 'text-green-600'}`}>
+// // //                   <Text style={tw`text-xs ${selectedDate === date ? 'text-blue-100' : 'text-blue-600'}`}>
 // // //                     {slotsByDate[date].mode?.toUpperCase() || 'N/A'}
 // // //                   </Text>
 // // //                 </TouchableOpacity>
 // // //               ))}
 // // //             </ScrollView>
 
-// // //             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>
+// // //             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>
 // // //               Available Slots ({slotsByDate[selectedDate]?.mode || ''})
 // // //             </Text>
 
 // // //             {loadingSlots ? (
-// // //               <ActivityIndicator size="large" color="#16a34a" />
+// // //               <ActivityIndicator size="large" color="#164aa3ff" />
 // // //             ) : slotsByDate[selectedDate]?.slots?.length > 0 ? (
 // // //               <FlatList
 // // //                 data={slotsByDate[selectedDate].slots}
@@ -575,10 +575,10 @@
 // // //                         setSelectedConsultType(null);
 // // //                       }}
 // // //                       style={tw`px-3 py-2 rounded-xl flex-1 mx-1 border ${
-// // //                         isSelected ? 'bg-green-600 border-green-700' : 'bg-green-100 border-green-300'
+// // //                         isSelected ? 'bg-blue-600 border-blue-700' : 'bg-blue-100 border-blue-300'
 // // //                       }`}
 // // //                     >
-// // //                       <Text style={tw`${isSelected ? 'text-white' : 'text-green-800'} font-semibold text-xs text-center`}>
+// // //                       <Text style={tw`${isSelected ? 'text-white' : 'text-blue-800'} font-semibold text-xs text-center`}>
 // // //                         {item}
 // // //                       </Text>
 // // //                     </TouchableOpacity>
@@ -586,12 +586,12 @@
 // // //                 }}
 // // //               />
 // // //             ) : (
-// // //               <Text style={tw`text-green-400 text-base`}>No slots available for this date.</Text>
+// // //               <Text style={tw`text-blue-400 text-base`}>No slots available for this date.</Text>
 // // //             )}
 
 // // //             {selectedSlot && (selectedMode === 'offline' || selectedConsultType) && (
 // // //               <TouchableOpacity
-// // //                 style={tw`bg-green-600 py-4 px-8 rounded-xl items-center shadow-md mt-6`}
+// // //                 style={tw`bg-blue-600 py-4 px-8 rounded-xl items-center shadow-md mt-6`}
 // // //                 onPress={handleBookAppointment}
 // // //               >
 // // //                 <Text style={tw`text-white text-lg font-bold`}>Book Appointment</Text>
@@ -602,13 +602,13 @@
 
 // // //         {/* Reviews */}
 // // //         {selectedTab === 'Reviews' && (
-// // //           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-// // //             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>Patient Reviews</Text>
+// // //           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+// // //             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>Patient Reviews</Text>
 // // //             {reviews.map((review, index) => (
-// // //               <View key={index} style={tw`border-b border-green-100 py-4`}>
-// // //                 <Text style={tw`text-base font-bold text-green-900`}>{review.name}</Text>
+// // //               <View key={index} style={tw`border-b border-blue-100 py-4`}>
+// // //                 <Text style={tw`text-base font-bold text-blue-900`}>{review.name}</Text>
 // // //                 <Text style={tw`text-yellow-500 text-lg my-1`}>{'★'.repeat(review.rating)}</Text>
-// // //                 <Text style={tw`text-green-600`}>{review.comment}</Text>
+// // //                 <Text style={tw`text-blue-600`}>{review.comment}</Text>
 // // //               </View>
 // // //             ))}
 // // //           </View>
@@ -616,9 +616,9 @@
 
 // // //         {/* About */}
 // // //         {selectedTab === 'About' && (
-// // //           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-// // //             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>About {doctor.name}</Text>
-// // //             <Text style={tw`text-green-600 text-base`}>
+// // //           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+// // //             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>About {doctor.name}</Text>
+// // //             <Text style={tw`text-blue-600 text-base`}>
 // // //               Dr. {doctor.name} is a skilled {doctor.specialization} with over {doctor.experience_years} years of experience.
 // // //               He/she is known for providing compassionate and personalized care.
 // // //             </Text>
@@ -761,38 +761,38 @@
 // //   };
 
 // //   return (
-// //     <View style={tw`flex-1 bg-green-50`}>
-// //       <PageHeader title="Doctor Profile" backgroundColor="#16a34a" textColor="#fff" />
+// //     <View style={tw`flex-1 bg-blue-50`}>
+// //       <PageHeader title="Doctor Profile" backgroundColor="#164aa3ff" textColor="#fff" />
 // //       <ScrollView contentContainerStyle={tw`p-5 pb-32`}>
 // //         {/* Doctor Card */}
-// //         <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
+// //         <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
 // //           <View style={tw`flex-row items-center mb-4`}>
 // //             <Image
 // //               source={{ uri: doctor.profile_picture || 'https://via.placeholder.com/150' }}
-// //               style={tw`w-24 h-24 rounded-full border-4 border-green-200 mr-4`}
+// //               style={tw`w-24 h-24 rounded-full border-4 border-blue-200 mr-4`}
 // //             />
 // //             <View style={tw`flex-1`}>
-// //               <Text style={tw`text-xl font-bold text-green-900`}>{doctor.user?.username}</Text>
-// //               <Text style={tw`text-base text-green-600 font-semibold mt-1`}>{doctor.specialization}</Text>
+// //               <Text style={tw`text-xl font-bold text-blue-900`}>{doctor.user?.username}</Text>
+// //               <Text style={tw`text-base text-blue-600 font-semibold mt-1`}>{doctor.specialization}</Text>
 // //               <View style={tw`flex-row items-center mt-2`}>
 // //                 <Briefcase size={16} color="#6b7280" />
-// //                 <Text style={tw`text-sm text-green-600 ml-2`}>
+// //                 <Text style={tw`text-sm text-blue-600 ml-2`}>
 // //                   {doctor.experience_years} years experience
 // //                 </Text>
 // //               </View>
 // //             </View>
 // //           </View>
 
-// //           <View style={tw`flex-row justify-between bg-green-50 rounded-xl px-4 py-3`}>
+// //           <View style={tw`flex-row justify-between bg-blue-50 rounded-xl px-4 py-3`}>
 // //             <View style={tw`flex-row items-center`}>
 // //               <IndianRupee size={16} color="#059669" />
-// //               <Text style={tw`text-sm font-semibold text-green-700 ml-2`}>
+// //               <Text style={tw`text-sm font-semibold text-blue-700 ml-2`}>
 // //                 ₹{doctor.consultation_fee}
 // //               </Text>
 // //             </View>
 // //             <View style={tw`flex-row items-center`}>
 // //               <ShieldCheck size={16} color="#059669" />
-// //               <Text style={tw`text-sm font-semibold text-green-700 ml-2`}>
+// //               <Text style={tw`text-sm font-semibold text-blue-700 ml-2`}>
 // //                 {doctor.license_number}
 // //               </Text>
 // //             </View>
@@ -800,18 +800,18 @@
 // //         </View>
 
 // //         {/* Mode Selector */}
-// //         <View style={tw`flex-row bg-green-100 rounded-xl p-2 mb-4`}>
+// //         <View style={tw`flex-row bg-blue-100 rounded-xl p-2 mb-4`}>
 // //           {['online', 'offline', 'hybrid'].map((mode) => (
 // //             <TouchableOpacity
 // //               key={mode}
-// //               style={tw`flex-1 py-2 rounded-lg ${selectedMode === mode ? 'bg-green-600' : 'bg-transparent'}`}
+// //               style={tw`flex-1 py-2 rounded-lg ${selectedMode === mode ? 'bg-blue-600' : 'bg-transparent'}`}
 // //               onPress={() => {
 // //                 setSelectedMode(mode);
 // //                 setSelectedConsultType(null);
 // //                 setSelectedSlot('');
 // //               }}
 // //             >
-// //               <Text style={tw`text-center font-semibold ${selectedMode === mode ? 'text-white' : 'text-green-800'}`}>
+// //               <Text style={tw`text-center font-semibold ${selectedMode === mode ? 'text-white' : 'text-blue-800'}`}>
 // //                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
 // //               </Text>
 // //             </TouchableOpacity>
@@ -819,14 +819,14 @@
 // //         </View>
 
 // //         {/* Tab Selector */}
-// //         <View style={tw`flex-row bg-green-50 rounded-2xl shadow-md p-2 mb-6`}>
+// //         <View style={tw`flex-row bg-blue-50 rounded-2xl shadow-md p-2 mb-6`}>
 // //           {['Availability', 'Reviews', 'About'].map((tab) => (
 // //             <TouchableOpacity
 // //               key={tab}
-// //               style={tw`flex-1 py-3 rounded-xl ${selectedTab === tab ? 'bg-green-600' : 'bg-transparent'}`}
+// //               style={tw`flex-1 py-3 rounded-xl ${selectedTab === tab ? 'bg-blue-600' : 'bg-transparent'}`}
 // //               onPress={() => setSelectedTab(tab)}
 // //             >
-// //               <Text style={tw`text-center text-base font-semibold ${selectedTab === tab ? 'text-white' : 'text-green-700'}`}>
+// //               <Text style={tw`text-center text-base font-semibold ${selectedTab === tab ? 'text-white' : 'text-blue-700'}`}>
 // //                 {tab}
 // //               </Text>
 // //             </TouchableOpacity>
@@ -835,41 +835,41 @@
 
 // //         {/* Availability Tab */}
 // //         {selectedTab === 'Availability' && (
-// //           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-// //             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>
+// //           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+// //             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>
 // //               Available Dates ({selectedMode})
 // //             </Text>
 
 // //             {loadingSlots ? (
-// //               <ActivityIndicator size="large" color="#16a34a" />
+// //               <ActivityIndicator size="large" color="#164aa3ff" />
 // //             ) : Object.keys(slotsByDate).length > 0 ? (
 // //               <>
 // //                 <ScrollView horizontal showsHorizontalScrollIndicator={false} style={tw`mb-4`}>
 // //                   {Object.keys(slotsByDate).map((date) => (
 // //                     <TouchableOpacity
 // //                       key={date}
-// //                       style={tw`px-5 py-3 mr-3 rounded-xl ${selectedDate === date ? 'bg-green-600' : 'bg-green-100'}`}
+// //                       style={tw`px-5 py-3 mr-3 rounded-xl ${selectedDate === date ? 'bg-blue-600' : 'bg-blue-100'}`}
 // //                       onPress={() => {
 // //                         setSelectedDate(date);
 // //                         setSelectedSlot('');
 // //                         setSelectedConsultType(null);
 // //                       }}
 // //                     >
-// //                       <Text style={tw`text-base font-semibold ${selectedDate === date ? 'text-white' : 'text-green-800'}`}>
+// //                       <Text style={tw`text-base font-semibold ${selectedDate === date ? 'text-white' : 'text-blue-800'}`}>
 // //                         {new Date(date).toLocaleDateString('en-US', {
 // //                           weekday: 'short',
 // //                           month: 'short',
 // //                           day: 'numeric',
 // //                         })}
 // //                       </Text>
-// //                       <Text style={tw`text-xs ${selectedDate === date ? 'text-green-100' : 'text-green-600'}`}>
+// //                       <Text style={tw`text-xs ${selectedDate === date ? 'text-blue-100' : 'text-blue-600'}`}>
 // //                         {slotsByDate[date].mode?.toUpperCase() || 'N/A'}
 // //                       </Text>
 // //                     </TouchableOpacity>
 // //                   ))}
 // //                 </ScrollView>
 
-// //                 <Text style={tw`text-lg font-bold text-green-700 mb-3`}>
+// //                 <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>
 // //                   Available Slots ({slotsByDate[selectedDate]?.mode || ''})
 // //                 </Text>
 
@@ -886,10 +886,10 @@
 // //                         <TouchableOpacity
 // //                           onPress={() => setSelectedSlot(item)}
 // //                           style={tw`px-3 py-2 rounded-xl flex-1 mx-1 border ${
-// //                             isSelected ? 'bg-green-600 border-green-700' : 'bg-green-100 border-green-300'
+// //                             isSelected ? 'bg-blue-600 border-blue-700' : 'bg-blue-100 border-blue-300'
 // //                           }`}
 // //                         >
-// //                           <Text style={tw`${isSelected ? 'text-white' : 'text-green-800'} font-semibold text-xs text-center`}>
+// //                           <Text style={tw`${isSelected ? 'text-white' : 'text-blue-800'} font-semibold text-xs text-center`}>
 // //                             {item}
 // //                           </Text>
 // //                         </TouchableOpacity>
@@ -897,16 +897,16 @@
 // //                     }}
 // //                   />
 // //                 ) : (
-// //                   <Text style={tw`text-green-400 text-base`}>No slots available for this mode.</Text>
+// //                   <Text style={tw`text-blue-400 text-base`}>No slots available for this mode.</Text>
 // //                 )}
 // //               </>
 // //             ) : (
-// //               <Text style={tw`text-green-400 text-base`}>No slots available.</Text>
+// //               <Text style={tw`text-blue-400 text-base`}>No slots available.</Text>
 // //             )}
 
 // //             {selectedSlot && (
 // //               <TouchableOpacity
-// //                 style={tw`bg-green-600 py-4 px-8 rounded-xl items-center shadow-md mt-6`}
+// //                 style={tw`bg-blue-600 py-4 px-8 rounded-xl items-center shadow-md mt-6`}
 // //                 onPress={handleBookAppointment}
 // //               >
 // //                 <Text style={tw`text-white text-lg font-bold`}>Book Appointment</Text>
@@ -917,13 +917,13 @@
 
 // //         {/* Reviews */}
 // //         {selectedTab === 'Reviews' && (
-// //           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-// //             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>Patient Reviews</Text>
+// //           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+// //             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>Patient Reviews</Text>
 // //             {reviews.map((review, index) => (
-// //               <View key={index} style={tw`border-b border-green-100 py-4`}>
-// //                 <Text style={tw`text-base font-bold text-green-900`}>{review.name}</Text>
+// //               <View key={index} style={tw`border-b border-blue-100 py-4`}>
+// //                 <Text style={tw`text-base font-bold text-blue-900`}>{review.name}</Text>
 // //                 <Text style={tw`text-yellow-500 text-lg my-1`}>{'★'.repeat(review.rating)}</Text>
-// //                 <Text style={tw`text-green-600`}>{review.comment}</Text>
+// //                 <Text style={tw`text-blue-600`}>{review.comment}</Text>
 // //               </View>
 // //             ))}
 // //           </View>
@@ -931,9 +931,9 @@
 
 // //         {/* About */}
 // //         {selectedTab === 'About' && (
-// //           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-// //             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>About {doctor.name}</Text>
-// //             <Text style={tw`text-green-600 text-base`}>
+// //           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+// //             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>About {doctor.name}</Text>
+// //             <Text style={tw`text-blue-600 text-base`}>
 // //               Dr. {doctor.name} is a skilled {doctor.specialization} with over {doctor.experience_years} years of experience.
 // //               Known for compassionate and personalized care.
 // //             </Text>
@@ -1053,39 +1053,39 @@
 
 
 //   return (
-//     <View style={tw`flex-1 bg-green-50`}>
-//       <PageHeader title="Doctor Profile" backgroundColor="#16a34a" textColor="#fff" />
+//     <View style={tw`flex-1 bg-blue-50`}>
+//       <PageHeader title="Doctor Profile" backgroundColor="#164aa3ff" textColor="#fff" />
 //       <ScrollView contentContainerStyle={tw`p-5 pb-32`}>
 //         {/* Doctor Info */}
-//         <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
+//         <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
 //           <View style={tw`flex-row items-center mb-4`}>
 //             <Image
 //               source={{ uri: doctor.profile_picture || 'https://via.placeholder.com/150' }}
-//               style={tw`w-24 h-24 rounded-full border-4 border-green-200 mr-4`}
+//               style={tw`w-24 h-24 rounded-full border-4 border-blue-200 mr-4`}
 //             />
 //             <View style={tw`flex-1`}>
-//               <Text style={tw`text-xl font-bold text-green-900`}>{doctor.user?.username}</Text>
-//               <Text style={tw`text-base text-green-600 font-semibold mt-1`}>{doctor.specialization}</Text>
-//               <Text style={tw`text-base text-green-600 font-semibold mt-1`}>{consultationMode}</Text>
+//               <Text style={tw`text-xl font-bold text-blue-900`}>{doctor.user?.username}</Text>
+//               <Text style={tw`text-base text-blue-600 font-semibold mt-1`}>{doctor.specialization}</Text>
+//               <Text style={tw`text-base text-blue-600 font-semibold mt-1`}>{consultationMode}</Text>
 //               <View style={tw`flex-row items-center mt-2`}>
 //                 <Briefcase size={16} color="#6b7280" />
-//                 <Text style={tw`text-sm text-green-600 ml-2`}>
+//                 <Text style={tw`text-sm text-blue-600 ml-2`}>
 //                   {doctor.experience_years} years experience
 //                 </Text>
 //               </View>
 //             </View>
 //           </View>
 
-//           <View style={tw`flex-row justify-between bg-green-50 rounded-xl px-4 py-3`}>
+//           <View style={tw`flex-row justify-between bg-blue-50 rounded-xl px-4 py-3`}>
 //             <View style={tw`flex-row items-center`}>
 //               <IndianRupee size={16} color="#059669" />
-//               <Text style={tw`text-sm font-semibold text-green-700 ml-2`}>
+//               <Text style={tw`text-sm font-semibold text-blue-700 ml-2`}>
 //                 ₹{doctor.consultation_fee}
 //               </Text>
 //             </View>
 //             <View style={tw`flex-row items-center`}>
 //               <ShieldCheck size={16} color="#059669" />
-//               <Text style={tw`text-sm font-semibold text-green-700 ml-2`}>
+//               <Text style={tw`text-sm font-semibold text-blue-700 ml-2`}>
 //                 {doctor.license_number}
 //               </Text>
 //             </View>
@@ -1093,14 +1093,14 @@
 //         </View>
 
 //         {/* Tabs */}
-//         <View style={tw`flex-row bg-green-50 rounded-2xl shadow-md p-2 mb-6`}>
+//         <View style={tw`flex-row bg-blue-50 rounded-2xl shadow-md p-2 mb-6`}>
 //           {['Availability', 'Reviews', 'About'].map((tab) => (
 //             <TouchableOpacity
 //               key={tab}
-//               style={tw`flex-1 py-3 rounded-xl ${selectedTab === tab ? 'bg-green-600' : 'bg-transparent'}`}
+//               style={tw`flex-1 py-3 rounded-xl ${selectedTab === tab ? 'bg-blue-600' : 'bg-transparent'}`}
 //               onPress={() => setSelectedTab(tab as typeof selectedTab)}
 //             >
-//               <Text style={tw`text-center text-base font-semibold ${selectedTab === tab ? 'text-white' : 'text-green-700'}`}>
+//               <Text style={tw`text-center text-base font-semibold ${selectedTab === tab ? 'text-white' : 'text-blue-700'}`}>
 //                 {tab}
 //               </Text>
 //             </TouchableOpacity>
@@ -1109,13 +1109,13 @@
 
 //         {/* Availability */}
 //         {selectedTab === 'Availability' && (
-//           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-//             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>
+//           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+//             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>
 //               Available Slots ({consultationMode.toUpperCase()})
 //             </Text>
 
 //             {loadingSlots ? (
-//               <ActivityIndicator size="large" color="#16a34a" />
+//               <ActivityIndicator size="large" color="#164aa3ff" />
 //             ) : Object.keys(slotsByDate).length > 0 ? (
 //               <>
 //                 {/* Date Selector */}
@@ -1123,10 +1123,10 @@
 //                   {Object.keys(slotsByDate).map((date) => (
 //                     <TouchableOpacity
 //                       key={date}
-//                       style={tw`px-5 py-3 mr-3 rounded-xl ${selectedDate === date ? 'bg-green-600' : 'bg-green-100'}`}
+//                       style={tw`px-5 py-3 mr-3 rounded-xl ${selectedDate === date ? 'bg-blue-600' : 'bg-blue-100'}`}
 //                       onPress={() => setSelectedDate(date)}
 //                     >
-//                       <Text style={tw`text-base font-semibold ${selectedDate === date ? 'text-white' : 'text-green-800'}`}>
+//                       <Text style={tw`text-base font-semibold ${selectedDate === date ? 'text-white' : 'text-blue-800'}`}>
 //                         {new Date(date).toLocaleDateString('en-US', {
 //                           weekday: 'short',
 //                           month: 'short',
@@ -1150,10 +1150,10 @@
 //                       <TouchableOpacity
 //                         onPress={() => setSelectedSlot(item)}
 //                         style={tw`px-3 py-2 rounded-xl flex-1 mx-1 border ${
-//                           isSelected ? 'bg-green-600 border-green-700' : 'bg-green-100 border-green-300'
+//                           isSelected ? 'bg-blue-600 border-blue-700' : 'bg-blue-100 border-blue-300'
 //                         }`}
 //                       >
-//                         <Text style={tw`${isSelected ? 'text-white' : 'text-green-800'} font-semibold text-xs text-center`}>
+//                         <Text style={tw`${isSelected ? 'text-white' : 'text-blue-800'} font-semibold text-xs text-center`}>
 //                           {item}
 //                         </Text>
 //                       </TouchableOpacity>
@@ -1163,7 +1163,7 @@
 
 //                 {selectedSlot && (
 //                   <TouchableOpacity
-//                     style={tw`bg-green-600 py-4 px-8 rounded-xl items-center shadow-md mt-6`}
+//                     style={tw`bg-blue-600 py-4 px-8 rounded-xl items-center shadow-md mt-6`}
 //                     onPress={handleBookAppointment}
 //                   >
 //                     <Text style={tw`text-white text-lg font-bold`}>Book Appointment</Text>
@@ -1171,20 +1171,20 @@
 //                 )}
 //               </>
 //             ) : (
-//               <Text style={tw`text-green-400 text-base`}>No {consultationMode} slots available.</Text>
+//               <Text style={tw`text-blue-400 text-base`}>No {consultationMode} slots available.</Text>
 //             )}
 //           </View>
 //         )}
 
 //         {/* Reviews */}
 //         {selectedTab === 'Reviews' && (
-//           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-//             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>Patient Reviews</Text>
+//           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+//             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>Patient Reviews</Text>
 //             {reviews.map((review, index) => (
-//               <View key={index} style={tw`border-b border-green-100 py-4`}>
-//                 <Text style={tw`text-base font-bold text-green-900`}>{review.name}</Text>
+//               <View key={index} style={tw`border-b border-blue-100 py-4`}>
+//                 <Text style={tw`text-base font-bold text-blue-900`}>{review.name}</Text>
 //                 <Text style={tw`text-yellow-500 text-lg my-1`}>{'★'.repeat(review.rating)}</Text>
-//                 <Text style={tw`text-green-600`}>{review.comment}</Text>
+//                 <Text style={tw`text-blue-600`}>{review.comment}</Text>
 //               </View>
 //             ))}
 //           </View>
@@ -1192,9 +1192,9 @@
 
 //         {/* About */}
 //         {selectedTab === 'About' && (
-//           <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-//             <Text style={tw`text-lg font-bold text-green-700 mb-3`}>About {doctor.name}</Text>
-//             <Text style={tw`text-green-600 text-base`}>
+//           <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+//             <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>About {doctor.name}</Text>
+//             <Text style={tw`text-blue-600 text-base`}>
 //               Dr. {doctor.name} is a skilled {doctor.specialization} with over {doctor.experience_years} years of experience.
 //               Known for providing compassionate and personalized care.
 //             </Text>
@@ -1318,40 +1318,40 @@ const DoctorProfileScreen = () => {
   };
 
   return (
-    <View style={tw`flex-1 bg-green-50`}>
-      <PageHeader title="Doctor Profile" backgroundColor="#16a34a" textColor="#fff" />
+    <View style={tw`flex-1 bg-blue-50`}>
+      <PageHeader title="Doctor Profile" backgroundColor="#1647a3ff" textColor="#fff" />
 
       <ScrollView contentContainerStyle={tw`p-5 pb-32`}>
         {/* Doctor Info */}
-        <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
+        <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
           <View style={tw`flex-row items-center mb-4`}>
             <Image
               source={{ uri: doctor.profile_picture || 'https://via.placeholder.com/150' }}
-              style={tw`w-24 h-24 rounded-full border-4 border-green-200 mr-4`}
+              style={tw`w-24 h-24 rounded-full border-4 border-blue-200 mr-4`}
             />
             <View style={tw`flex-1`}>
-              <Text style={tw`text-xl font-bold text-green-900`}>{doctor.user?.username}</Text>
-              <Text style={tw`text-base text-green-600 font-semibold mt-1`}>{doctor.specialization}</Text>
-              <Text style={tw`text-base text-green-600 font-semibold mt-1`}>{consultationMode}</Text>
+              <Text style={tw`text-xl font-bold text-blue-900`}>{doctor.user?.username}</Text>
+              <Text style={tw`text-base text-blue-600 font-semibold mt-1`}>{doctor.specialization}</Text>
+              <Text style={tw`text-base text-blue-600 font-semibold mt-1`}>{consultationMode}</Text>
               <View style={tw`flex-row items-center mt-2`}>
                 <Briefcase size={16} color="#6b7280" />
-                <Text style={tw`text-sm text-green-600 ml-2`}>
+                <Text style={tw`text-sm text-blue-600 ml-2`}>
                   {doctor.experience_years} years experience
                 </Text>
               </View>
             </View>
           </View>
 
-          <View style={tw`flex-row justify-between bg-green-50 rounded-xl px-4 py-3`}>
+          <View style={tw`flex-row justify-between bg-blue-50 rounded-xl px-4 py-3`}>
             <View style={tw`flex-row items-center`}>
               <IndianRupee size={16} color="#059669" />
-              <Text style={tw`text-sm font-semibold text-green-700 ml-2`}>
+              <Text style={tw`text-sm font-semibold text-blue-700 ml-2`}>
                 ₹{doctor.consultation_fee}
               </Text>
             </View>
             <View style={tw`flex-row items-center`}>
               <ShieldCheck size={16} color="#059669" />
-              <Text style={tw`text-sm font-semibold text-green-700 ml-2`}>
+              <Text style={tw`text-sm font-semibold text-blue-700 ml-2`}>
                 {doctor.license_number}
               </Text>
             </View>
@@ -1359,14 +1359,14 @@ const DoctorProfileScreen = () => {
         </View>
 
         {/* Tabs */}
-        <View style={tw`flex-row bg-green-50 rounded-2xl shadow-md p-2 mb-6`}>
+        <View style={tw`flex-row bg-blue-50 rounded-2xl shadow-md p-2 mb-6`}>
           {['Availability', 'Reviews', 'About'].map((tab) => (
             <TouchableOpacity
               key={tab}
-              style={tw`flex-1 py-3 rounded-xl ${selectedTab === tab ? 'bg-green-600' : 'bg-transparent'}`}
+              style={tw`flex-1 py-3 rounded-xl ${selectedTab === tab ? 'bg-blue-600' : 'bg-transparent'}`}
               onPress={() => setSelectedTab(tab as typeof selectedTab)}
             >
-              <Text style={tw`text-center text-base font-semibold ${selectedTab === tab ? 'text-white' : 'text-green-700'}`}>
+              <Text style={tw`text-center text-base font-semibold ${selectedTab === tab ? 'text-white' : 'text-blue-700'}`}>
                 {tab}
               </Text>
             </TouchableOpacity>
@@ -1375,13 +1375,13 @@ const DoctorProfileScreen = () => {
 
         {/* Availability */}
         {selectedTab === 'Availability' && (
-          <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-            <Text style={tw`text-lg font-bold text-green-700 mb-3`}>
+          <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+            <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>
               Available Slots ({consultationMode.toUpperCase()})
             </Text>
 
             {loadingSlots ? (
-              <ActivityIndicator size="large" color="#16a34a" />
+              <ActivityIndicator size="large" color="#164aa3ff" />
             ) : Object.keys(slotsByDate).length > 0 ? (
               <>
                 {/* Date Selector */}
@@ -1389,10 +1389,10 @@ const DoctorProfileScreen = () => {
                   {Object.keys(slotsByDate).map((date) => (
                     <TouchableOpacity
                       key={date}
-                      style={tw`px-5 py-3 mr-3 rounded-xl ${selectedDate === date ? 'bg-green-600' : 'bg-green-100'}`}
+                      style={tw`px-5 py-3 mr-3 rounded-xl ${selectedDate === date ? 'bg-blue-600' : 'bg-blue-100'}`}
                       onPress={() => setSelectedDate(date)}
                     >
-                      <Text style={tw`text-base font-semibold ${selectedDate === date ? 'text-white' : 'text-green-800'}`}>
+                      <Text style={tw`text-base font-semibold ${selectedDate === date ? 'text-white' : 'text-blue-800'}`}>
                         {new Date(date).toLocaleDateString('en-US', {
                           weekday: 'short',
                           month: 'short',
@@ -1416,10 +1416,10 @@ const DoctorProfileScreen = () => {
                       <TouchableOpacity
                         onPress={() => setSelectedSlot(item)}
                         style={tw`px-3 py-2 rounded-xl flex-1 mx-1 border ${
-                          isSelected ? 'bg-green-600 border-green-700' : 'bg-green-100 border-green-300'
+                          isSelected ? 'bg-blue-600 border-blue-700' : 'bg-blue-100 border-blue-300'
                         }`}
                       >
-                        <Text style={tw`${isSelected ? 'text-white' : 'text-green-800'} font-semibold text-xs text-center`}>
+                        <Text style={tw`${isSelected ? 'text-white' : 'text-blue-800'} font-semibold text-xs text-center`}>
                           {item}
                         </Text>
                       </TouchableOpacity>
@@ -1429,7 +1429,7 @@ const DoctorProfileScreen = () => {
 
                 {selectedSlot && (
                   <TouchableOpacity
-                    style={tw`bg-green-600 py-4 px-8 rounded-xl items-center shadow-md mt-6`}
+                    style={tw`bg-blue-600 py-4 px-8 rounded-xl items-center shadow-md mt-6`}
                     onPress={handleBookAppointment}
                   >
                     <Text style={tw`text-white text-lg font-bold`}>Book Appointment</Text>
@@ -1437,7 +1437,7 @@ const DoctorProfileScreen = () => {
                 )}
               </>
             ) : (
-              <Text style={tw`text-green-400 text-base`}>
+              <Text style={tw`text-blue-400 text-base`}>
                 No {consultationMode} or hybrid slots available.
               </Text>
             )}
@@ -1446,13 +1446,13 @@ const DoctorProfileScreen = () => {
 
         {/* Reviews */}
         {selectedTab === 'Reviews' && (
-          <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-            <Text style={tw`text-lg font-bold text-green-700 mb-3`}>Patient Reviews</Text>
+          <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+            <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>Patient Reviews</Text>
             {reviews.map((review, index) => (
-              <View key={index} style={tw`border-b border-green-100 py-4`}>
-                <Text style={tw`text-base font-bold text-green-900`}>{review.name}</Text>
+              <View key={index} style={tw`border-b border-blue-100 py-4`}>
+                <Text style={tw`text-base font-bold text-blue-900`}>{review.name}</Text>
                 <Text style={tw`text-yellow-500 text-lg my-1`}>{'★'.repeat(review.rating)}</Text>
-                <Text style={tw`text-green-600`}>{review.comment}</Text>
+                <Text style={tw`text-blue-600`}>{review.comment}</Text>
               </View>
             ))}
           </View>
@@ -1460,9 +1460,9 @@ const DoctorProfileScreen = () => {
 
         {/* About */}
         {selectedTab === 'About' && (
-          <View style={tw`bg-green-50 rounded-2xl shadow-md p-5 mb-6`}>
-            <Text style={tw`text-lg font-bold text-green-700 mb-3`}>About {doctor.name}</Text>
-            <Text style={tw`text-green-600 text-base`}>
+          <View style={tw`bg-blue-50 rounded-2xl shadow-md p-5 mb-6`}>
+            <Text style={tw`text-lg font-bold text-blue-700 mb-3`}>About {doctor.name}</Text>
+            <Text style={tw`text-blue-600 text-base`}>
               Dr. {doctor.name} is a skilled {doctor.specialization} with over {doctor.experience_years} years of experience.
               Known for providing compassionate and personalized care.
             </Text>

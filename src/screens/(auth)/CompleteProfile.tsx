@@ -18,7 +18,7 @@
 // // // // import tw from 'twrnc';
 // // // // import { useUser } from '../contexts/UserContext';
 
-// // // // const GREEN = '#22c55e';
+// // // // const blue = '#22c55e';
 // // // // const API_ENDPOINT = 'https://landing.docapp.co.in/api/auth/profile/complete/general_user';
 
 // // // // export default function CompleteProfile() {
@@ -82,7 +82,7 @@
 // // // //         { paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0 },
 // // // //       ]}
 // // // //     >
-// // // //       <StatusBar backgroundColor={GREEN} barStyle="light-content" />
+// // // //       <StatusBar backgroundColor={blue} barStyle="light-content" />
 // // // //       <ScrollView contentContainerStyle={tw`p-4 pt-20 pb-10`}>
 // // // //         {/* Profile Picture URL Input */}
 // // // //         <View style={tw`mb-6`}>
@@ -101,7 +101,7 @@
 // // // //             <View style={tw`items-center mt-4`}>
 // // // //               <Image
 // // // //                 source={{ uri: profilePictureUrl }}
-// // // //                 style={tw`w-28 h-28 rounded-full border-2 border-[${GREEN}]` as any}
+// // // //                 style={tw`w-28 h-28 rounded-full border-2 border-[${blue}]` as any}
 // // // //               />
 // // // //             </View>
 // // // //           )}
@@ -160,7 +160,7 @@
 // // // //                   setGender(g as typeof gender);
 // // // //                   setErrors((prev) => ({ ...prev, gender: '' }));
 // // // //                 }}
-// // // //                 style={tw`flex-1 mx-1 py-2 rounded-lg border ${gender === g ? `bg-[${GREEN}] border-[${GREEN}]` : 'bg-white border-gray-200'} shadow-sm items-center`}
+// // // //                 style={tw`flex-1 mx-1 py-2 rounded-lg border ${gender === g ? `bg-[${blue}] border-[${blue}]` : 'bg-white border-gray-200'} shadow-sm items-center`}
 // // // //                 activeOpacity={0.7}
 // // // //               >
 // // // //                 <Text style={tw`${gender === g ? 'text-white' : 'text-gray-700'} text-sm`}>
@@ -175,7 +175,7 @@
 // // // //         {/* Submit Button */}
 // // // //         <TouchableOpacity
 // // // //           onPress={handleSubmit}
-// // // //           style={tw`bg-[${GREEN}] rounded-lg h-12 justify-center items-center shadow-md ${loading ? 'opacity-50' : ''}`}
+// // // //           style={tw`bg-[${blue}] rounded-lg h-12 justify-center items-center shadow-md ${loading ? 'opacity-50' : ''}`}
 // // // //           disabled={loading}
 // // // //           activeOpacity={0.7}
 // // // //         >
@@ -192,7 +192,7 @@
 // // // //           style={tw`items-center mt-6 bg-gray-100 rounded-lg py-2 px-4`}
 // // // //           activeOpacity={0.7}
 // // // //         >
-// // // //           <Text style={tw`text-[${GREEN}] text-sm font-semibold underline`}>Skip for now</Text>
+// // // //           <Text style={tw`text-[${blue}] text-sm font-semibold underline`}>Skip for now</Text>
 // // // //         </TouchableOpacity>
 // // // //       </ScrollView>
 // // // //     </SafeAreaView>
@@ -221,7 +221,7 @@
 // // // import tw from 'twrnc';
 // // // import { useUser } from '../contexts/UserContext';
 
-// // // const GREEN = '#22c55e';
+// // // const blue = '#22c55e';
 // // // const API_ENDPOINT =
 // // //   'https://landing.docapp.co.in/api/auth/profile/complete/general_user';
 
@@ -291,7 +291,7 @@
 // // //         { paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0 },
 // // //       ]}
 // // //     >
-// // //       <StatusBar backgroundColor={GREEN} barStyle="light-content" />
+// // //       <StatusBar backgroundColor={blue} barStyle="light-content" />
 // // //       <ScrollView contentContainerStyle={tw`p-4 pt-20 pb-10`}>
 // // //         {/* Profile Picture URL Input */}
 // // //         <View style={tw`mb-6`}>
@@ -314,7 +314,7 @@
 // // //             <View style={tw`items-center mt-4`}>
 // // //               <Image
 // // //                 source={{ uri: profilePictureUrl }}
-// // //                 style={tw`w-28 h-28 rounded-full border-2 border-[${GREEN}]` as any}
+// // //                 style={tw`w-28 h-28 rounded-full border-2 border-[${blue}]` as any}
 // // //               />
 // // //             </View>
 // // //           )}
@@ -395,7 +395,7 @@
 // // //                 }}
 // // //                 style={tw`flex-1 mx-1 py-2 rounded-lg border ${
 // // //                   gender === g
-// // //                     ? `bg-[${GREEN}] border-[${GREEN}]`
+// // //                     ? `bg-[${blue}] border-[${blue}]`
 // // //                     : 'bg-white border-gray-200'
 // // //                 } shadow-sm items-center`}
 // // //                 activeOpacity={0.7}
@@ -418,7 +418,7 @@
 // // //         {/* Submit Button */}
 // // //         <TouchableOpacity
 // // //           onPress={handleSubmit}
-// // //           style={tw`bg-[${GREEN}] rounded-lg h-12 justify-center items-center shadow-md ${
+// // //           style={tw`bg-[${blue}] rounded-lg h-12 justify-center items-center shadow-md ${
 // // //             loading ? 'opacity-50' : ''
 // // //           }`}
 // // //           disabled={loading}
@@ -439,7 +439,7 @@
 // // //           style={tw`items-center mt-6 bg-gray-100 rounded-lg py-2 px-4`}
 // // //           activeOpacity={0.7}
 // // //         >
-// // //           <Text style={tw`text-[${GREEN}] text-sm font-semibold underline`}>
+// // //           <Text style={tw`text-[${blue}] text-sm font-semibold underline`}>
 // // //             Skip for now
 // // //           </Text>
 // // //         </TouchableOpacity>
@@ -469,7 +469,7 @@
 // // import tw from 'twrnc';
 // // import { useUser } from '../contexts/UserContext';
 
-// // const GREEN = '#22c55e';
+// // const blue = '#22c55e';
 // // const API_ENDPOINT =
 // //   'https://landing.docapp.co.in/api/auth/profile/complete/general_user';
 
@@ -540,7 +540,7 @@
 // //         { paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0 },
 // //       ]}
 // //     >
-// //       <StatusBar backgroundColor={GREEN} barStyle="light-content" />
+// //       <StatusBar backgroundColor={blue} barStyle="light-content" />
 // //       <ScrollView contentContainerStyle={tw`p-4 pt-20 pb-10`}>
 // //         {/* Profile Picture URL Input (UI Only, Not Sent to API) */}
 // //         <View style={tw`mb-6`}>
@@ -563,7 +563,7 @@
 // //             <View style={tw`items-center mt-4`}>
 // //               <Image
 // //                 source={{ uri: profilePictureUrl }}
-// //                 style={tw`w-28 h-28 rounded-full border-2 border-[${GREEN}]` as any}
+// //                 style={tw`w-28 h-28 rounded-full border-2 border-[${blue}]` as any}
 // //               />
 // //             </View>
 // //           )}
@@ -644,7 +644,7 @@
 // //                 }}
 // //                 style={tw`flex-1 mx-1 py-2 rounded-lg border ${
 // //                   gender === g
-// //                     ? `bg-[${GREEN}] border-[${GREEN}]`
+// //                     ? `bg-[${blue}] border-[${blue}]`
 // //                     : 'bg-white border-gray-200'
 // //                 } shadow-sm items-center`}
 // //                 activeOpacity={0.7}
@@ -667,7 +667,7 @@
 // //         {/* Submit Button */}
 // //         <TouchableOpacity
 // //           onPress={handleSubmit}
-// //           style={tw`bg-[${GREEN}] rounded-lg h-12 justify-center items-center shadow-md ${
+// //           style={tw`bg-[${blue}] rounded-lg h-12 justify-center items-center shadow-md ${
 // //             loading ? 'opacity-50' : ''
 // //           }`}
 // //           disabled={loading}
@@ -688,7 +688,7 @@
 // //           style={tw`items-center mt-6 bg-gray-100 rounded-lg py-2 px-4`}
 // //           activeOpacity={0.7}
 // //         >
-// //           <Text style={tw`text-[${GREEN}] text-sm font-semibold underline`}>
+// //           <Text style={tw`text-[${blue}] text-sm font-semibold underline`}>
 // //             Skip for nows
 // //           </Text>
 // //         </TouchableOpacity>
@@ -719,7 +719,7 @@
 // import tw from 'twrnc';
 // import { useUser } from '../contexts/UserContext';
 
-// const GREEN = '#22c55e';
+// const blue = '#22c55e';
 // const API_COMPLETE_PROFILE =
 //   'https://landing.docapp.co.in/api/auth/profile/complete/general_user';
 // const API_GET_USER = 'https://landing.docapp.co.in/api/auth/get-user-data';
@@ -826,7 +826,7 @@
 //   if (initialCheckLoading) {
 //     return (
 //       <SafeAreaView style={tw`flex-1 justify-center items-center bg-white`}>
-//         <ActivityIndicator size="large" color={GREEN} />
+//         <ActivityIndicator size="large" color={blue} />
 //         <Text style={tw`mt-4 text-gray-600`}>Checking profile status...</Text>
 //       </SafeAreaView>
 //     );
@@ -839,7 +839,7 @@
 //         { paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0 },
 //       ]}
 //     >
-//       <StatusBar backgroundColor={GREEN} barStyle="light-content" />
+//       <StatusBar backgroundColor={blue} barStyle="light-content" />
 //       <ScrollView contentContainerStyle={tw`p-4 pt-20 pb-10`}>
 //         {isCompleted ? (
 //           // ✅ Profile Already Completed
@@ -860,7 +860,7 @@
 //             </Text>
 //             <TouchableOpacity
 //               onPress={() => navigation.navigate('Profile')}
-//               style={tw`bg-[${GREEN}] rounded-lg px-6 py-3`}
+//               style={tw`bg-[${blue}] rounded-lg px-6 py-3`}
 //             >
 //               <Text style={tw`text-white font-semibold`}>Go to Profile</Text>
 //             </TouchableOpacity>
@@ -890,7 +890,7 @@
 //                 <View style={tw`items-center mt-4`}>
 //                   <Image
 //                     source={{ uri: profilePictureUrl }}
-//                     style={tw`w-28 h-28 rounded-full border-2 border-[${GREEN}]` as any}
+//                     style={tw`w-28 h-28 rounded-full border-2 border-[${blue}]` as any}
 //                   />
 //                 </View>
 //               )}
@@ -950,7 +950,7 @@
 //                     }}
 //                     style={tw`flex-1 mx-1 py-2 rounded-lg border ${
 //                       gender === g
-//                         ? `bg-[${GREEN}] border-[${GREEN}]`
+//                         ? `bg-[${blue}] border-[${blue}]`
 //                         : 'bg-white border-gray-200'
 //                     } shadow-sm items-center`}
 //                     activeOpacity={0.7}
@@ -973,7 +973,7 @@
 //             {/* Submit */}
 //             <TouchableOpacity
 //               onPress={handleSubmit}
-//               style={tw`bg-[${GREEN}] rounded-lg h-12 justify-center items-center shadow-md ${
+//               style={tw`bg-[${blue}] rounded-lg h-12 justify-center items-center shadow-md ${
 //                 loading ? 'opacity-50' : ''
 //               }`}
 //               disabled={loading}
@@ -1019,7 +1019,7 @@ import { useUser } from '../contexts/UserContext';
 // NEW: Import the image picker library
 import { launchImageLibrary } from 'react-native-image-picker';
 
-const GREEN = '#22c55e';
+const blue = '#22c55e';
 
 // API Endpoints
 const API_COMPLETE_PROFILE =
@@ -1164,14 +1164,14 @@ export default function CompleteProfile() {
   if (initialCheckLoading) {
     return (
       <SafeAreaView style={tw`flex-1 justify-center items-center bg-white`}>
-        <ActivityIndicator size="large" color={GREEN} />
+        <ActivityIndicator size="large" color={blue} />
       </SafeAreaView>
     );
   }
 
   return (
     <SafeAreaView style={[tw`flex-1 bg-white`, { paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0 }]}>
-      <StatusBar backgroundColor={GREEN} barStyle="light-content" />
+      <StatusBar backgroundColor={blue} barStyle="light-content" />
       <ScrollView contentContainerStyle={tw`p-4 pt-10 pb-10`}>
         {isCompleted ? (
           <View style={tw`items-center justify-center mt-20`}>
@@ -1180,7 +1180,7 @@ export default function CompleteProfile() {
               style={tw`w-32 h-32 rounded-full mb-6`}
             />
             <Text style={tw`text-lg font-semibold text-gray-800 mb-2`}>Profile Completed</Text>
-            <TouchableOpacity onPress={() => navigation.navigate('Profile')} style={tw`bg-[${GREEN}] rounded-lg px-6 py-3`}>
+            <TouchableOpacity onPress={() => navigation.navigate('Profile')} style={tw`bg-[${blue}] rounded-lg px-6 py-3`}>
               <Text style={tw`text-white font-semibold`}>Go to Profile</Text>
             </TouchableOpacity>
           </View>
@@ -1193,7 +1193,7 @@ export default function CompleteProfile() {
               <Text style={tw`text-sm font-semibold text-gray-800 mb-2`}>Profile Picture</Text>
               <Image
                 source={{ uri: selectedImage?.uri || profilePictureUrl || 'https://cdn-icons-png.flaticon.com/512/847/847969.png' }}
-                style={tw`w-28 h-28 rounded-full border-2 border-[${GREEN}] mb-4`}
+                style={tw`w-28 h-28 rounded-full border-2 border-[${blue}] mb-4`}
               />
               <TouchableOpacity onPress={handleSelectPhoto} style={tw`bg-gray-200 rounded-lg px-6 py-3`}>
                 <Text style={tw`text-gray-800 font-semibold`}>Select Photo</Text>
@@ -1230,7 +1230,7 @@ export default function CompleteProfile() {
                <Text style={tw`text-sm font-semibold text-gray-800 mb-2`}>Gender</Text>
                <View style={tw`flex-row justify-between`}>
                  {['Male', 'Female', 'Others'].map((g) => (
-                   <TouchableOpacity key={g} onPress={() => { setGender(g as typeof gender); setErrors((prev) => ({ ...prev, gender: '' })); }} style={tw`flex-1 mx-1 py-2 rounded-lg border ${gender === g ? `bg-[${GREEN}] border-[${GREEN}]` : 'bg-white border-gray-200'} shadow-sm items-center`}>
+                   <TouchableOpacity key={g} onPress={() => { setGender(g as typeof gender); setErrors((prev) => ({ ...prev, gender: '' })); }} style={tw`flex-1 mx-1 py-2 rounded-lg border ${gender === g ? `bg-[${blue}] border-[${blue}]` : 'bg-white border-gray-200'} shadow-sm items-center`}>
                      <Text style={tw`${gender === g ? 'text-white' : 'text-gray-700'} text-sm`}>{g}</Text>
                    </TouchableOpacity>
                  ))}
@@ -1239,7 +1239,7 @@ export default function CompleteProfile() {
             </View>
             
             {/* Submit Button */}
-            <TouchableOpacity onPress={handleSubmit} style={tw`bg-[${GREEN}] rounded-lg h-12 justify-center items-center shadow-md ${loading ? 'opacity-50' : ''}`} disabled={loading}>
+            <TouchableOpacity onPress={handleSubmit} style={tw`bg-[${blue}] rounded-lg h-12 justify-center items-center shadow-md ${loading ? 'opacity-50' : ''}`} disabled={loading}>
               {loading ? <ActivityIndicator color="#fff" /> : <Text style={tw`text-white text-base font-semibold`}>Complete ProfileS</Text>}
             </TouchableOpacity>
           </>

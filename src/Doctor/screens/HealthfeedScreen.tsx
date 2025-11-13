@@ -6,23 +6,23 @@
 
 // const HealthfeedScreen = () => {
 //   return (
-//     <View style={tw`flex-1 bg-green-50`}>
+//     <View style={tw`flex-1 bg-blue-50`}>
 //       <DoctorHeader title="Healthfeed" showSettings showNotifications />
 //       <View style={tw`flex-1 px-4 pt-6`}>
-//         <Text style={tw`text-2xl text-green-700 font-bold mb-4 text-center`}>Latest Healthfeed</Text>
+//         <Text style={tw`text-2xl text-blue-700 font-bold mb-4 text-center`}>Latest Healthfeed</Text>
 //         <View style={tw`w-full max-w-[480px] self-center`}> 
-//           <View style={tw`bg-green-100 rounded-2xl p-5 mb-4 shadow-sm`}> 
-//             <Text style={tw`text-green-700 font-bold text-lg mb-1`}>5 Tips for a Healthy Heart</Text>
-//             <Text style={tw`text-green-600 mb-2`}>Learn how to keep your heart healthy with these simple lifestyle changes.</Text>
+//           <View style={tw`bg-blue-100 rounded-2xl p-5 mb-4 shadow-sm`}> 
+//             <Text style={tw`text-blue-700 font-bold text-lg mb-1`}>5 Tips for a Healthy Heart</Text>
+//             <Text style={tw`text-blue-600 mb-2`}>Learn how to keep your heart healthy with these simple lifestyle changes.</Text>
 //             <Text style={tw`text-emerald-500 text-sm`}>Read More</Text>
 //           </View>
-//           <View style={tw`bg-green-100 rounded-2xl p-5 mb-4 shadow-sm`}> 
-//             <Text style={tw`text-green-700 font-bold text-lg mb-1`}>Managing Stress Effectively</Text>
-//             <Text style={tw`text-green-600 mb-2`}>Discover techniques to manage stress and improve your well-being.</Text>
+//           <View style={tw`bg-blue-100 rounded-2xl p-5 mb-4 shadow-sm`}> 
+//             <Text style={tw`text-blue-700 font-bold text-lg mb-1`}>Managing Stress Effectively</Text>
+//             <Text style={tw`text-blue-600 mb-2`}>Discover techniques to manage stress and improve your well-being.</Text>
 //             <Text style={tw`text-emerald-500 text-sm`}>Read More</Text>
 //           </View>
 //         </View>
-//         <Text style={tw`text-green-600 mt-8 text-center text-base`}>Stay updated with the latest health news and tips here.</Text>
+//         <Text style={tw`text-blue-600 mt-8 text-center text-base`}>Stay updated with the latest health news and tips here.</Text>
 //       </View>
 //     </View>
 //   );
@@ -137,7 +137,7 @@ export default function AppointmentsScreen() {
   return (
     <PageLayout
       title="My Appointments"
-      headerBackgroundColor="#16a34a"
+      headerBackgroundColor="#164aa3ff"
       scrollable={true}
     >
       {/* Tabs */}
@@ -147,7 +147,7 @@ export default function AppointmentsScreen() {
             key={tab}
             onPress={() => setSelectedTab(tab)}
             style={tw`px-4 py-2 rounded-full ${
-              selectedTab === tab ? 'bg-green-600' : 'bg-gray-200'
+              selectedTab === tab ? 'bg-blue-600' : 'bg-gray-200'
             }`}
           >
             <Text
@@ -173,7 +173,7 @@ export default function AppointmentsScreen() {
               key={item.id}
               style={tw`bg-white p-4 mb-4 rounded-xl shadow-sm border border-gray-200`}
             >
-              <Text style={tw`text-lg font-bold text-green-700`}>
+              <Text style={tw`text-lg font-bold text-blue-700`}>
                 Doctor ID: #{item.doctor_id}
               </Text>
               <Text style={tw`text-gray-800`}>

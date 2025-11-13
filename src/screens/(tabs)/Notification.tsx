@@ -84,8 +84,8 @@ const NotificationsScreen = () => {
   const renderItem = ({ item }: { item: Notification }) => (
     <TouchableOpacity
       style={[
-        tw`bg-green-50 p-4 rounded-xl flex-row my-1.5 items-center mx-4 ${
-          !item.read ? 'border-l-4 border-green-600' : ''
+        tw`bg-blue-50 p-4 rounded-xl flex-row my-1.5 items-center mx-4 ${
+          !item.read ? 'border-l-4 border-blue-600' : ''
         }`,
         { elevation: 1 },
       ]}
@@ -96,11 +96,11 @@ const NotificationsScreen = () => {
     >
       <View style={tw`mr-3 w-7 items-center`}>{getIcon(item.type, item.read)}</View>
       <View style={tw`flex-1`}>
-        <Text style={tw`font-semibold text-base text-green-800`}>{item.title}</Text>
-        <Text style={tw`text-sm text-green-700 my-1`}>{item.message}</Text>
-        <Text style={tw`text-xs text-green-400`}>{item.time}</Text>
+        <Text style={tw`font-semibold text-base text-blue-800`}>{item.title}</Text>
+        <Text style={tw`text-sm text-blue-700 my-1`}>{item.message}</Text>
+        <Text style={tw`text-xs text-blue-400`}>{item.time}</Text>
       </View>
-      {!item.read && <View style={tw`w-2.5 h-2.5 bg-green-600 rounded-full ml-2.5`} />}
+      {!item.read && <View style={tw`w-2.5 h-2.5 bg-blue-600 rounded-full ml-2.5`} />}
     </TouchableOpacity>
   );
 
@@ -115,14 +115,14 @@ const NotificationsScreen = () => {
   return (
     <PageLayout
       title="Notifications"
-        headerBackgroundColor="#16a34a"
+        headerBackgroundColor="#164aa3ff"
       scrollable={false}
       headerRight={<HeaderRight />}
     >
       {notifications.length === 0 ? (
         <View style={tw`flex-1 justify-center items-center`}>
           <Bell size={50} color="#aaa" />
-          <Text style={tw`text-base text-green-400 mt-2.5`}>No Notifications</Text>
+          <Text style={tw`text-base text-blue-400 mt-2.5`}>No Notifications</Text>
         </View>
       ) : (
         <FlatList

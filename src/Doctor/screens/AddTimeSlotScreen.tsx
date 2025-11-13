@@ -26,9 +26,9 @@ const AddTimeSlotScreen = () => {
 
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-      <View style={tw`flex-1 justify-center items-center bg-green-50`}>
+      <View style={tw`flex-1 justify-center items-center bg-blue-50`}>
         <View style={tw`w-11/12 bg-white rounded-2xl p-6 shadow-sm`}>
-          <Text style={tw`text-2xl font-bold text-green-700 mb-4`}>Add Time Slot</Text>
+          <Text style={tw`text-2xl font-bold text-blue-700 mb-4`}>Add Time Slot</Text>
           <TextInput
             style={styles.input}
             placeholder="Start Time (e.g. 09:00 AM)"

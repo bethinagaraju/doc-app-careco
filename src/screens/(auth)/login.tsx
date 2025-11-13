@@ -218,6 +218,7 @@ import {
   TouchableOpacity,
   ScrollView,
   Platform,
+  Image,
 } from 'react-native';
 import { useUser } from '../contexts/UserContext';
 import { useNavigation } from '@react-navigation/native';
@@ -244,7 +245,7 @@ const Login = () => {
       const res = await fetch(apiUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
+        // credentials: 'include',
         body: JSON.stringify({
           email,
           password,
@@ -324,6 +325,12 @@ const Login = () => {
         contentContainerStyle={styles.container}
         keyboardShouldPersistTaps="handled"
     >
+
+      <Image
+        source={require('../../assets/images/Gemini_Generated_Image_p2c0kip2c0kip2c0-removebg-preview.png')}
+        style={[styles.image, { height: 75 }]}
+      />
+
       <Text style={styles.title}>
         {isLoginMode ? 'Welcome to DocApp' : 'Create an Account'}
       </Text>
@@ -448,26 +455,26 @@ export default Login;
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: '#e6f4ea',
+    backgroundColor: '#e6f0ff',
     justifyContent: 'center',
     padding: 20,
   },
   title: {
     fontSize: 24,
-    color: '#2e7d32',
+    color: '#1e3a8a',
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 40,
   },
   label: {
     fontSize: 16,
-    color: '#1b5e20',
+    color: '#1e3a8a',
     marginBottom: 6,
     marginTop: 10,
   },
   input: {
     height: 48,
-    borderColor: '#81c784',
+    borderColor: '#3b82f6',
     borderWidth: 1,
     borderRadius: 8,
     paddingHorizontal: 12,
@@ -485,23 +492,23 @@ const styles = StyleSheet.create({
     marginHorizontal: 5,
     backgroundColor: '#ffffff',
     borderWidth: 1,
-    borderColor: '#81c784',
+    borderColor: '#3b82f6',
     borderRadius: 8,
     alignItems: 'center',
   },
   selectedRole: {
-    backgroundColor: '#388e3c',
-    borderColor: '#388e3c',
+    backgroundColor: '#2563eb',
+    borderColor: '#2563eb',
   },
   roleText: {
-    color: '#2e7d32',
+    color: '#1e3a8a',
     fontWeight: '600',
   },
   selectedRoleText: {
     color: '#ffffff',
   },
   button: {
-    backgroundColor: '#388e3c',
+    backgroundColor: '#2563eb',
     paddingVertical: 14,
     borderRadius: 8,
     alignItems: 'center',
@@ -516,8 +523,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   switchText: {
-    color: '#2e7d32',
+    color: '#1e3a8a',
     fontWeight: '600',
     fontSize: 14,
+  },
+  image: {
+    width: 300,
+
+    alignSelf: 'center',
+    marginBottom: 20,
   },
 });

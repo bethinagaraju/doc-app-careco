@@ -104,22 +104,22 @@ const DoctorSettingsScreen = () => {
     },
   ];
   return (
-    <View style={tw`flex-1 bg-green-50`}>
+    <View style={tw`flex-1 bg-blue-50`}>
       <DoctorHeader title="Settings" showNotifications />
       <ScrollView contentContainerStyle={tw`pb-6`}>
         <View style={tw`bg-white mt-4 rounded-xl`}>
           {menuItems.map((item, index) => (
             <TouchableOpacity
               key={index}
-              style={tw`flex-row items-center justify-between p-4 border-b border-green-100`}
+              style={tw`flex-row items-center justify-between p-4 border-b border-blue-100`}
               onPress={item.action}
             >
               <View style={tw`flex-row items-center`}>
-                <Icon name={item.icon} size={24} color="#16a34a" />
+                <Icon name={item.icon} size={24} color="#164aa3ff" />
                 <View style={tw`ml-3`}> 
-                  <Text style={tw`text-green-700 font-bold`}>{item.title}</Text>
+                  <Text style={tw`text-blue-700 font-bold`}>{item.title}</Text>
                   {item.subtitle && (
-                    <Text style={tw`text-green-600 text-xs`}>{item.subtitle}</Text>
+                    <Text style={tw`text-blue-600 text-xs`}>{item.subtitle}</Text>
                   )}
                 </View>
               </View>
@@ -131,14 +131,14 @@ const DoctorSettingsScreen = () => {
                   thumbColor="#f4f3f4"
                 />
               ) : item.rightIcon && (
-                <Icon name={item.rightIcon} size={24} color="#16a34a" />
+                <Icon name={item.rightIcon} size={24} color="#164aa3ff" />
               )}
             </TouchableOpacity>
           ))}
         </View>
 
         {/* Alert Message */}
-        <Text style={tw`text-green-600 text-center mt-6 mb-2`}>We use full screen alerts and permission to alert you if a patient is waiting for your response</Text>
+        <Text style={tw`text-blue-600 text-center mt-6 mb-2`}>We use full screen alerts and permission to alert you if a patient is waiting for your response</Text>
       </ScrollView>
     </View>
   );

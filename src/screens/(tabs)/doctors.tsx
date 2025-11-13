@@ -157,10 +157,10 @@ if (consultationMode) {
 
 
   return (
-    <View style={tw`flex-1 bg-green-50`}>
+    <View style={tw`flex-1 bg-blue-50`}>
       <PageHeader
         title="Find Doctors"
-        backgroundColor="#16a34a"
+        backgroundColor="#1640a3ff"
         textColor="#fff"
         leftComponent={
           <TouchableOpacity onPress={() => navigation.goBack()} style={tw`p-2`}>
@@ -180,7 +180,7 @@ if (consultationMode) {
       />
 
       <View style={tw`px-4 pt-2`}>        
-        <View style={tw`flex-row items-center bg-green-100 rounded-xl px-3 py-2`}>
+        <View style={tw`flex-row items-center bg-blue-100 rounded-xl px-3 py-2`}>
           <LucideSearch size={20} color="#888" />
           <TextInput
             style={tw`flex-1 ml-2 text-base`}
@@ -199,7 +199,7 @@ if (consultationMode) {
 
       {loading ? (
         <View style={tw`flex-1 justify-center items-center`}>
-          <ActivityIndicator size="large" color="#16a34a" />
+          <ActivityIndicator size="large" color="#164aa3ff" />
         </View>
       ) : (
         <FlatList
@@ -209,7 +209,7 @@ if (consultationMode) {
           renderItem={({ item }) => (
             <TouchableOpacity
               onPress={() => handleCardPress(item)}
-              style={tw`bg-green-50 p-4 mb-4 rounded-xl shadow-sm mx-4`}
+              style={tw`bg-blue-50 p-4 mb-4 rounded-xl shadow-sm mx-4`}
             >
               <View style={tw`flex-row`}>
                 <Image
@@ -217,31 +217,31 @@ if (consultationMode) {
                   style={tw`w-20 h-20 rounded-lg`}
                 />
                 <View style={tw`flex-1 ml-3`}>
-                  <Text style={tw`text-lg font-bold text-green-800`}>
+                  <Text style={tw`text-lg font-bold text-blue-800`}>
                     {item.user?.username || 'Unnamed Doctor'}
                   </Text>
-                  <Text style={tw`text-green-600`}>
+                  <Text style={tw`text-blue-600`}>
                     {item.specialization || 'Specialty Unknown'}
                   </Text>
-                  <Text style={tw`text-green-600`}>
+                  <Text style={tw`text-blue-600`}>
                     {item.id || 'Specialty Unknown'}
                   </Text>
                   <View style={tw`flex-row items-center mt-1`}>
                     <Clock size={14} color="#666" />
-                    <Text style={tw`text-green-600 ml-1`}>
+                    <Text style={tw`text-blue-600 ml-1`}>
                       {item.experience_years || 0} Years experience
                     </Text>
                   </View>
                 </View>
               </View>
-              <View style={tw`flex-row justify-between items-center mt-3 pt-3 border-t border-green-100`}>
+              <View style={tw`flex-row justify-between items-center mt-3 pt-3 border-t border-blue-100`}>
                 <View style={tw`flex-row items-center`}>
                   <Star size={16} color="#22c55e" />
                   <Text style={tw`ml-1 font-medium`}>{item.rating || '--'}</Text>
                   <ThumbsUp size={14} color="#22c55e" style={tw`ml-4`} />
                   <Text style={tw`ml-1 font-medium`}>{item.recommendation || '--'}</Text>
                 </View>
-                <Text style={tw`text-green-800 font-bold`}>
+                <Text style={tw`text-blue-800 font-bold`}>
                   ₹{item.consultation_fee}
                 </Text>
               </View>
@@ -251,12 +251,12 @@ if (consultationMode) {
       )}
 
       <Modal visible={locationModalVisible} transparent animationType="slide">
-        <View style={tw`flex-1 bg-green-900/10 justify-end`}>
-          <View style={tw`bg-green-50 rounded-t-3xl pt-6 pb-8 px-4`}>
+        <View style={tw`flex-1 bg-blue-900/10 justify-end`}>
+          <View style={tw`bg-blue-50 rounded-t-3xl pt-6 pb-8 px-4`}>
             <View style={tw`flex-row justify-between items-center mb-6`}>
               <Text style={tw`text-xl font-bold`}>Select Location</Text>
               <TouchableOpacity onPress={() => setLocationModalVisible(false)}>
-                <Text style={tw`text-green-600`}>Done</Text>
+                <Text style={tw`text-blue-600`}>Done</Text>
               </TouchableOpacity>
             </View>
             {locations.map((item) => (
@@ -266,9 +266,9 @@ if (consultationMode) {
                   setLocation(item);
                   setLocationModalVisible(false);
                 }}
-                style={tw`py-4 border-b border-green-100`}
+                style={tw`py-4 border-b border-blue-100`}
               >
-                <Text style={tw`${location === item ? 'text-green-600 font-semibold' : 'text-green-800'}`}>
+                <Text style={tw`${location === item ? 'text-blue-600 font-semibold' : 'text-blue-800'}`}>
                   {item}
                 </Text>
               </TouchableOpacity>
@@ -278,8 +278,8 @@ if (consultationMode) {
       </Modal>
 
       <Modal visible={filterModalVisible} transparent animationType="slide">
-        <View style={tw`flex-1 bg-green-900/10 justify-end`}>
-          <View style={tw`bg-green-50 rounded-t-3xl pt-6 pb-8 px-4`}>
+        <View style={tw`flex-1 bg-blue-900/10 justify-end`}>
+          <View style={tw`bg-blue-50 rounded-t-3xl pt-6 pb-8 px-4`}>
             <Text style={tw`text-xl font-bold mb-4`}>Filter Options</Text>
             <Text style={tw`text-base font-semibold mb-2`}>Department</Text>
             {departments.map((dep) => (
@@ -288,13 +288,13 @@ if (consultationMode) {
                 onPress={() => setSelectedDepartment(dep)}
                 style={tw`py-2`}
               >
-                <Text style={tw`${selectedDepartment === dep ? 'text-green-600 font-semibold' : 'text-green-800'}`}>{dep}</Text>
+                <Text style={tw`${selectedDepartment === dep ? 'text-blue-600 font-semibold' : 'text-blue-800'}`}>{dep}</Text>
               </TouchableOpacity>
             ))}
             <Text style={tw`text-base font-semibold mt-4 mb-2`}>Consultation Mode</Text>
             {['online', 'offline'].map((mode) => (
               <TouchableOpacity key={mode} onPress={() => setConsultationMode(mode)} style={tw`py-2`}>
-                <Text style={tw`${consultationMode === mode ? 'text-green-600 font-semibold' : 'text-green-800'}`}>{mode}</Text>
+                <Text style={tw`${consultationMode === mode ? 'text-blue-600 font-semibold' : 'text-blue-800'}`}>{mode}</Text>
               </TouchableOpacity>
             ))}
             <Text style={tw`text-base font-semibold mt-4 mb-2`}>Sort by Price</Text>
@@ -303,7 +303,7 @@ if (consultationMode) {
               { label: 'High to Low', value: 'highToLow' },
             ].map((opt) => (
               <TouchableOpacity key={opt.value} onPress={() => setSortBy(opt.value)} style={tw`py-2`}>
-                <Text style={tw`${sortBy === opt.value ? 'text-green-600 font-semibold' : 'text-green-800'}`}>{opt.label}</Text>
+                <Text style={tw`${sortBy === opt.value ? 'text-blue-600 font-semibold' : 'text-blue-800'}`}>{opt.label}</Text>
               </TouchableOpacity>
             ))}
             <TouchableOpacity
@@ -311,7 +311,7 @@ if (consultationMode) {
     setFilterModalVisible(false);
     applyFilters(); // In case Apply Filters needs to be triggered here too
   }}
-  style={tw`mt-6 bg-green-600 rounded-lg py-3`}
+  style={tw`mt-6 bg-blue-600 rounded-lg py-3`}
 >
   <Text style={tw`text-center text-white text-base font-semibold`}>Apply Filters</Text>
 </TouchableOpacity>
@@ -324,9 +324,9 @@ if (consultationMode) {
     setFilterModalVisible(false);
     applyFilters();
   }}
-  style={tw`mt-3 border border-green-300 rounded-lg py-3`}
+  style={tw`mt-3 border border-blue-300 rounded-lg py-3`}
 >
-  <Text style={tw`text-center text-green-700 text-base font-semibold`}>Clear Filters</Text>
+  <Text style={tw`text-center text-blue-700 text-base font-semibold`}>Clear Filters</Text>
 </TouchableOpacity>
           </View>
         </View>

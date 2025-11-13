@@ -177,8 +177,8 @@ export default function App() {
       <UserProvider>
         <LoadingProvider>
           <SafeAreaProvider>
-            <View style={{ flex: 1, backgroundColor: '#16a34a' }}>
-              <StatusBar backgroundColor="#16a34a" barStyle="light-content" translucent />
+            <View style={{ flex: 1, backgroundColor: '#164aa3ff' }}>
+              <StatusBar backgroundColor="#164aa3ff" barStyle="light-content" translucent />
               <CallProvider>
               <RootNavigator />
               </CallProvider>

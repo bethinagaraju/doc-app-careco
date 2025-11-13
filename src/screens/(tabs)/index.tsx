@@ -58,6 +58,7 @@ import {
 import tw from 'twrnc'; // Import twrnc
 import Modal from 'react-native-modal'; // or 'react-native' if you use the built-in Modal
 import Footer from './Footer';
+import { IoLocationSharp } from "react-icons/io5";
 
 
 
@@ -261,7 +262,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
         onPress={onPress}
       >
         <View
-          style={tw`relative bg-green-50 w-[100px] h-[100px] rounded-[30px] items-center justify-center overflow-hidden shadow-sm`}
+          style={tw`relative bg-blue-50 w-[100px] h-[100px] rounded-[30px] items-center justify-center overflow-hidden shadow-sm`}
         >
           {image ? (
             <Image
@@ -288,15 +289,22 @@ const [showLocationModal, setShowLocationModal] = useState(false);
   };
 
   return (
-    <SafeAreaView style={tw`flex-1 bg-green-50`}>
+    <SafeAreaView style={tw`flex-1 bg-orange-50`}>
       <ScrollView
         contentContainerStyle={tw`pb-20`}
         showsVerticalScrollIndicator={false}
       >
+{/* 
+////////////////////////////////////////////////////////////      */}
 <View
   style={[
-    tw`px-4 pb-4 bg-green-600`,
+    tw`px-4 pb-4 bg-[#0066E3]`,
     {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 10,
       borderBottomLeftRadius: 35,
       borderBottomRightRadius: 35,
       paddingTop: Platform.OS === 'android' ? 35 : 60,
@@ -310,8 +318,8 @@ const [showLocationModal, setShowLocationModal] = useState(false);
       {/* Profile Image */}
       <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
         <Image
-          source={{ uri: profileImageUri }}
-          style={tw`w-14 h-14 rounded-full border-2 border-green-200`}
+          source={require('../../assets/images/uifaces-popular-avatar(1).jpg')}
+          style={tw`w-12 h-12 border-blue-200 border-2 rounded-full`}
         />
       </TouchableOpacity>
 
@@ -320,11 +328,14 @@ const [showLocationModal, setShowLocationModal] = useState(false);
         onPress={() => setShowLocationModal(true)}
         style={tw`flex-row items-center mx-3`}
       >
-        <MapPin size={16} color="white" />
-        <Text style={tw`ml-1 text-white font-medium text-sm`}>
+        <MapPin size={24} color="white" />
+        
+        {/* <IoLocationSharp size={16} color="white" /> */}
+        <Text style={tw`ml-1 text-white font-semibold text-base`}>
           {selectedLocation}
         </Text>
-        <ChevronDown size={16} color="white" style={tw`ml-1`} />
+
+        <ChevronDown size={24} color="white" style={tw`ml-1`} />
       </TouchableOpacity>
       <Modal isVisible={showLocationModal} onBackdropPress={() => setShowLocationModal(false)}>
         <View style={tw`bg-white p-6 rounded-2xl items-center`}>
@@ -338,16 +349,16 @@ const [showLocationModal, setShowLocationModal] = useState(false);
                 setShowLocationModal(false);
               }}
             >
-              <Text style={tw`text-lg ${selectedLocation === city ? 'text-green-700 font-bold' : 'text-green-800'}`}>{city}</Text>
+              <Text style={tw`text-lg ${selectedLocation === city ? 'text-blue-700 font-bold' : 'text-blue-800'}`}>{city}</Text>
             </TouchableOpacity>
           ))}
           <TouchableOpacity style={tw`mt-4`} onPress={() => setShowLocationModal(false)}>
-            <Text style={tw`text-green-700 font-bold`}>Close</Text>
+            <Text style={tw`text-blue-700 font-bold`}>Close</Text>
           </TouchableOpacity>
         </View>
       </Modal>      
       
-      <View style={tw`flex-row items-center`}>
+      {/* <View style={tw`flex-row items-center`}>
         <TouchableOpacity 
           onPress={() => setShowLanguageModal(true)} 
           style={tw`flex-row items-center`}
@@ -361,34 +372,34 @@ const [showLocationModal, setShowLocationModal] = useState(false);
               <View style={tw`absolute top-0 right-0 w-2 h-2 rounded-full bg-emerald-500`} />
             </View>
         </TouchableOpacity>
-      </View>
+      </View> */}
 
       {/* Language Selection Modal */}
-      <Modal 
+      {/* <Modal 
         isVisible={showLanguageModal} 
         onBackdropPress={() => setShowLanguageModal(false)}
         style={tw`m-0 justify-end`}
       >
         <View style={tw`bg-white rounded-t-3xl`}>
-          <View style={tw`p-4 border-b border-green-100`}>
-            <View style={tw`w-12 h-1 bg-green-200 rounded-full mx-auto mb-4`} />
+          <View style={tw`p-4 border-b border-blue-100`}>
+            <View style={tw`w-12 h-1 bg-blue-200 rounded-full mx-auto mb-4`} />
             <Text style={tw`text-xl font-bold text-center`}>Select Language</Text>
           </View>
           <ScrollView style={tw`max-h-[70%]`}>
             {languages.map((lang) => (
               <TouchableOpacity
                 key={lang.code}
-                style={tw`flex-row items-center justify-between px-6 py-4 border-b border-green-50`}
+                style={tw`flex-row items-center justify-between px-6 py-4 border-b border-blue-50`}
                 onPress={() => {
                   setSelectedLanguage(lang.name);
                   setShowLanguageModal(false);
                 }}
               >
-                <Text style={tw`text-base ${selectedLanguage === lang.name ? 'text-green-700 font-bold' : 'text-green-800'}`}>
+                <Text style={tw`text-base ${selectedLanguage === lang.name ? 'text-blue-700 font-bold' : 'text-blue-800'}`}>
                   {lang.name}
                 </Text>
                 {selectedLanguage === lang.name && (
-                  <View style={tw`w-6 h-6 rounded-full bg-green-600 items-center justify-center`}>
+                  <View style={tw`w-6 h-6 rounded-full bg-blue-600 items-center justify-center`}>
                     <Text style={tw`text-white font-bold text-sm`}>✓</Text>
                   </View>
                 )}
@@ -396,13 +407,23 @@ const [showLocationModal, setShowLocationModal] = useState(false);
             ))}
           </ScrollView>
           <TouchableOpacity
-            style={tw`p-4 border-t border-green-100`}
+            style={tw`p-4 border-t border-blue-100`}
             onPress={() => setShowLanguageModal(false)}
           >
-            <Text style={tw`text-center text-green-700 font-bold text-lg`}>Close</Text>
+            <Text style={tw`text-center text-blue-700 font-bold text-lg`}>Close</Text>
           </TouchableOpacity>
         </View>
-      </Modal>
+      </Modal> */}
+
+
+      <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+        <Image
+          source={require('../../assets/images/chat-bot-icon-design-robot-600nw-2476207303.jpg')}
+          style={tw`w-12 h-12 border-blue-200 border-2 rounded-full bg-white`}
+        />
+      </TouchableOpacity>
+
+
     </View>
 
     {/* Search Bar */}
@@ -412,12 +433,16 @@ const [showLocationModal, setShowLocationModal] = useState(false);
       style={tw`mt-4 mb-4 flex-row items-center px-4 py-2.5 bg-white rounded-full shadow-sm border border-gray-200`}
     >
       <Search size={18} color="#059669" />
-      <Text style={tw`ml-3 text-green-700 text-sm`}>
+      <Text style={tw`ml-3 text-blue-700 text-sm`}>
         Search doctors, clinics, tests...
       </Text>
     </TouchableOpacity>
   </View>
 </View>
+
+
+{/* 
+////////////////////////////////////////////////////////////      */}
 
   {/* Quick Actions Grid - Images only */}
 <View style={tw`flex-row flex-wrap justify-between mx-4 mt-6 gap-2`}>
@@ -430,15 +455,98 @@ const [showLocationModal, setShowLocationModal] = useState(false);
     style={tw`relative`}
   >
     <Image
-      source={require('../../assets/images/13234650_5183184.jpg')}
+      source={require('../../assets/images/onlinehome.jpg')}
       style={tw`w-[${(screenWidth - 48) / 2}px] h-30 rounded-3xl`}
-      resizeMode="cover"
+      resizeMode="contain"
     />
     {/* <View style={tw`absolute bottom-2 left-2`}>
       <Text style={tw`text-white font-bold text-lg`}>Video Consult</Text>
       <Text style={tw`text-white text-sm`}>Consult Online Now</Text>
     </View> */}
   </TouchableOpacity>
+
+
+
+    <TouchableOpacity
+    onPress={() => {
+      user.setConsultationMode('online');
+      navigation.navigate('AllSpecialtiesScreen', { mode: 'video' });
+    }}
+    style={tw`relative`}
+  >
+    <Image
+      source={require('../../assets/images/daycare.jpg')}
+      style={tw`w-[${(screenWidth - 48) / 2}px] h-30 rounded-3xl`}
+      resizeMode="contain"
+    />
+    {/* <View style={tw`absolute bottom-2 left-2`}>
+      <Text style={tw`text-white font-bold text-lg`}>Video Consult</Text>
+      <Text style={tw`text-white text-sm`}>Consult Online Now</Text>
+    </View> */}
+  </TouchableOpacity>
+
+
+
+      <TouchableOpacity
+    onPress={() => {
+      user.setConsultationMode('online');
+      navigation.navigate('AllSpecialtiesScreen', { mode: 'video' });
+    }}
+    style={tw`relative`}
+  >
+    <Image
+      source={require('../../assets/images/secondopinion.jpg')}
+      style={tw`w-[${(screenWidth - 48) / 2}px] h-30 rounded-3xl`}
+      resizeMode="contain"
+    />
+    {/* <View style={tw`absolute bottom-2 left-2`}>
+      <Text style={tw`text-white font-bold text-lg`}>Video Consult</Text>
+      <Text style={tw`text-white text-sm`}>Consult Online Now</Text>
+    </View> */}
+  </TouchableOpacity>
+
+
+
+
+      <TouchableOpacity
+    onPress={() => {
+      user.setConsultationMode('online');
+      navigation.navigate('AllSpecialtiesScreen', { mode: 'video' });
+    }}
+    style={tw`relative`}
+  >
+    <Image
+      source={require('../../assets/images/eldercare.jpg')}
+      style={tw`w-[${(screenWidth - 48) / 2}px] h-30 rounded-3xl`}
+      resizeMode="contain"
+    />
+    {/* <View style={tw`absolute bottom-2 left-2`}>
+      <Text style={tw`text-white font-bold text-lg`}>Video Consult</Text>
+      <Text style={tw`text-white text-sm`}>Consult Online Now</Text>
+    </View> */}
+  </TouchableOpacity>
+
+
+        <TouchableOpacity
+    onPress={() => {
+      user.setConsultationMode('online');
+      navigation.navigate('AllSpecialtiesScreen', { mode: 'video' });
+    }}
+    style={tw`relative`}
+  >
+    <Image
+      source={require('../../assets/images/insurance.jpg')}
+      style={tw`w-[${(screenWidth - 48) / 2}px] h-30 rounded-3xl`}
+      resizeMode="contain"
+    />
+    {/* <View style={tw`absolute bottom-2 left-2`}>
+      <Text style={tw`text-white font-bold text-lg`}>Video Consult</Text>
+      <Text style={tw`text-white text-sm`}>Consult Online Now</Text>
+    </View> */}
+  </TouchableOpacity>
+
+
+
 
   {/* In-Clinic Consultation */}
   <TouchableOpacity
@@ -506,7 +614,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
               <View
                 key={index}
                 style={tw`w-2 h-2 bg-gray-300 rounded-full mx-1 ${
-                  activeBannerIndex === index ? 'bg-green-800 w-4 shadow-sm' : ''
+                  activeBannerIndex === index ? 'bg-blue-800 w-4 shadow-sm' : ''
                 }`}
               />
             ))}
@@ -516,7 +624,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
         {/* Specialties */}
         <View style={tw`mt-6 px-6`}>
           <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left`}>
-            Find a Doctor for your Health Problem
+            Find a Doctor for your Health Problems
           </Text>
           <View style={tw`mt-2`}>
             <View style={tw`flex-row flex-wrap justify-between`}>
@@ -534,10 +642,10 @@ const [showLocationModal, setShowLocationModal] = useState(false);
                 style={tw`w-[30%] mb-4 items-center`} 
                 onPress={() => navigation.navigate('AllSpecialtiesScreen')}
               >
-                <View style={tw`bg-green-100 w-[100px] h-[100px] rounded-[30px] items-center justify-center`}>
+                <View style={tw`bg-blue-100 w-[100px] h-[100px] rounded-[30px] items-center justify-center`}>
                   <ChevronRight size={18} color="#059669" />
                 </View>
-                <Text style={tw`text-xs mt-2 text-center text-green-700 font-bold`}>
+                <Text style={tw`text-xs mt-2 text-center text-blue-700 font-bold`}>
                   View More
                 </Text>
               </TouchableOpacity>
@@ -555,7 +663,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
               onPress={() => navigation.navigate('AllHospitals')}
               activeOpacity={0.7}
             >
-              <Text style={tw`text-xs text-green-700 font-semibold py-2 px-2`}>
+              <Text style={tw`text-xs text-blue-700 font-semibold py-2 px-2`}>
                 View All
               </Text>
             </TouchableOpacity>
@@ -589,7 +697,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
                   <Text style={tw`text-sm font-bold text-white`}>{hospital.name}</Text>
                   <View style={tw`flex-row items-center mt-0.5`}>
                     <MapPin size={10} color="#bbf7d0" />
-                    <Text style={tw`text-xs text-green-100 ml-1`}>{hospital.location}</Text>
+                    <Text style={tw`text-xs text-blue-100 ml-1`}>{hospital.location}</Text>
                   </View>
                 </View>
               </TouchableOpacity> 
@@ -610,7 +718,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
               onPress={() => navigation.navigate('AllPharmacies')}
               activeOpacity={0.7}
             >
-              <Text style={tw`text-xs text-green-700 font-semibold py-2 px-2`}>
+              <Text style={tw`text-xs text-blue-700 font-semibold py-2 px-2`}>
                 View All
               </Text>
             </TouchableOpacity>
@@ -636,7 +744,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
                   <Text style={tw`text-sm font-bold text-white`}>{pharmacy.name}</Text>
                   <View style={tw`flex-row items-center mt-0.5`}>
                     <MapPin size={12} color="#bbf7d0" />
-                    <Text style={tw`text-xs text-green-100 ml-1`}>{pharmacy.location}</Text>
+                    <Text style={tw`text-xs text-blue-100 ml-1`}>{pharmacy.location}</Text>
                   </View>
                 </View>
               </TouchableOpacity>
@@ -655,7 +763,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
               onPress={() => navigation.navigate('AllOffersScreen')}
               activeOpacity={0.7}
             >
-              <Text style={tw`text-xs text-green-700 font-semibold py-2 px-2`}>
+              <Text style={tw`text-xs text-blue-700 font-semibold py-2 px-2`}>
                 View All
               </Text>
             </TouchableOpacity>

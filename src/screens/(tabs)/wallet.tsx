@@ -18,7 +18,7 @@ const transactions = [
         date: '13 May 2025',
         description: 'from: Promotion',
         amount: '+200.0',
-        color: 'text-green-600',
+        color: 'text-blue-600',
     },
 ];
 

@@ -138,7 +138,7 @@ const DoctorHeader: React.FC<DoctorHeaderProps> = ({
   }, [showDoctorInfo]);
 
   return (
-    <View style={tw`bg-[#059669] px-4 pt-12 pb-3`}>
+    <View style={tw`bg-[#164aa3] px-4 pt-12 pb-3`}>
       <View style={tw`flex-row items-center justify-between`}>
         {/* Back / Title */}
         <View style={tw`flex-row items-center`}>

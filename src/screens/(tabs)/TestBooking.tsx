@@ -49,8 +49,8 @@ const TestBookingScreen = () => {
     const isSelected = selectedTests.includes(item.id);
     return (
           <TouchableOpacity
-            style={tw`bg-green-50 p-4 rounded-xl mb-3 mx-4 border ${
-              isSelected ? 'border-green-600 bg-green-100' : 'border-green-200'
+            style={tw`bg-blue-50 p-4 rounded-xl mb-3 mx-4 border ${
+              isSelected ? 'border-blue-600 bg-blue-100' : 'border-blue-200'
             }`}
         onPress={() => toggleSelection(item.id)}
         activeOpacity={0.8}
@@ -60,13 +60,13 @@ const TestBookingScreen = () => {
       >
         <View style={tw`flex-row items-center`}>
           {isSelected ? (
-                <CheckSquare size={24} color="#16a34a" />
+                <CheckSquare size={24} color="#164aa3ff" />
           ) : (
             <Square size={24} color="#888" />
           )}
           <View style={tw`ml-3 flex-1`}>
-            <Text style={tw`text-base font-medium text-green-900`}>{item.name}</Text>
-            <Text style={tw`text-sm text-green-700 mt-1`}>₹{item.price}</Text>
+            <Text style={tw`text-base font-medium text-blue-900`}>{item.name}</Text>
+            <Text style={tw`text-sm text-blue-700 mt-1`}>₹{item.price}</Text>
           </View>
         </View>
       </TouchableOpacity>
@@ -89,12 +89,12 @@ const TestBookingScreen = () => {
 
       {/* Bottom Bar */}
       {selectedTests.length > 0 && (
-        <View style={tw`absolute bottom-0 left-0 right-0 bg-green-50 px-4 py-3 border-t border-green-200 flex-row justify-between items-center`}>
-          <Text style={tw`text-base font-medium text-green-800`}>
+        <View style={tw`absolute bottom-0 left-0 right-0 bg-blue-50 px-4 py-3 border-t border-blue-200 flex-row justify-between items-center`}>
+          <Text style={tw`text-base font-medium text-blue-800`}>
             {selectedTests.length} test(s) — ₹{totalAmount}
           </Text>
           <TouchableOpacity
-              style={tw`bg-green-600 py-2 px-5 rounded-2xl`}
+              style={tw`bg-blue-600 py-2 px-5 rounded-2xl`}
             onPress={handleBooking}
             accessibilityRole="button"
             accessibilityLabel={`Book ${selectedTests.length} tests for ₹${totalAmount}`}

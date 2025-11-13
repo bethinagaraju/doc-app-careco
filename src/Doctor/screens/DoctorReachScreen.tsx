@@ -15,41 +15,41 @@ const DoctorReachScreen = () => {
   ];
 
   return (
-    <View style={tw`flex-1 bg-green-50`}>
+    <View style={tw`flex-1 bg-blue-50`}>
       <DoctorHeader title="Online Reach" showSettings showNotifications />
       <ScrollView contentContainerStyle={tw`pb-6`}> 
-        <View style={tw`p-5 bg-green-100 rounded-b-2xl mb-4`}> 
-          <Text style={tw`text-2xl font-bold text-green-700 mb-2`}>Your Online Reach</Text>
-          <Text style={tw`text-base text-green-600`}>Monitor and improve your online presence</Text>
+        <View style={tw`p-5 bg-blue-100 rounded-b-2xl mb-4`}> 
+          <Text style={tw`text-2xl font-bold text-blue-700 mb-2`}>Your Online Reach</Text>
+          <Text style={tw`text-base text-blue-600`}>Monitor and improve your online presence</Text>
         </View>
 
         <View style={tw`flex-row flex-wrap justify-between px-4 mb-4`}> 
           {stats.map((stat, index) => (
             <View key={index} style={tw`bg-white rounded-xl p-4 mb-4 w-[47%] items-center shadow-sm`}>
-              <Icon name={stat.icon} size={32} color="#16a34a" />
-              <Text style={tw`text-2xl font-bold text-green-700 mt-2`}>{stat.count}</Text>
-              <Text style={tw`text-green-600 mt-1`}>{stat.title}</Text>
+              <Icon name={stat.icon} size={32} color="#164aa3ff" />
+              <Text style={tw`text-2xl font-bold text-blue-700 mt-2`}>{stat.count}</Text>
+              <Text style={tw`text-blue-600 mt-1`}>{stat.title}</Text>
             </View>
           ))}
         </View>
 
         <View style={tw`px-4 mb-4`}> 
-          <Text style={tw`text-lg font-bold text-green-700 mb-2`}>Profile Completion</Text>
-          <View style={tw`h-3 bg-green-100 rounded-full overflow-hidden mb-2`}> 
-            <View style={[tw`h-3 bg-green-600 rounded-full`, { width: '85%' }]} />
+          <Text style={tw`text-lg font-bold text-blue-700 mb-2`}>Profile Completion</Text>
+          <View style={tw`h-3 bg-blue-100 rounded-full overflow-hidden mb-2`}> 
+            <View style={[tw`h-3 bg-blue-600 rounded-full`, { width: '85%' }]} />
           </View>
-          <Text style={tw`text-green-600`}>85% Complete</Text>
+          <Text style={tw`text-blue-600`}>85% Complete</Text>
         </View>
 
         <View style={tw`px-4 mb-4`}> 
-          <Text style={tw`text-lg font-bold text-green-700 mb-2`}>Improve Your Reach</Text>
-          <View style={tw`bg-green-100 rounded-xl p-4 mb-2 flex-row items-center`}>
-            <Icon name="lightbulb-on" size={24} color="#16a34a" />
-            <Text style={tw`text-green-600 ml-2`}>Complete your profile to appear higher in search results</Text>
+          <Text style={tw`text-lg font-bold text-blue-700 mb-2`}>Improve Your Reach</Text>
+          <View style={tw`bg-blue-100 rounded-xl p-4 mb-2 flex-row items-center`}>
+            <Icon name="lightbulb-on" size={24} color="#164aa3ff" />
+            <Text style={tw`text-blue-600 ml-2`}>Complete your profile to appear higher in search results</Text>
           </View>
-          <View style={tw`bg-green-100 rounded-xl p-4 flex-row items-center`}>
-            <Icon name="star" size={24} color="#16a34a" />
-            <Text style={tw`text-green-600 ml-2`}>Encourage satisfied patients to leave reviews</Text>
+          <View style={tw`bg-blue-100 rounded-xl p-4 flex-row items-center`}>
+            <Icon name="star" size={24} color="#164aa3ff" />
+            <Text style={tw`text-blue-600 ml-2`}>Encourage satisfied patients to leave reviews</Text>
           </View>
         </View>
       </ScrollView>

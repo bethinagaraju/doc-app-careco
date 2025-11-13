@@ -33,25 +33,25 @@ const PatientStoriesScreen = () => {
         key={index}
         name={index < rating ? 'star' : 'star-outline'}
         size={16}
-        color="#16a34a"
+        color="#165aa3ff"
       />
     ));
   };
 
   return (
-    <View style={tw`flex-1 bg-green-50`}>
+    <View style={tw`flex-1 bg-blue-50`}>
       <DoctorHeader title="Patient Stories" showSettings showNotifications />
       <ScrollView contentContainerStyle={tw`pb-6`}> 
-        <View style={tw`p-5 bg-green-100 rounded-b-2xl mb-4`}> 
-          <Text style={tw`text-2xl font-bold text-green-700 mb-2`}>Patient Stories</Text>
+        <View style={tw`p-5 bg-blue-100 rounded-b-2xl mb-4`}> 
+          <Text style={tw`text-2xl font-bold text-blue-700 mb-2`}>Patient Stories</Text>
           <View style={tw`flex-row justify-between mt-2`}> 
             <View style={tw`items-center`}> 
-              <Text style={tw`text-2xl font-bold text-green-700`}>4.8</Text>
-              <Text style={tw`text-green-600`}>Average Rating</Text>
+              <Text style={tw`text-2xl font-bold text-blue-700`}>4.8</Text>
+              <Text style={tw`text-blue-600`}>Average Rating</Text>
             </View>
             <View style={tw`items-center`}> 
-              <Text style={tw`text-2xl font-bold text-green-700`}>156</Text>
-              <Text style={tw`text-green-600`}>Total Reviews</Text>
+              <Text style={tw`text-2xl font-bold text-blue-700`}>156</Text>
+              <Text style={tw`text-blue-600`}>Total Reviews</Text>
             </View>
           </View>
         </View>
@@ -62,13 +62,13 @@ const PatientStoriesScreen = () => {
               <View style={tw`flex-row items-center mb-2`}> 
                 <Image source={{ uri: story.image }} style={tw`w-12 h-12 rounded-full mr-3`} />
                 <View style={tw`flex-1`}> 
-                  <Text style={tw`text-green-700 font-bold`}>{story.patientName}</Text>
-                  <Text style={tw`text-green-400 text-xs`}>{story.condition}</Text>
+                  <Text style={tw`text-blue-700 font-bold`}>{story.patientName}</Text>
+                  <Text style={tw`text-blue-400 text-xs`}>{story.condition}</Text>
                 </View>
-                <Text style={tw`text-green-400 text-xs`}>{story.date}</Text>
+                <Text style={tw`text-blue-400 text-xs`}>{story.date}</Text>
               </View>
               <View style={tw`flex-row items-center mb-2`}>{renderStars(story.rating)}</View>
-              <Text style={tw`text-green-600`}>{story.review}</Text>
+              <Text style={tw`text-blue-600`}>{story.review}</Text>
             </View>
           ))}
         </View>

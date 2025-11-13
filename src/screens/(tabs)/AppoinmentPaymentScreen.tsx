@@ -78,7 +78,7 @@
 // // // // // // // // //             <View style={tw`flex-1`}>
 // // // // // // // // //               <Text style={tw`font-bold text-gray-900`}>{doctor.user.username}</Text>
 // // // // // // // // //               {doctor.specialization && <Text style={tw`text-gray-600`}>{doctor.specialization}</Text>}
-// // // // // // // // //               <Text style={tw`text-green-700`}>
+// // // // // // // // //               <Text style={tw`text-blue-700`}>
 // // // // // // // // //                 {[
 // // // // // // // // //                   doctor.user.address[0]?.house_no,
 // // // // // // // // //                   doctor.user.address[0]?.street,
@@ -94,7 +94,7 @@
 // // // // // // // // //                     <Text style={tw`text-gray-500 text-sm`}>{doctor.address}</Text>
 // // // // // // // // //                   )}
 // // // // // // // // //               {doctor.consultation_fee && (
-// // // // // // // // //                 <Text style={tw`text-green-700 mt-1`}>
+// // // // // // // // //                 <Text style={tw`text-blue-700 mt-1`}>
 // // // // // // // // //                   Fee: ₹{doctor.consultation_fee}
 // // // // // // // // //                 </Text>
 // // // // // // // // //               )}
@@ -143,7 +143,7 @@
 // // // // // // // // //             <Text style={tw`text-gray-600`}>Platform Fee</Text>
 // // // // // // // // //             <View style={tw`flex-row items-center`}>
 // // // // // // // // //               <Text style={tw`text-gray-400 line-through mr-2`}>₹49</Text>
-// // // // // // // // //               <Text style={tw`text-green-600`}>FREE</Text>
+// // // // // // // // //               <Text style={tw`text-blue-600`}>FREE</Text>
 // // // // // // // // //             </View>
 // // // // // // // // //           </View>
 
@@ -173,8 +173,8 @@
 // // // // // // // // //           {/* Cards */}
 // // // // // // // // //           <TouchableOpacity style={tw`flex-row items-center justify-between p-3 border border-gray-200 rounded-lg`}>
 // // // // // // // // //             <View style={tw`flex-row items-center`}>
-// // // // // // // // //               <View style={tw`w-10 h-10 bg-green-50 rounded-full items-center justify-center`}>
-// // // // // // // // //                 <Text style={tw`text-green-600 font-bold`}>₹</Text>
+// // // // // // // // //               <View style={tw`w-10 h-10 bg-blue-50 rounded-full items-center justify-center`}>
+// // // // // // // // //                 <Text style={tw`text-blue-600 font-bold`}>₹</Text>
 // // // // // // // // //               </View>
 // // // // // // // // //               <Text style={tw`ml-3 font-medium`}>Cards, Netbanking & More</Text>
 // // // // // // // // //             </View>
@@ -383,7 +383,7 @@
 // // // // // // // //             <View style={tw`flex-1`}>
 // // // // // // // //               <Text style={tw`font-bold text-gray-900`}>{doctor.user?.username}</Text>
 // // // // // // // //               <Text style={tw`text-gray-600`}>{doctor.specialization}</Text>
-// // // // // // // //               <Text style={tw`text-green-700 mt-1`}>
+// // // // // // // //               <Text style={tw`text-blue-700 mt-1`}>
 // // // // // // // //                 Fee: ₹{doctor.consultation_fee}
 // // // // // // // //               </Text>
 // // // // // // // //             </View>
@@ -651,7 +651,7 @@
 // // // // // // //             <View style={tw`flex-1`}>
 // // // // // // //               <Text style={tw`font-bold text-gray-900`}>{doctor.user?.username}</Text>
 // // // // // // //               <Text style={tw`text-gray-600`}>{doctor.specialization}</Text>
-// // // // // // //               <Text style={tw`text-green-700 mt-1`}>
+// // // // // // //               <Text style={tw`text-blue-700 mt-1`}>
 // // // // // // //                 Fee: ₹{doctor.consultation_fee}
 // // // // // // //               </Text>
 // // // // // // //             </View>
@@ -916,7 +916,7 @@
 // // // // // //             <View style={tw`flex-1`}>
 // // // // // //               <Text style={tw`font-bold text-gray-900`}>{doctor.user?.username}</Text>
 // // // // // //               <Text style={tw`text-gray-600`}>{doctor.specialization}</Text>
-// // // // // //               <Text style={tw`text-green-700 mt-1`}>
+// // // // // //               <Text style={tw`text-blue-700 mt-1`}>
 // // // // // //                 Fee: ₹{doctor.consultation_fee}
 // // // // // //               </Text>
 // // // // // //             </View>
@@ -1164,7 +1164,7 @@
 // // // // //             <View style={tw`flex-1`}>
 // // // // //               <Text style={tw`font-bold text-gray-900`}>{doctor.user?.username}</Text>
 // // // // //               <Text style={tw`text-gray-600`}>{doctor.specialization}</Text>
-// // // // //               <Text style={tw`text-green-700 mt-1`}>
+// // // // //               <Text style={tw`text-blue-700 mt-1`}>
 // // // // //                 Fee: ₹{doctor.consultation_fee}
 // // // // //               </Text>
 // // // // //             </View>
@@ -1448,7 +1448,7 @@
 // // // //               <Text style={tw`text-gray-600`}>
 // // // //                 {doctor.specialization || 'General Physician'}
 // // // //               </Text>
-// // // //               <Text style={tw`text-green-700 mt-1`}>
+// // // //               <Text style={tw`text-blue-700 mt-1`}>
 // // // //                 Fee: ₹{doctor.consultation_fee || amount}
 // // // //               </Text>
 // // // //             </View>
@@ -1771,7 +1771,7 @@
 // // //               <Text style={tw`text-gray-600`}>
 // // //                 {doctor.specialization || 'General Physician'}
 // // //               </Text>
-// // //               <Text style={tw`text-green-700 mt-1`}>
+// // //               <Text style={tw`text-blue-700 mt-1`}>
 // // //                 Fee: ₹{doctor.consultation_fee || amount}
 // // //               </Text>
 // // //             </View>
@@ -1965,7 +1965,7 @@
 // //               <Text style={tw`text-gray-600`}>
 // //                 {doctor.specialization || 'General Physician'}
 // //               </Text>
-// //               <Text style={tw`text-green-700 mt-1`}>
+// //               <Text style={tw`text-blue-700 mt-1`}>
 // //                 Fee: ₹{doctor.consultation_fee || amount}
 // //               </Text>
 // //             </View>
@@ -2149,7 +2149,7 @@
 //               <Text style={tw`text-gray-600`}>
 //                 {doctor?.specialization || 'General Physician'}
 //               </Text>
-//               <Text style={tw`text-green-700 mt-1`}>
+//               <Text style={tw`text-blue-700 mt-1`}>
 //                 Fee: ₹{doctor?.consultation_fee || amount}
 //               </Text>
 //             </View>
@@ -2318,7 +2318,7 @@ const PaymentScreen = () => {
               <Text style={tw`text-gray-600`}>
                 {doctor?.specialization || 'General Physician'}
               </Text>
-              <Text style={tw`text-green-700 mt-1`}>
+              <Text style={tw`text-blue-700 mt-1`}>
                 Fee: ₹{doctor?.consultation_fee || amount}
               </Text>
             </View>

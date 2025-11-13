@@ -37,11 +37,11 @@ const AccountScreen = () => {
   };
 
   return (
-    <View style={tw`flex-1 bg-green-50`}>
+    <View style={tw`flex-1 bg-blue-50`}>
       <DoctorHeader title="Account" />
       <ScrollView contentContainerStyle={tw`p-4 pb-10`}>
-        <Text style={tw`text-2xl font-bold text-green-700 mb-2 text-center`}>Account Information</Text>
-        <Text style={tw`text-base text-green-600 mb-6 text-center`}>Manage your profile details</Text>
+        <Text style={tw`text-2xl font-bold text-blue-700 mb-2 text-center`}>Account Information</Text>
+        <Text style={tw`text-base text-blue-600 mb-6 text-center`}>Manage your profile details</Text>
 
         {/* Profile Picture Section */}
         <View style={tw`bg-white rounded-xl p-4 mb-4 items-center`}>
@@ -56,7 +56,7 @@ const AccountScreen = () => {
         {/* Personal Information */}
         <View style={tw`bg-white rounded-xl p-4 mb-4`}>
           <View style={tw`flex-row justify-between items-center mb-4`}>
-            <Text style={tw`text-lg font-bold text-green-700`}>Personal Information</Text>
+            <Text style={tw`text-lg font-bold text-blue-700`}>Personal Information</Text>
             <TouchableOpacity 
               onPress={() => setEditMode(!editMode)}
               style={tw`bg-emerald-500 rounded-lg px-3 py-1`}
@@ -68,81 +68,81 @@ const AccountScreen = () => {
           {/* Name (Fixed) */}
           <View style={tw`mb-4`}>
             <View style={tw`flex-row items-center mb-2`}>
-              <User size={20} color="#16a34a" />
-              <Text style={tw`text-green-600 font-medium ml-2`}>Full Name</Text>
+              <User size={20} color="#164aa3ff" />
+              <Text style={tw`text-blue-600 font-medium ml-2`}>Full Name</Text>
             </View>
-            <Text style={tw`text-green-700 font-bold ml-6`}>{doctorInfo.name}</Text>
+            <Text style={tw`text-blue-700 font-bold ml-6`}>{doctorInfo.name}</Text>
           </View>
 
           {/* Email (Fixed) */}
           <View style={tw`mb-4`}>
             <View style={tw`flex-row items-center mb-2`}>
-              <Mail size={20} color="#16a34a" />
+              <Mail size={20} color="#164aa3ff" />
               <Text style={tw`text-gray-700 font-medium ml-2`}>Email</Text>
             </View>
-            <Text style={tw`text-[#16a34a] font-bold ml-6`}>{doctorInfo.email}</Text>
+            <Text style={tw`text-[#164aa3ff] font-bold ml-6`}>{doctorInfo.email}</Text>
           </View>
 
           {/* Phone (Fixed) */}
           <View style={tw`mb-4`}>
             <View style={tw`flex-row items-center mb-2`}>
-              <Phone size={20} color="#16a34a" />
+              <Phone size={20} color="#164aa3ff" />
               <Text style={tw`text-gray-700 font-medium ml-2`}>Phone</Text>
             </View>
-            <Text style={tw`text-[#16a34a] font-bold ml-6`}>{doctorInfo.phone}</Text>
+            <Text style={tw`text-[#164aa3ff] font-bold ml-6`}>{doctorInfo.phone}</Text>
           </View>
 
           {/* Date of Birth (Editable) */}
           <View style={tw`mb-4`}>
             <View style={tw`flex-row items-center mb-2`}>
-              <Calendar size={20} color="#16a34a" />
+              <Calendar size={20} color="#164aa3ff" />
               <Text style={tw`text-gray-700 font-medium ml-2`}>Date of Birth</Text>
             </View>
             {editMode ? (
               <TextInput
-                style={tw`border border-gray-300 rounded-lg p-3 text-[#16a34a]`}
+                style={tw`border border-gray-300 rounded-lg p-3 text-[#164aa3ff]`}
                 value={doctorInfo.dateOfBirth}
                 onChangeText={(text) => setDoctorInfo({...doctorInfo, dateOfBirth: text})}
                 placeholder="YYYY-MM-DD"
               />
             ) : (
-              <Text style={tw`text-[#16a34a] font-bold ml-6`}>{doctorInfo.dateOfBirth}</Text>
+              <Text style={tw`text-[#164aa3ff] font-bold ml-6`}>{doctorInfo.dateOfBirth}</Text>
             )}
           </View>
 
           {/* Gender (Editable) */}
           <View style={tw`mb-4`}>
             <View style={tw`flex-row items-center mb-2`}>
-              <User2 size={20} color="#16a34a" />
+              <User2 size={20} color="#164aa3ff" />
               <Text style={tw`text-gray-700 font-medium ml-2`}>Gender</Text>
             </View>
             {editMode ? (
               <TextInput
-                style={tw`border border-gray-300 rounded-lg p-3 text-[#16a34a]`}
+                style={tw`border border-gray-300 rounded-lg p-3 text-[#164aa3ff]`}
                 value={doctorInfo.gender}
                 onChangeText={(text) => setDoctorInfo({...doctorInfo, gender: text})}
               />
             ) : (
-              <Text style={tw`text-[#16a34a] font-bold ml-6`}>{doctorInfo.gender}</Text>
+              <Text style={tw`text-[#164aa3ff] font-bold ml-6`}>{doctorInfo.gender}</Text>
             )}
           </View>
         </View>
 
         {/* Professional Information */}
         <View style={tw`bg-white rounded-xl p-4 mb-4`}>
-          <Text style={tw`text-lg font-bold text-[#16a34a] mb-4`}>Professional Information</Text>
+          <Text style={tw`text-lg font-bold text-[#164aa3ff] mb-4`}>Professional Information</Text>
 
           {/* Specialization (Editable) */}
           <View style={tw`mb-3`}>
             <Text style={tw`text-gray-600 text-sm`}>Specialization</Text>
             {editMode ? (
               <TextInput
-                style={tw`border border-gray-300 rounded-lg p-3 text-[#16a34a]`}
+                style={tw`border border-gray-300 rounded-lg p-3 text-[#164aa3ff]`}
                 value={doctorInfo.specialization}
                 onChangeText={(text) => setDoctorInfo({...doctorInfo, specialization: text})}
               />
             ) : (
-              <Text style={tw`text-[#16a34a] font-bold text-base`}>{doctorInfo.specialization}</Text>
+              <Text style={tw`text-[#164aa3ff] font-bold text-base`}>{doctorInfo.specialization}</Text>
             )}
           </View>
 
@@ -151,12 +151,12 @@ const AccountScreen = () => {
             <Text style={tw`text-gray-600 text-sm`}>Experience</Text>
             {editMode ? (
               <TextInput
-                style={tw`border border-gray-300 rounded-lg p-3 text-[#16a34a]`}
+                style={tw`border border-gray-300 rounded-lg p-3 text-[#164aa3ff]`}
                 value={doctorInfo.experience}
                 onChangeText={(text) => setDoctorInfo({...doctorInfo, experience: text})}
               />
             ) : (
-              <Text style={tw`text-[#16a34a] font-bold text-base`}>{doctorInfo.experience}</Text>
+              <Text style={tw`text-[#164aa3ff] font-bold text-base`}>{doctorInfo.experience}</Text>
             )}
           </View>
 
@@ -165,31 +165,31 @@ const AccountScreen = () => {
             <Text style={tw`text-gray-600 text-sm`}>License Number</Text>
             {editMode ? (
               <TextInput
-                style={tw`border border-gray-300 rounded-lg p-3 text-[#16a34a]`}
+                style={tw`border border-gray-300 rounded-lg p-3 text-[#164aa3ff]`}
                 value={doctorInfo.licenseNumber}
                 onChangeText={(text) => setDoctorInfo({...doctorInfo, licenseNumber: text})}
               />
             ) : (
-              <Text style={tw`text-[#16a34a] font-bold text-base`}>{doctorInfo.licenseNumber}</Text>
+              <Text style={tw`text-[#164aa3ff] font-bold text-base`}>{doctorInfo.licenseNumber}</Text>
             )}
           </View>
         </View>
 
         {/* Address Information */}
         <View style={tw`bg-white rounded-xl p-4 mb-4`}>
-          <Text style={tw`text-lg font-bold text-[#16a34a] mb-4`}>Address Information</Text>
+          <Text style={tw`text-lg font-bold text-[#164aa3ff] mb-4`}>Address Information</Text>
 
           {/* Street */}
           <View style={tw`mb-3`}>
             <Text style={tw`text-gray-600 text-sm`}>Street</Text>
             {editMode ? (
               <TextInput
-                style={tw`border border-gray-300 rounded-lg p-3 text-[#16a34a]`}
+                style={tw`border border-gray-300 rounded-lg p-3 text-[#164aa3ff]`}
                 value={doctorInfo.street}
                 onChangeText={(text) => setDoctorInfo({...doctorInfo, street: text})}
               />
             ) : (
-              <Text style={tw`text-[#16a34a] font-bold text-base`}>{doctorInfo.street}</Text>
+              <Text style={tw`text-[#164aa3ff] font-bold text-base`}>{doctorInfo.street}</Text>
             )}
           </View>
 
@@ -198,12 +198,12 @@ const AccountScreen = () => {
             <Text style={tw`text-gray-600 text-sm`}>City</Text>
             {editMode ? (
               <TextInput
-                style={tw`border border-gray-300 rounded-lg p-3 text-[#16a34a]`}
+                style={tw`border border-gray-300 rounded-lg p-3 text-[#164aa3ff]`}
                 value={doctorInfo.city}
                 onChangeText={(text) => setDoctorInfo({...doctorInfo, city: text})}
               />
             ) : (
-              <Text style={tw`text-[#16a34a] font-bold text-base`}>{doctorInfo.city}</Text>
+              <Text style={tw`text-[#164aa3ff] font-bold text-base`}>{doctorInfo.city}</Text>
             )}
           </View>
 
@@ -212,12 +212,12 @@ const AccountScreen = () => {
             <Text style={tw`text-gray-600 text-sm`}>State</Text>
             {editMode ? (
               <TextInput
-                style={tw`border border-gray-300 rounded-lg p-3 text-[#16a34a]`}
+                style={tw`border border-gray-300 rounded-lg p-3 text-[#164aa3ff]`}
                 value={doctorInfo.state}
                 onChangeText={(text) => setDoctorInfo({...doctorInfo, state: text})}
               />
             ) : (
-              <Text style={tw`text-[#16a34a] font-bold text-base`}>{doctorInfo.state}</Text>
+              <Text style={tw`text-[#164aa3ff] font-bold text-base`}>{doctorInfo.state}</Text>
             )}
           </View>
 
@@ -226,13 +226,13 @@ const AccountScreen = () => {
             <Text style={tw`text-gray-600 text-sm`}>Pincode</Text>
             {editMode ? (
               <TextInput
-                style={tw`border border-gray-300 rounded-lg p-3 text-[#16a34a]`}
+                style={tw`border border-gray-300 rounded-lg p-3 text-[#164aa3ff]`}
                 value={doctorInfo.pincode}
                 onChangeText={(text) => setDoctorInfo({...doctorInfo, pincode: text})}
                 keyboardType="numeric"
               />
             ) : (
-              <Text style={tw`text-[#16a34a] font-bold text-base`}>{doctorInfo.pincode}</Text>
+              <Text style={tw`text-[#164aa3ff] font-bold text-base`}>{doctorInfo.pincode}</Text>
             )}
           </View>
 
@@ -241,12 +241,12 @@ const AccountScreen = () => {
             <Text style={tw`text-gray-600 text-sm`}>Delivery Name</Text>
             {editMode ? (
               <TextInput
-                style={tw`border border-gray-300 rounded-lg p-3 text-[#16a34a]`}
+                style={tw`border border-gray-300 rounded-lg p-3 text-[#164aa3ff]`}
                 value={doctorInfo.deliveryName}
                 onChangeText={(text) => setDoctorInfo({...doctorInfo, deliveryName: text})}
               />
             ) : (
-              <Text style={tw`text-[#16a34a] font-bold text-base`}>{doctorInfo.deliveryName}</Text>
+              <Text style={tw`text-[#164aa3ff] font-bold text-base`}>{doctorInfo.deliveryName}</Text>
             )}
           </View>
 
@@ -255,13 +255,13 @@ const AccountScreen = () => {
             <Text style={tw`text-gray-600 text-sm`}>Delivery Phone Number</Text>
             {editMode ? (
               <TextInput
-                style={tw`border border-gray-300 rounded-lg p-3 text-[#16a34a]`}
+                style={tw`border border-gray-300 rounded-lg p-3 text-[#164aa3ff]`}
                 value={doctorInfo.deliveryPNo}
                 onChangeText={(text) => setDoctorInfo({...doctorInfo, deliveryPNo: text})}
                 keyboardType="phone-pad"
               />
             ) : (
-              <Text style={tw`text-[#16a34a] font-bold text-base`}>{doctorInfo.deliveryPNo}</Text>
+              <Text style={tw`text-[#164aa3ff] font-bold text-base`}>{doctorInfo.deliveryPNo}</Text>
             )}
           </View>
         </View>

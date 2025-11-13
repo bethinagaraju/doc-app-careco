@@ -240,7 +240,7 @@ const RazorpayPaymentScreen = () => {
               <Text style={tw`text-gray-600`}>
                 {doctor?.specialization || 'General Physician'}
               </Text>
-              <Text style={tw`text-green-700 mt-1`}>
+              <Text style={tw`text-blue-700 mt-1`}>
                 Fee: ₹{doctor?.consultation_fee || amount}
               </Text>
             </View>

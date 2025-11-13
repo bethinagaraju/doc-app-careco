@@ -22,18 +22,18 @@
 // // // // // // // // // //   const specializations: Specialization[] = [
 // // // // // // // // // //     {
 // // // // // // // // // //       title: 'Cardiology',
-// // // // // // // // // //       icon: <Heart size={24} color="#16a34a" />,
+// // // // // // // // // //       icon: <Heart size={24} color="#164aa3ff" />,
 // // // // // // // // // //       years: 10,
 // // // // // // // // // //       expertise: ['Interventional Cardiology', 'Heart Failure Management'],
 // // // // // // // // // //     },
 // // // // // // // // // //     {
 // // // // // // // // // //       title: 'Internal Medicine',
-// // // // // // // // // //       icon: <Stethoscope size={24} color="#16a34a" />,
+// // // // // // // // // //       icon: <Stethoscope size={24} color="#164aa3ff" />,
 // // // // // // // // // //       years: 12,
 // // // // // // // // // //       expertise: ['General Medicine', 'Preventive Care'],
 // // // // // // // // // //     },    {
 // // // // // // // // // //       title: 'Critical Care',
-// // // // // // // // // //       icon: <Activity size={24} color="#16a34a" />,
+// // // // // // // // // //       icon: <Activity size={24} color="#164aa3ff" />,
 // // // // // // // // // //       years: 8,
 // // // // // // // // // //       expertise: ['ICU Management', 'Emergency Medicine'],
 // // // // // // // // // //     },
@@ -53,9 +53,9 @@
 // // // // // // // // // //     }]);
 // // // // // // // // // //   };
 // // // // // // // // // //   return (
-// // // // // // // // // //     <View style={tw`flex-1 bg-green-50`}>
+// // // // // // // // // //     <View style={tw`flex-1 bg-blue-50`}>
 // // // // // // // // // //       <DoctorHeader title="Specializations" showSettings showNotifications />
-// // // // // // // // // //       <View style={tw`flex-row justify-end px-4 py-2 bg-white border-b border-green-100`}>
+// // // // // // // // // //       <View style={tw`flex-row justify-end px-4 py-2 bg-white border-b border-blue-100`}>
 // // // // // // // // // //         <TouchableOpacity 
 // // // // // // // // // //           style={tw`bg-emerald-500 p-2 rounded-full`} 
 // // // // // // // // // //           activeOpacity={0.85}
@@ -66,18 +66,18 @@
 // // // // // // // // // //       </View>
 
 // // // // // // // // // //       <ScrollView contentContainerStyle={tw`p-5 pb-10`}>
-// // // // // // // // // //         <Text style={tw`text-2xl font-bold text-green-700 mb-2 text-center`}>Your Expertise</Text>
-// // // // // // // // // //         <Text style={tw`text-base text-green-600 mb-6 text-center`}>Manage your specializations and expertise areas</Text>
+// // // // // // // // // //         <Text style={tw`text-2xl font-bold text-blue-700 mb-2 text-center`}>Your Expertise</Text>
+// // // // // // // // // //         <Text style={tw`text-base text-blue-600 mb-6 text-center`}>Manage your specializations and expertise areas</Text>
 
 // // // // // // // // // //         {specializations.map((spec, idx) => (
 // // // // // // // // // //           <View key={idx} style={tw`bg-white rounded-2xl p-5 shadow-sm mb-5`}>
 // // // // // // // // // //             <View style={tw`flex-row items-center mb-3`}>
 // // // // // // // // // //               {spec.icon}
 // // // // // // // // // //               <View style={tw`ml-3 flex-1`}>
-// // // // // // // // // //                 <Text style={tw`text-green-700 font-bold text-lg`}>{spec.title}</Text>
-// // // // // // // // // //                 <Text style={tw`text-green-600 text-sm`}>{spec.years} Years Experience</Text>
+// // // // // // // // // //                 <Text style={tw`text-blue-700 font-bold text-lg`}>{spec.title}</Text>
+// // // // // // // // // //                 <Text style={tw`text-blue-600 text-sm`}>{spec.years} Years Experience</Text>
 // // // // // // // // // //               </View>              <TouchableOpacity 
-// // // // // // // // // //                 style={tw`bg-green-100 p-2 rounded-full`}
+// // // // // // // // // //                 style={tw`bg-blue-100 p-2 rounded-full`}
 // // // // // // // // // //                 onPress={() => Alert.alert('Primary Specialization', 'Mark this as your primary specialization?', [
 // // // // // // // // // //                   { text: 'Cancel', style: 'cancel' },
 // // // // // // // // // //                   { text: 'Set as Primary', style: 'default' }
@@ -143,7 +143,7 @@
 // // // // // // // // //   {
 // // // // // // // // //     id: 'spec_1',
 // // // // // // // // //     title: 'Cardiology',
-// // // // // // // // //     icon: <Heart size={24} color="#16a34a" />,
+// // // // // // // // //     icon: <Heart size={24} color="#164aa3ff" />,
 // // // // // // // // //     years: 10,
 // // // // // // // // //     expertise: ['Interventional Cardiology', 'Heart Failure Management'],
 // // // // // // // // //     isPrimary: true,
@@ -151,7 +151,7 @@
 // // // // // // // // //   {
 // // // // // // // // //     id: 'spec_2',
 // // // // // // // // //     title: 'Internal Medicine',
-// // // // // // // // //     icon: <Stethoscope size={24} color="#16a34a" />,
+// // // // // // // // //     icon: <Stethoscope size={24} color="#164aa3ff" />,
 // // // // // // // // //     years: 12,
 // // // // // // // // //     expertise: ['General Medicine', 'Preventive Care'],
 // // // // // // // // //     isPrimary: false,
@@ -159,7 +159,7 @@
 // // // // // // // // //   {
 // // // // // // // // //     id: 'spec_3',
 // // // // // // // // //     title: 'Critical Care',
-// // // // // // // // //     icon: <Activity size={24} color="#16a34a" />,
+// // // // // // // // //     icon: <Activity size={24} color="#164aa3ff" />,
 // // // // // // // // //     years: 8,
 // // // // // // // // //     expertise: ['ICU Management', 'Emergency Medicine'],
 // // // // // // // // //     isPrimary: false,
@@ -181,11 +181,11 @@
 // // // // // // // // //     <View style={tw`flex-row items-center mb-3`}>
 // // // // // // // // //       {spec.icon}
 // // // // // // // // //       <View style={tw`ml-3 flex-1`}>
-// // // // // // // // //         <Text style={tw`text-green-700 font-bold text-lg`}>{spec.title}</Text>
-// // // // // // // // //         <Text style={tw`text-green-600 text-sm`}>{spec.years} Years Experience</Text>
+// // // // // // // // //         <Text style={tw`text-blue-700 font-bold text-lg`}>{spec.title}</Text>
+// // // // // // // // //         <Text style={tw`text-blue-600 text-sm`}>{spec.years} Years Experience</Text>
 // // // // // // // // //       </View>
 // // // // // // // // //       <TouchableOpacity
-// // // // // // // // //         style={tw`bg-green-100 p-2 rounded-full`}
+// // // // // // // // //         style={tw`bg-blue-100 p-2 rounded-full`}
 // // // // // // // // //         onPress={() => onSetPrimary(spec.id)}
 // // // // // // // // //       >
 // // // // // // // // //         <Star size={20} color={spec.isPrimary ? '#f59e0b' : '#a3a3a3'} />
@@ -255,10 +255,10 @@
 // // // // // // // // //   };
   
 // // // // // // // // //   return (
-// // // // // // // // //     <View style={tw`flex-1 bg-green-50`}>
+// // // // // // // // //     <View style={tw`flex-1 bg-blue-50`}>
 // // // // // // // // //       <DoctorHeader title="Specializations" showSettings showNotifications />
       
-// // // // // // // // //       <View style={tw`flex-row justify-end px-4 py-2 bg-white border-b border-green-100`}>
+// // // // // // // // //       <View style={tw`flex-row justify-end px-4 py-2 bg-white border-b border-blue-100`}>
 // // // // // // // // //         <TouchableOpacity
 // // // // // // // // //           style={tw`bg-emerald-500 p-2 rounded-full`}
 // // // // // // // // //           activeOpacity={0.85}
@@ -269,8 +269,8 @@
 // // // // // // // // //       </View>
 
 // // // // // // // // //       <ScrollView contentContainerStyle={tw`p-5 pb-10`}>
-// // // // // // // // //         <Text style={tw`text-2xl font-bold text-green-700 mb-2 text-center`}>Your Expertise</Text>
-// // // // // // // // //         <Text style={tw`text-base text-green-600 mb-6 text-center`}>Manage your specializations and expertise areas</Text>
+// // // // // // // // //         <Text style={tw`text-2xl font-bold text-blue-700 mb-2 text-center`}>Your Expertise</Text>
+// // // // // // // // //         <Text style={tw`text-base text-blue-600 mb-6 text-center`}>Manage your specializations and expertise areas</Text>
 
 // // // // // // // // //         {specializations.map((spec) => (
 // // // // // // // // //           <SpecializationCard 
@@ -377,8 +377,8 @@
 // // // // // // // //   };
 
 // // // // // // // //   return (
-// // // // // // // //     <View style={tw`flex-1 justify-center items-center bg-green-50 p-5`}>
-// // // // // // // //       <Text style={tw`text-2xl font-bold text-green-700 mb-8`}>
+// // // // // // // //     <View style={tw`flex-1 justify-center items-center bg-blue-50 p-5`}>
+// // // // // // // //       <Text style={tw`text-2xl font-bold text-blue-700 mb-8`}>
 // // // // // // // //         Upload Document for Verification
 // // // // // // // //       </Text>
 
@@ -386,7 +386,7 @@
 // // // // // // // //         style={tw`bg-white px-6 py-4 rounded-2xl shadow mb-5`}
 // // // // // // // //         onPress={handlePickDocument}
 // // // // // // // //       >
-// // // // // // // //         <Text style={tw`text-green-700 font-semibold`}>
+// // // // // // // //         <Text style={tw`text-blue-700 font-semibold`}>
 // // // // // // // //           {selectedFile ? selectedFile.name : 'Select Document'}
 // // // // // // // //         </Text>
 // // // // // // // //       </TouchableOpacity>
@@ -489,8 +489,8 @@
 // // // // // // //   };
 
 // // // // // // //   return (
-// // // // // // //     <View style={tw`flex-1 justify-center items-center bg-green-50 p-5`}>
-// // // // // // //       <Text style={tw`text-2xl font-bold text-green-700 mb-8`}>
+// // // // // // //     <View style={tw`flex-1 justify-center items-center bg-blue-50 p-5`}>
+// // // // // // //       <Text style={tw`text-2xl font-bold text-blue-700 mb-8`}>
 // // // // // // //         Upload Document for Verification
 // // // // // // //       </Text>
 
@@ -498,7 +498,7 @@
 // // // // // // //         style={tw`bg-white px-6 py-4 rounded-2xl shadow mb-5`}
 // // // // // // //         onPress={handlePickDocument}
 // // // // // // //       >
-// // // // // // //         <Text style={tw`text-green-700 font-semibold`}>
+// // // // // // //         <Text style={tw`text-blue-700 font-semibold`}>
 // // // // // // //           {selectedFile ? selectedFile.name : 'Select Document'}
 // // // // // // //         </Text>
 // // // // // // //       </TouchableOpacity>
@@ -588,15 +588,15 @@
 // // // // // //   };
 
 // // // // // //   return (
-// // // // // //     <View style={tw`flex-1 justify-center items-center bg-green-50 p-5`}>
-// // // // // //       <Text style={tw`text-2xl font-bold text-green-700 mb-8`}>
+// // // // // //     <View style={tw`flex-1 justify-center items-center bg-blue-50 p-5`}>
+// // // // // //       <Text style={tw`text-2xl font-bold text-blue-700 mb-8`}>
 // // // // // //         Upload Document for Verification
 // // // // // //       </Text>
 // // // // // //       <TouchableOpacity
 // // // // // //         style={tw`bg-white px-6 py-4 rounded-2xl shadow mb-5`}
 // // // // // //         onPress={handlePickDocument}
 // // // // // //       >
-// // // // // //         <Text style={tw`text-green-700 font-semibold`}>
+// // // // // //         <Text style={tw`text-blue-700 font-semibold`}>
 // // // // // //           {selectedFile ? selectedFile.name : 'Select Document'}
 // // // // // //         </Text>
 // // // // // //       </TouchableOpacity>
@@ -681,15 +681,15 @@
 // // // // //   };
 
 // // // // //   return (
-// // // // //     <View style={tw`flex-1 justify-center items-center bg-green-50 p-5`}>
-// // // // //       <Text style={tw`text-2xl font-bold text-green-700 mb-8`}>
+// // // // //     <View style={tw`flex-1 justify-center items-center bg-blue-50 p-5`}>
+// // // // //       <Text style={tw`text-2xl font-bold text-blue-700 mb-8`}>
 // // // // //         Upload Document for Verification
 // // // // //       </Text>
 // // // // //       <TouchableOpacity
 // // // // //         style={tw`bg-white px-6 py-4 rounded-2xl shadow mb-5`}
 // // // // //         onPress={handlePickDocument}
 // // // // //       >
-// // // // //         <Text style={tw`text-green-700 font-semibold`}>
+// // // // //         <Text style={tw`text-blue-700 font-semibold`}>
 // // // // //           {selectedFile ? selectedFile.fileName : 'Select Document'}
 // // // // //         </Text>
 // // // // //       </TouchableOpacity>
@@ -808,8 +808,8 @@
 // // // //   };
 
 // // // //   return (
-// // // //     <View style={tw`flex-1 justify-center items-center bg-green-50 p-5`}>
-// // // //       <Text style={tw`text-2xl font-bold text-green-700 mb-8`}>
+// // // //     <View style={tw`flex-1 justify-center items-center bg-blue-50 p-5`}>
+// // // //       <Text style={tw`text-2xl font-bold text-blue-700 mb-8`}>
 // // // //         Upload Document for Verification
 // // // //       </Text>
 
@@ -817,7 +817,7 @@
 // // // //         style={tw`bg-white px-6 py-4 rounded-2xl shadow mb-5`}
 // // // //         onPress={handlePickDocument}
 // // // //       >
-// // // //         <Text style={tw`text-green-700 font-semibold`}>
+// // // //         <Text style={tw`text-blue-700 font-semibold`}>
 // // // //           {selectedFile ? selectedFile.fileName : 'Select Document'}
 // // // //         </Text>
 // // // //       </TouchableOpacity>
@@ -903,8 +903,8 @@
 // // //   };
 
 // // //   return (
-// // //     <View style={tw`flex-1 justify-center items-center bg-green-50 p-5`}>
-// // //       <Text style={tw`text-2xl font-bold text-green-700 mb-8`}>
+// // //     <View style={tw`flex-1 justify-center items-center bg-blue-50 p-5`}>
+// // //       <Text style={tw`text-2xl font-bold text-blue-700 mb-8`}>
 // // //         Upload Document for Verification
 // // //       </Text>
 
@@ -912,7 +912,7 @@
 // // //         style={tw`bg-white px-6 py-4 rounded-2xl shadow mb-5`}
 // // //         onPress={handlePickDocument}
 // // //       >
-// // //         <Text style={tw`text-green-700 font-semibold`}>
+// // //         <Text style={tw`text-blue-700 font-semibold`}>
 // // //           {selectedFile ? selectedFile.name : 'Select Document'}
 // // //         </Text>
 // // //       </TouchableOpacity>
@@ -1003,8 +1003,8 @@
 // //   };
 
 // //   return (
-// //     <View style={tw`flex-1 justify-center items-center bg-green-50 p-5`}>
-// //       <Text style={tw`text-2xl font-bold text-green-700 mb-8`}>
+// //     <View style={tw`flex-1 justify-center items-center bg-blue-50 p-5`}>
+// //       <Text style={tw`text-2xl font-bold text-blue-700 mb-8`}>
 // //         Upload Image for Verification
 // //       </Text>
 
@@ -1012,7 +1012,7 @@
 // //         style={tw`bg-white px-6 py-4 rounded-2xl shadow mb-5`}
 // //         onPress={handlePickDocument}
 // //       >
-// //         <Text style={tw`text-green-700 font-semibold`}>
+// //         <Text style={tw`text-blue-700 font-semibold`}>
 // //           {selectedFile ? selectedFile.name : 'Select Image'}
 // //         </Text>
 // //       </TouchableOpacity>
@@ -1104,8 +1104,8 @@
 //   };
 
 //   return (
-//     <View style={tw`flex-1 justify-center items-center bg-green-50 p-5`}>
-//       <Text style={tw`text-2xl font-bold text-green-700 mb-8`}>
+//     <View style={tw`flex-1 justify-center items-center bg-blue-50 p-5`}>
+//       <Text style={tw`text-2xl font-bold text-blue-700 mb-8`}>
 //         Upload Image for Verification
 //       </Text>
 
@@ -1113,7 +1113,7 @@
 //         style={tw`bg-white px-6 py-4 rounded-2xl shadow mb-5`}
 //         onPress={handlePickImage}
 //       >
-//         <Text style={tw`text-green-700 font-semibold`}>
+//         <Text style={tw`text-blue-700 font-semibold`}>
 //           {selectedImage ? selectedImage.fileName : 'Select Image'}
 //         </Text>
 //       </TouchableOpacity>
@@ -1212,7 +1212,7 @@ const SpecializationsScreen = () => {
 
   return (
     
-    <View style={tw`flex-1 bg-green-50 p-5`}>
+    <View style={tw`flex-1 bg-blue-50 p-5`}>
       {/* 🔙 Header */}
       <View style={tw`flex-row items-center mb-6 mt-6`}>
         <TouchableOpacity
@@ -1221,14 +1221,14 @@ const SpecializationsScreen = () => {
         >
           <ArrowLeft size={22} color="#047857" />
         </TouchableOpacity>
-        <Text style={tw`text-xl font-bold text-green-700 ml-3`}>
+        <Text style={tw`text-xl font-bold text-blue-700 ml-3`}>
           KYC Verification
         </Text>
       </View>
     
       {/* 🪪 Title */}
       <View style={tw`items-center justify-center mb-6`}>
-        <Text style={tw`text-2xl font-bold text-green-800 text-center`}>
+        <Text style={tw`text-2xl font-bold text-blue-800 text-center`}>
           Upload Document for the KYC Verification
         </Text>
         <Text style={tw`text-gray-600 text-center mt-2`}>
@@ -1241,10 +1241,10 @@ const SpecializationsScreen = () => {
         <View style={tw`items-center mb-5`}>
           <Image
             source={{ uri: selectedImage.uri }}
-            style={tw`w-48 h-48 rounded-xl border-2 border-green-400`}
+            style={tw`w-48 h-48 rounded-xl border-2 border-blue-400`}
             resizeMode="cover"
           />
-          <Text style={tw`mt-2 text-green-700`}>
+          <Text style={tw`mt-2 text-blue-700`}>
             {selectedImage.fileName || 'Selected Image'}
           </Text>
         </View>
@@ -1256,7 +1256,7 @@ const SpecializationsScreen = () => {
         onPress={handlePickImage}
       >
         <ImageIcon size={22} color="#047857" />
-        <Text style={tw`text-green-700 font-semibold ml-2`}>
+        <Text style={tw`text-blue-700 font-semibold ml-2`}>
           {selectedImage ? 'Change Image' : 'Select Image'}
         </Text>
       </TouchableOpacity>

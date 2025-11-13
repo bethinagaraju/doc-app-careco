@@ -74,19 +74,19 @@ const AppointmentConfirmationScreen = ({ route, navigation }) => {
 };
 
   return (
-    <ScrollView style={tw`flex-1 bg-green-50`} contentContainerStyle={tw`pt-12 px-4 pb-8`}>
-      <Text style={tw`text-2xl font-bold text-green-800 mb-6 text-center`}>
+    <ScrollView style={tw`flex-1 bg-blue-50`} contentContainerStyle={tw`pt-12 px-4 pb-8`}>
+      <Text style={tw`text-2xl font-bold text-blue-800 mb-6 text-center`}>
         Confirm Appointment
       </Text>
 
       <View style={tw`bg-white p-4 rounded-2xl shadow mb-6`}>
         <Text style={tw`text-lg font-semibold text-gray-700 mb-1`}>Doctor</Text>
-        <Text style={tw`text-green-800 text-base mb-1`}>{doctor?.user.username}</Text>
+        <Text style={tw`text-blue-800 text-base mb-1`}>{doctor?.user.username}</Text>
         {doctor?.specialization && (
           <Text style={tw`text-gray-600 text-sm mb-1`}>{doctor.specialization}</Text>
         )}
         <Text style={tw`text-gray-600 text-base mb-1`}>{doctor.consultation_fee}</Text>
-        <Text style={tw`text-green-700`}>
+        <Text style={tw`text-blue-700`}>
       {[
         doctor.user.address[0]?.house_no,
         doctor.user.address[0]?.street,
@@ -106,13 +106,13 @@ const AppointmentConfirmationScreen = ({ route, navigation }) => {
       <View style={tw`bg-white p-4 rounded-2xl shadow mb-6`}>
         <Text style={tw`text-lg font-semibold text-gray-700 mb-2`}>Appointment Details</Text>
         <Text style={tw`text-base text-gray-700`}>
-          Date: <Text style={tw`text-green-800`}>{selectedSlot.date}</Text>
+          Date: <Text style={tw`text-blue-800`}>{selectedSlot.date}</Text>
         </Text>
         <Text style={tw`text-base text-gray-700`}>
-          Time: <Text style={tw`text-green-800`}>{selectedSlot.time}</Text>
+          Time: <Text style={tw`text-blue-800`}>{selectedSlot.time}</Text>
         </Text>
         <Text style={tw`text-base text-gray-700`}>
-          Mode: <Text style={tw`text-green-800`}>{selectedSlot.mode}</Text>
+          Mode: <Text style={tw`text-blue-800`}>{selectedSlot.mode}</Text>
         </Text>
       </View>
 
@@ -125,10 +125,10 @@ const AppointmentConfirmationScreen = ({ route, navigation }) => {
             key={mode}
             style={tw`
               px-5 py-2 mr-4 rounded-full
-              ${paymentMode === mode ? 'bg-green-700' : 'bg-green-200'}
+              ${paymentMode === mode ? 'bg-blue-700' : 'bg-blue-200'}
             `}
             onPress={() => setPaymentMode(mode)}>
-            <Text style={tw`${paymentMode === mode ? 'text-white' : 'text-green-800'}`}>
+            <Text style={tw`${paymentMode === mode ? 'text-white' : 'text-blue-800'}`}>
               {mode.charAt(0).toUpperCase() + mode.slice(1)}
             </Text>
           </TouchableOpacity>
@@ -136,7 +136,7 @@ const AppointmentConfirmationScreen = ({ route, navigation }) => {
       </View>
 
       <TouchableOpacity
-        style={tw`bg-green-700 py-4 rounded-full items-center`}
+        style={tw`bg-blue-700 py-4 rounded-full items-center`}
         onPress={handleConfirm}
         disabled={loading}>
         <Text style={tw`text-white text-lg font-semibold`}>

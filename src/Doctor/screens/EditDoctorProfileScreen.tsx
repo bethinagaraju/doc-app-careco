@@ -35,7 +35,7 @@ const EditDoctorProfileScreen = () => {
     ]);
   };
   return (
-    <View style={tw`flex-1 bg-green-50`}>
+    <View style={tw`flex-1 bg-blue-50`}>
       <DoctorHeader title="Edit Profile" showSettings showNotifications />
       
       <ScrollView contentContainerStyle={tw`p-5 pb-10`}>
@@ -47,29 +47,29 @@ const EditDoctorProfileScreen = () => {
               style={tw`w-24 h-24 rounded-full`}
             />
             <TouchableOpacity 
-              style={tw`absolute bottom-0 right-0 bg-green-600 p-2 rounded-full`}
+              style={tw`absolute bottom-0 right-0 bg-blue-600 p-2 rounded-full`}
               onPress={() => Alert.alert('Upload Photo', 'Photo upload functionality will be implemented')}
             >
               <Camera size={20} color="white" />
             </TouchableOpacity>
           </View>
-          <Text style={tw`mt-2 text-green-700`}>Tap to change profile picture</Text>
+          <Text style={tw`mt-2 text-blue-700`}>Tap to change profile picture</Text>
         </View>        {/* Form Fields */}
         <View style={tw`mb-4`}>
-          <Text style={tw`text-green-700 mb-2`}>Full Name</Text>
+          <Text style={tw`text-blue-700 mb-2`}>Full Name</Text>
           <TextInput
-            style={tw`bg-white p-4 rounded-xl text-green-900 border border-green-200`}
+            style={tw`bg-white p-4 rounded-xl text-blue-900 border border-blue-200`}
             value={formData.fullName}
             onChangeText={(text) => setFormData({ ...formData, fullName: text })}
           />
         </View>
 
         <View style={tw`mb-4`}>
-          <Text style={tw`text-green-700 mb-2`}>Email</Text>
+          <Text style={tw`text-blue-700 mb-2`}>Email</Text>
           <View style={tw`flex-row items-center bg-white p-4 rounded-xl border border-gray-200`}>
             <Mail size={20} color="#047857" />
             <TextInput
-              style={tw`flex-1 ml-2 text-green-900`}
+              style={tw`flex-1 ml-2 text-blue-900`}
               value={formData.email}
               onChangeText={(text) => setFormData({ ...formData, email: text })}
               keyboardType="email-address"

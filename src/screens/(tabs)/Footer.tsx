@@ -56,9 +56,9 @@
 // // // // // // //         onRequestClose={() => setModalVisible(false)}
 // // // // // // //         onShow={() => setLoading(false)}
 // // // // // // //       >
-// // // // // // //         <View style={tw`flex-1 bg-green-900/10 justify-center items-center`}>
-// // // // // // //           <View style={tw`w-[95%] h-[80%] bg-green-50 rounded-2xl p-5 items-center`}>
-// // // // // // //             <Text style={tw`text-lg font-bold mb-2.5 text-green-400`}>Choose a Specialty</Text>
+// // // // // // //         <View style={tw`flex-1 bg-blue-900/10 justify-center items-center`}>
+// // // // // // //           <View style={tw`w-[95%] h-[80%] bg-blue-50 rounded-2xl p-5 items-center`}>
+// // // // // // //             <Text style={tw`text-lg font-bold mb-2.5 text-blue-400`}>Choose a Specialty</Text>
 // // // // // // //             <ScrollView contentContainerStyle={tw`flex-row flex-wrap justify-between pb-5`}>
 // // // // // // //               {specialties.map((item, index) => (
 // // // // // // //                 <TouchableOpacity
@@ -69,19 +69,19 @@
 // // // // // // //                     navigation.navigate('ConsultOptionsScreen', { specialty: item.name });
 // // // // // // //                   }}
 // // // // // // //                 >
-// // // // // // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-green-100`}> 
+// // // // // // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-blue-100`}> 
 // // // // // // //                     <Image
 // // // // // // //                       source={item.image}
 // // // // // // //                       style={{ width: '95%', height: '95%', borderRadius: 12 }}
 // // // // // // //                       resizeMode="contain"
 // // // // // // //                     />
 // // // // // // //                   </View>
-// // // // // // //                   <Text style={tw`text-xs text-center font-semibold text-green-800`}> {item.name} </Text>
+// // // // // // //                   <Text style={tw`text-xs text-center font-semibold text-blue-800`}> {item.name} </Text>
 // // // // // // //                 </TouchableOpacity>
 // // // // // // //               ))}
 // // // // // // //             </ScrollView>
 // // // // // // //             <Pressable
-// // // // // // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-green-600`}
+// // // // // // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-blue-600`}
 // // // // // // //               onPress={() => setModalVisible(false)}
 // // // // // // //             >
 // // // // // // //               <Text style={tw`text-white font-bold`}>Cancel</Text>
@@ -92,7 +92,7 @@
 
 // // // // // // //       {/* Footer */}
 // // // // // // //       <View
-// // // // // // //         style={tw`flex-row bg-green-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
+// // // // // // //         style={tw`flex-row bg-blue-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
 // // // // // // //       >
 // // // // // // //         <TouchableOpacity
 // // // // // // //           style={tw`flex-1 items-center`}
@@ -106,7 +106,7 @@
 // // // // // // //           }}
 // // // // // // //         >
 // // // // // // //           <Home size={22} color={'#6B7280'} /> {/* Tailwind gray-500 */}
-// // // // // // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Home</Text>
+// // // // // // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Home</Text>
 // // // // // // //         </TouchableOpacity>
 // // // // // // //         <View style={tw`flex-1 items-center`} />
 // // // // // // //         <TouchableOpacity
@@ -119,17 +119,17 @@
 // // // // // // //           }}
 // // // // // // //         >
 // // // // // // //           <FileText size={22} color={'#6B7280'} />
-// // // // // // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Medical Records</Text>
+// // // // // // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Medical Records</Text>
 // // // // // // //         </TouchableOpacity>
 // // // // // // //       </View>
 
-// // // // // // //       {/* Floating Doctor Button (Green Themed) */}
+// // // // // // //       {/* Floating Doctor Button (blue Themed) */}
 // // // // // // //       <TouchableOpacity
 // // // // // // //         style={tw`absolute bottom-0 left-1/2 -translate-x-8.75 shadow-lg z-10 flex-col items-center`}
 // // // // // // //         onPress={() => setModalVisible(true)}
 // // // // // // //         activeOpacity={0.8}
 // // // // // // //       >
-// // // // // // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-green-600 justify-center items-center border-4 border-green-50`}>
+// // // // // // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-blue-600 justify-center items-center border-4 border-blue-50`}>
 // // // // // // //           <Stethoscope size={32} color="#fff" />
 // // // // // // //         </View>
 // // // // // // //       </TouchableOpacity>
@@ -199,9 +199,9 @@
 // // // // // //         onRequestClose={() => setModalVisible(false)}
 // // // // // //         onShow={() => setLoading(false)}
 // // // // // //       >
-// // // // // //         <View style={tw`flex-1 bg-green-900/10 justify-center items-center`}>
-// // // // // //           <View style={tw`w-[95%] h-[80%] bg-green-50 rounded-2xl p-5 items-center`}>
-// // // // // //             <Text style={tw`text-lg font-bold mb-2.5 text-green-400`}>Choose a Specialty</Text>
+// // // // // //         <View style={tw`flex-1 bg-blue-900/10 justify-center items-center`}>
+// // // // // //           <View style={tw`w-[95%] h-[80%] bg-blue-50 rounded-2xl p-5 items-center`}>
+// // // // // //             <Text style={tw`text-lg font-bold mb-2.5 text-blue-400`}>Choose a Specialty</Text>
 // // // // // //             <ScrollView contentContainerStyle={tw`flex-row flex-wrap justify-between pb-5`}>
 // // // // // //               {specialties.map((item, index) => (
 // // // // // //                 <TouchableOpacity
@@ -212,19 +212,19 @@
 // // // // // //                     navigation.navigate('ConsultOptionsScreen', { specialty: item.name });
 // // // // // //                   }}
 // // // // // //                 >
-// // // // // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-green-100`}> 
+// // // // // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-blue-100`}> 
 // // // // // //                     <Image
 // // // // // //                       source={item.image}
 // // // // // //                       style={{ width: '95%', height: '95%', borderRadius: 12 }}
 // // // // // //                       resizeMode="contain"
 // // // // // //                     />
 // // // // // //                   </View>
-// // // // // //                   <Text style={tw`text-xs text-center font-semibold text-green-800`}> {item.name} </Text>
+// // // // // //                   <Text style={tw`text-xs text-center font-semibold text-blue-800`}> {item.name} </Text>
 // // // // // //                 </TouchableOpacity>
 // // // // // //               ))}
 // // // // // //             </ScrollView>
 // // // // // //             <Pressable
-// // // // // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-green-600`}
+// // // // // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-blue-600`}
 // // // // // //               onPress={() => setModalVisible(false)}
 // // // // // //             >
 // // // // // //               <Text style={tw`text-white font-bold`}>Cancel</Text>
@@ -235,7 +235,7 @@
 
 // // // // // //       {/* Footer */}
 // // // // // //       <View
-// // // // // //         style={tw`flex-row bg-green-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
+// // // // // //         style={tw`flex-row bg-blue-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
 // // // // // //       >
 // // // // // //         <TouchableOpacity
 // // // // // //           style={tw`flex-1 items-center`}
@@ -249,7 +249,7 @@
 // // // // // //           }}
 // // // // // //         >
 // // // // // //           <Home size={22} color={'#6B7280'} />
-// // // // // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Home</Text>
+// // // // // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Home</Text>
 // // // // // //         </TouchableOpacity>
         
 // // // // // //         {/* ================================================================= */}
@@ -267,9 +267,9 @@
 // // // // // //           <User size={22} color={'#6B7280'} />
 // // // // // //           {/* This logic prevents the crash: */}
 // // // // // //           {user ? (
-// // // // // //             <Text style={tw`text-[10px] mt-0.5 text-green-700`}>{user.username}</Text>
+// // // // // //             <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>{user.username}</Text>
 // // // // // //           ) : (
-// // // // // //             <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Profile</Text>
+// // // // // //             <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Profile</Text>
 // // // // // //           )}
 // // // // // //         </TouchableOpacity>
 // // // // // //         {/* ================================================================= */}
@@ -284,7 +284,7 @@
 // // // // // //           }}
 // // // // // //         >
 // // // // // //           <FileText size={22} color={'#6B7280'} />
-// // // // // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Medical Records</Text>
+// // // // // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Medical Records</Text>
 // // // // // //         </TouchableOpacity>
 // // // // // //       </View>
 
@@ -294,7 +294,7 @@
 // // // // // //         onPress={() => setModalVisible(true)}
 // // // // // //         activeOpacity={0.8}
 // // // // // //       >
-// // // // // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-green-600 justify-center items-center border-4 border-green-50`}>
+// // // // // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-blue-600 justify-center items-center border-4 border-blue-50`}>
 // // // // // //           <Stethoscope size={32} color="#fff" />
 // // // // // //         </View>
 // // // // // //       </TouchableOpacity>
@@ -354,9 +354,9 @@
 // // // // // //         onRequestClose={() => setModalVisible(false)}
 // // // // // //         onShow={() => setLoading(false)}
 // // // // // //       >
-// // // // // //         <View style={tw`flex-1 bg-green-900/10 justify-center items-center`}>
-// // // // // //           <View style={tw`w-[95%] h-[80%] bg-green-50 rounded-2xl p-5 items-center`}>
-// // // // // //             <Text style={tw`text-lg font-bold mb-2.5 text-green-400`}>Choose a Specialty</Text>
+// // // // // //         <View style={tw`flex-1 bg-blue-900/10 justify-center items-center`}>
+// // // // // //           <View style={tw`w-[95%] h-[80%] bg-blue-50 rounded-2xl p-5 items-center`}>
+// // // // // //             <Text style={tw`text-lg font-bold mb-2.5 text-blue-400`}>Choose a Specialty</Text>
 // // // // // //             <ScrollView contentContainerStyle={tw`flex-row flex-wrap justify-between pb-5`}>
 // // // // // //               {specialties.map((item, index) => (
 // // // // // //                 <TouchableOpacity
@@ -367,19 +367,19 @@
 // // // // // //                     navigation.navigate('ConsultOptionsScreen', { specialty: item.name });
 // // // // // //                   }}
 // // // // // //                 >
-// // // // // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-green-100`}>
+// // // // // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-blue-100`}>
 // // // // // //                     <Image
 // // // // // //                       source={item.image}
 // // // // // //                       style={{ width: '95%', height: '95%', borderRadius: 12 }}
 // // // // // //                       resizeMode="contain"
 // // // // // //                     />
 // // // // // //                   </View>
-// // // // // //                   <Text style={tw`text-xs text-center font-semibold text-green-800`}> {item.name} </Text>
+// // // // // //                   <Text style={tw`text-xs text-center font-semibold text-blue-800`}> {item.name} </Text>
 // // // // // //                 </TouchableOpacity>
 // // // // // //               ))}
 // // // // // //             </ScrollView>
 // // // // // //             <Pressable
-// // // // // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-green-600`}
+// // // // // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-blue-600`}
 // // // // // //               onPress={() => setModalVisible(false)}
 // // // // // //             >
 // // // // // //               <Text style={tw`text-white font-bold`}>Cancel</Text>
@@ -390,7 +390,7 @@
 
 // // // // // //       {/* Footer */}
 // // // // // //       <View
-// // // // // //         style={tw`flex-row bg-green-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
+// // // // // //         style={tw`flex-row bg-blue-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
 // // // // // //       >
 // // // // // //         <TouchableOpacity
 // // // // // //           style={tw`flex-1 items-center`}
@@ -404,7 +404,7 @@
 // // // // // //           }}
 // // // // // //         >
 // // // // // //           <Home size={22} color={'#6B7280'} />
-// // // // // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Home</Text>
+// // // // // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Home</Text>
 // // // // // //         </TouchableOpacity>
 
 // // // // // //         <TouchableOpacity
@@ -419,9 +419,9 @@
 // // // // // //           <User size={22} color={'#6B7280'} />
 // // // // // //           {/* This logic prevents the crash: */}
 // // // // // //           {user ? (
-// // // // // //             <Text style={tw`text-[10px] mt-0.5 text-green-700`}>{user.username}</Text>
+// // // // // //             <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>{user.username}</Text>
 // // // // // //           ) : (
-// // // // // //             <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Profile</Text>
+// // // // // //             <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Profile</Text>
 // // // // // //           )}
 // // // // // //         </TouchableOpacity>
 
@@ -435,7 +435,7 @@
 // // // // // //           }}
 // // // // // //         >
 // // // // // //           <FileText size={22} color={'#6B7280'} />
-// // // // // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Medical Records</Text>
+// // // // // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Medical Records</Text>
 // // // // // //         </TouchableOpacity>
 // // // // // //       </View>
 
@@ -445,7 +445,7 @@
 // // // // // //         onPress={() => setModalVisible(true)}
 // // // // // //         activeOpacity={0.8}
 // // // // // //       >
-// // // // // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-green-600 justify-center items-center border-4 border-green-50`}>
+// // // // // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-blue-600 justify-center items-center border-4 border-blue-50`}>
 // // // // // //           <Stethoscope size={32} color="#fff" />
 // // // // // //         </View>
 // // // // // //       </TouchableOpacity>
@@ -503,9 +503,9 @@
 // // // // //         onRequestClose={() => setModalVisible(false)}
 // // // // //         onShow={() => setLoading(false)}
 // // // // //       >
-// // // // //         <View style={tw`flex-1 bg-green-900/10 justify-center items-center`}>
-// // // // //           <View style={tw`w-[95%] h-[80%] bg-green-50 rounded-2xl p-5 items-center`}>
-// // // // //             <Text style={tw`text-lg font-bold mb-2.5 text-green-400`}>Choose a Specialty</Text>
+// // // // //         <View style={tw`flex-1 bg-blue-900/10 justify-center items-center`}>
+// // // // //           <View style={tw`w-[95%] h-[80%] bg-blue-50 rounded-2xl p-5 items-center`}>
+// // // // //             <Text style={tw`text-lg font-bold mb-2.5 text-blue-400`}>Choose a Specialty</Text>
 // // // // //             <ScrollView contentContainerStyle={tw`flex-row flex-wrap justify-between pb-5`}>
 // // // // //               {specialties.map((item, index) => (
 // // // // //                 <TouchableOpacity
@@ -516,19 +516,19 @@
 // // // // //                     navigation.navigate('ConsultOptionsScreen', { specialty: item.name });
 // // // // //                   }}
 // // // // //                 >
-// // // // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-green-100`}>
+// // // // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-blue-100`}>
 // // // // //                     <Image
 // // // // //                       source={item.image}
 // // // // //                       style={{ width: '95%', height: '95%', borderRadius: 12 }}
 // // // // //                       resizeMode="contain"
 // // // // //                     />
 // // // // //                   </View>
-// // // // //                   <Text style={tw`text-xs text-center font-semibold text-green-800`}> {item.name} </Text>
+// // // // //                   <Text style={tw`text-xs text-center font-semibold text-blue-800`}> {item.name} </Text>
 // // // // //                 </TouchableOpacity>
 // // // // //               ))}
 // // // // //             </ScrollView>
 // // // // //             <Pressable
-// // // // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-green-600`}
+// // // // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-blue-600`}
 // // // // //               onPress={() => setModalVisible(false)}
 // // // // //             >
 // // // // //               <Text style={tw`text-white font-bold`}>Cancel</Text>
@@ -539,7 +539,7 @@
 
 // // // // //       {/* Footer */}
 // // // // //       <View
-// // // // //         style={tw`flex-row bg-green-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
+// // // // //         style={tw`flex-row bg-blue-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
 // // // // //       >
 // // // // //         <TouchableOpacity
 // // // // //           style={tw`flex-1 items-center`}
@@ -553,7 +553,7 @@
 // // // // //           }}
 // // // // //         >
 // // // // //           <Home size={22} color={'#6B7280'} />
-// // // // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Home</Text>
+// // // // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Home</Text>
 // // // // //         </TouchableOpacity>
 
 // // // // //         <TouchableOpacity
@@ -568,9 +568,9 @@
 // // // // //           <User size={22} color={'#6B7280'} />
 // // // // //           {/* This logic prevents the crash: */}
 // // // // //           {user ? (
-// // // // //             <Text style={tw`text-[10px] mt-0.5 text-green-700`}>{user.username}</Text>
+// // // // //             <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>{user.username}</Text>
 // // // // //           ) : (
-// // // // //             <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Profile</Text>
+// // // // //             <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Profile</Text>
 // // // // //           )}
 // // // // //         </TouchableOpacity>
 
@@ -584,7 +584,7 @@
 // // // // //           }}
 // // // // //         >
 // // // // //           <FileText size={22} color={'#6B7280'} />
-// // // // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Medical Records</Text>
+// // // // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Medical Records</Text>
 // // // // //         </TouchableOpacity>
 // // // // //       </View>
 
@@ -594,7 +594,7 @@
 // // // // //         onPress={() => setModalVisible(true)}
 // // // // //         activeOpacity={0.8}
 // // // // //       >
-// // // // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-green-600 justify-center items-center border-4 border-green-50`}>
+// // // // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-blue-600 justify-center items-center border-4 border-blue-50`}>
 // // // // //           <Stethoscope size={32} color="#fff" />
 // // // // //         </View>
 // // // // //       </TouchableOpacity>
@@ -664,9 +664,9 @@
 // // // //         onRequestClose={() => setModalVisible(false)}
 // // // //         onShow={() => setLoading(false)}
 // // // //       >
-// // // //         <View style={tw`flex-1 bg-green-900/10 justify-center items-center`}>
-// // // //           <View style={tw`w-[95%] h-[80%] bg-green-50 rounded-2xl p-5 items-center`}>
-// // // //             <Text style={tw`text-lg font-bold mb-2.5 text-green-400`}>Choose a Specialty</Text>
+// // // //         <View style={tw`flex-1 bg-blue-900/10 justify-center items-center`}>
+// // // //           <View style={tw`w-[95%] h-[80%] bg-blue-50 rounded-2xl p-5 items-center`}>
+// // // //             <Text style={tw`text-lg font-bold mb-2.5 text-blue-400`}>Choose a Specialty</Text>
 // // // //             <ScrollView contentContainerStyle={tw`flex-row flex-wrap justify-between pb-5`}>
 // // // //               {specialties.map((item, index) => (
 // // // //                 <TouchableOpacity
@@ -677,19 +677,19 @@
 // // // //                     navigation.navigate('ConsultOptionsScreen', { specialty: item.name });
 // // // //                   }}
 // // // //                 >
-// // // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-green-100`}> 
+// // // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-blue-100`}> 
 // // // //                     <Image
 // // // //                       source={item.image}
 // // // //                       style={{ width: '95%', height: '95%', borderRadius: 12 }}
 // // // //                       resizeMode="contain"
 // // // //                     />
 // // // //                   </View>
-// // // //                   <Text style={tw`text-xs text-center font-semibold text-green-800`}> {item.name} </Text>
+// // // //                   <Text style={tw`text-xs text-center font-semibold text-blue-800`}> {item.name} </Text>
 // // // //                 </TouchableOpacity>
 // // // //               ))}
 // // // //             </ScrollView>
 // // // //             <Pressable
-// // // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-green-600`}
+// // // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-blue-600`}
 // // // //               onPress={() => setModalVisible(false)}
 // // // //             >
 // // // //               <Text style={tw`text-white font-bold`}>Cancel</Text>
@@ -700,7 +700,7 @@
 
 // // // //       {/* Footer */}
 // // // //       <View
-// // // //         style={tw`flex-row bg-green-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
+// // // //         style={tw`flex-row bg-blue-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
 // // // //       >
 // // // //         <TouchableOpacity
 // // // //           style={tw`flex-1 items-center`}
@@ -714,7 +714,7 @@
 // // // //           }}
 // // // //         >
 // // // //           <Home size={22} color={'#6B7280'} /> {/* Tailwind gray-500 */}
-// // // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Home</Text>
+// // // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Home</Text>
 // // // //         </TouchableOpacity>
 // // // //         <View style={tw`flex-1 items-center`} />
 // // // //         <TouchableOpacity
@@ -727,17 +727,17 @@
 // // // //           }}
 // // // //         >
 // // // //           <FileText size={22} color={'#6B7280'} />
-// // // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Medical Records</Text>
+// // // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Medical Records</Text>
 // // // //         </TouchableOpacity>
 // // // //       </View>
 
-// // // //       {/* Floating Doctor Button (Green Themed) */}
+// // // //       {/* Floating Doctor Button (blue Themed) */}
 // // // //       <TouchableOpacity
 // // // //         style={tw`absolute bottom-0 left-1/2 -translate-x-8.75 shadow-lg z-10 flex-col items-center`}
 // // // //         onPress={() => setModalVisible(true)}
 // // // //         activeOpacity={0.8}
 // // // //       >
-// // // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-green-600 justify-center items-center border-4 border-green-50`}>
+// // // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-blue-600 justify-center items-center border-4 border-blue-50`}>
 // // // //           <Stethoscope size={32} color="#fff" />
 // // // //         </View>
 // // // //       </TouchableOpacity>
@@ -805,9 +805,9 @@
 // // //         onRequestClose={() => setModalVisible(false)}
 // // //         onShow={() => setLoading(false)}
 // // //       >
-// // //         <View style={tw`flex-1 bg-green-900/10 justify-center items-center`}>
-// // //           <View style={tw`w-[95%] h-[80%] bg-green-50 rounded-2xl p-5 items-center`}>
-// // //             <Text style={tw`text-lg font-bold mb-2.5 text-green-400`}>Choose a Specialty</Text>
+// // //         <View style={tw`flex-1 bg-blue-900/10 justify-center items-center`}>
+// // //           <View style={tw`w-[95%] h-[80%] bg-blue-50 rounded-2xl p-5 items-center`}>
+// // //             <Text style={tw`text-lg font-bold mb-2.5 text-blue-400`}>Choose a Specialty</Text>
 // // //             <ScrollView contentContainerStyle={tw`flex-row flex-wrap justify-between pb-5`}>
 // // //               {specialties.map((item, index) => (
 // // //                 <TouchableOpacity
@@ -818,19 +818,19 @@
 // // //                     navigation.navigate('ConsultOptionsScreen', { specialty: item.name });
 // // //                   }}
 // // //                 >
-// // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-green-100`}>
+// // //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-blue-100`}>
 // // //                     <Image
 // // //                       source={item.image}
 // // //                       style={{ width: '95%', height: '95%', borderRadius: 12 }}
 // // //                       resizeMode="contain"
 // // //                     />
 // // //                   </View>
-// // //                   <Text style={tw`text-xs text-center font-semibold text-green-800`}> {item.name} </Text>
+// // //                   <Text style={tw`text-xs text-center font-semibold text-blue-800`}> {item.name} </Text>
 // // //                 </TouchableOpacity>
 // // //               ))}
 // // //             </ScrollView>
 // // //             <Pressable
-// // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-green-600`}
+// // //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-blue-600`}
 // // //               onPress={() => setModalVisible(false)}
 // // //             >
 // // //               <Text style={tw`text-white font-bold`}>Cancel</Text>
@@ -841,7 +841,7 @@
 
 // // //       {/* Footer */}
 // // //       <View
-// // //         style={tw`flex-row bg-green-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
+// // //         style={tw`flex-row bg-blue-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
 // // //       >
 // // //         <TouchableOpacity
 // // //           style={tw`flex-1 items-center`}
@@ -849,7 +849,7 @@
 // // //           onPress={() => navigation.navigate('Home')}
 // // //         >
 // // //           <Home size={22} color={'#6B7280'} />
-// // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Home</Text>
+// // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Home</Text>
 // // //         </TouchableOpacity>
 
 // // //         <TouchableOpacity
@@ -859,7 +859,7 @@
 // // //         >
 // // //           <User size={22} color={'#6B7280'} />
 // // //           {/* This text is now static and will not cause a crash */}
-// // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Profile</Text>
+// // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Profile</Text>
 // // //         </TouchableOpacity>
 
 // // //         <TouchableOpacity
@@ -868,7 +868,7 @@
 // // //           onPress={() => navigation.navigate('MedicalRecords')}
 // // //         >
 // // //           <FileText size={22} color={'#6B7280'} />
-// // //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Medical Records</Text>
+// // //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Medical Records</Text>
 // // //         </TouchableOpacity>
 // // //       </View>
 
@@ -878,7 +878,7 @@
 // // //         onPress={() => setModalVisible(true)}
 // // //         activeOpacity={0.8}
 // // //       >
-// // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-green-600 justify-center items-center border-4 border-green-50`}>
+// // //         <View style={tw`w-[70px] h-[70px] rounded-full bg-blue-600 justify-center items-center border-4 border-blue-50`}>
 // // //           <Stethoscope size={32} color="#fff" />
 // // //         </View>
 // // //       </TouchableOpacity>
@@ -942,9 +942,9 @@
 // //         onRequestClose={() => setModalVisible(false)}
 // //         onShow={() => setLoading(false)}
 // //       >
-// //         <View style={tw`flex-1 bg-green-900/10 justify-center items-center`}>
-// //           <View style={tw`w-[95%] h-[80%] bg-green-50 rounded-2xl p-5 items-center`}>
-// //             <Text style={tw`text-lg font-bold mb-2.5 text-green-400`}>Choose a Specialty</Text>
+// //         <View style={tw`flex-1 bg-blue-900/10 justify-center items-center`}>
+// //           <View style={tw`w-[95%] h-[80%] bg-blue-50 rounded-2xl p-5 items-center`}>
+// //             <Text style={tw`text-lg font-bold mb-2.5 text-blue-400`}>Choose a Specialty</Text>
 // //             <ScrollView contentContainerStyle={tw`flex-row flex-wrap justify-between pb-5`}>
 // //               {specialties.map((item, index) => (
 // //                 <TouchableOpacity
@@ -955,19 +955,19 @@
 // //                     navigation.navigate('ConsultOptionsScreen', { specialty: item.name });
 // //                   }}
 // //                 >
-// //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-green-100`}>
+// //                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-blue-100`}>
 // //                     <Image
 // //                       source={item.image}
 // //                       style={{ width: '95%', height: '95%', borderRadius: 12 }}
 // //                       resizeMode="contain"
 // //                     />
 // //                   </View>
-// //                   <Text style={tw`text-xs text-center font-semibold text-green-800`}> {item.name} </Text>
+// //                   <Text style={tw`text-xs text-center font-semibold text-blue-800`}> {item.name} </Text>
 // //                 </TouchableOpacity>
 // //               ))}
 // //             </ScrollView>
 // //             <Pressable
-// //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-green-600`}
+// //               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-blue-600`}
 // //               onPress={() => setModalVisible(false)}
 // //             >
 // //               <Text style={tw`text-white font-bold`}>Cancel</Text>
@@ -978,7 +978,7 @@
 
 // //       {/* Footer */}
 // //       <View
-// //         style={tw`flex-row bg-green-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
+// //         style={tw`flex-row bg-blue-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
 // //       >
 // //         <TouchableOpacity
 // //           style={tw`flex-1 items-center`}
@@ -986,7 +986,7 @@
 // //           onPress={() => navigation.navigate('Home')}
 // //         >
 // //           <Home size={22} color={'#6B7280'} />
-// //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Home</Text>
+// //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Home</Text>
 // //         </TouchableOpacity>
 
 // //         <TouchableOpacity
@@ -995,7 +995,7 @@
 // //           onPress={() => navigation.navigate('Profile')}
 // //         >
 // //           <User size={22} color={'#6B7280'} />
-// //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Profile</Text>
+// //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Profile</Text>
 // //         </TouchableOpacity>
 
 // //         <TouchableOpacity
@@ -1004,7 +1004,7 @@
 // //           onPress={() => navigation.navigate('MedicalRecords')}
 // //         >
 // //           <FileText size={22} color={'#6B7280'} />
-// //           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Medical Records</Text>
+// //           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Medical Records</Text>
 // //         </TouchableOpacity>
 // //       </View>
 
@@ -1014,7 +1014,7 @@
 // //         onPress={() => setModalVisible(true)}
 // //         activeOpacity={0.8}
 // //       >
-// //         <View style={tw`w-[70px] h-[70px] rounded-full bg-green-600 justify-center items-center border-4 border-green-50`}>
+// //         <View style={tw`w-[70px] h-[70px] rounded-full bg-blue-600 justify-center items-center border-4 border-blue-50`}>
 // //           <Stethoscope size={32} color="#fff" />
 // //         </View>
 // //       </TouchableOpacity>
@@ -1069,9 +1069,9 @@
 //         onRequestClose={() => setModalVisible(false)}
 //         onShow={() => setLoading(false)}
 //       >
-//         <View style={tw`flex-1 bg-green-900/10 justify-center items-center`}>
-//           <View style={tw`w-[95%] h-[80%] bg-green-50 rounded-2xl p-5 items-center`}>
-//             <Text style={tw`text-lg font-bold mb-2.5 text-green-400`}>Choose a Specialty</Text>
+//         <View style={tw`flex-1 bg-blue-900/10 justify-center items-center`}>
+//           <View style={tw`w-[95%] h-[80%] bg-blue-50 rounded-2xl p-5 items-center`}>
+//             <Text style={tw`text-lg font-bold mb-2.5 text-blue-400`}>Choose a Specialty</Text>
 //             <ScrollView contentContainerStyle={tw`flex-row flex-wrap justify-between pb-5`}>
 //               {specialties.map((item, index) => (
 //                 <TouchableOpacity
@@ -1082,19 +1082,19 @@
 //                     navigation.navigate('ConsultOptionsScreen', { specialty: item.name });
 //                   }}
 //                 >
-//                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-green-100`}>
+//                   <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-blue-100`}>
 //                     <Image
 //                       source={item.image}
 //                       style={{ width: '95%', height: '95%', borderRadius: 12 }}
 //                       resizeMode="contain"
 //                     />
 //                   </View>
-//                   <Text style={tw`text-xs text-center font-semibold text-green-800`}> {item.name} </Text>
+//                   <Text style={tw`text-xs text-center font-semibold text-blue-800`}> {item.name} </Text>
 //                 </TouchableOpacity>
 //               ))}
 //             </ScrollView>
 //             <Pressable
-//               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-green-600`}
+//               style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-blue-600`}
 //               onPress={() => setModalVisible(false)}
 //             >
 //               <Text style={tw`text-white font-bold`}>Cancel</Text>
@@ -1104,14 +1104,14 @@
 //       </Modal>
 
 //       <View
-//         style={tw`flex-row bg-green-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
+//         style={tw`flex-row bg-blue-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
 //       >
 //         <TouchableOpacity
 //           style={tw`flex-1 items-center`}
 //           onPress={() => navigation.navigate('Home')}
 //         >
 //           <Home size={22} color={'#6B7280'} />
-//           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Home</Text>
+//           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Home</Text>
 //         </TouchableOpacity>
 
 //         <TouchableOpacity
@@ -1119,7 +1119,7 @@
 //           onPress={() => navigation.navigate('Profile')}
 //         >
 //           <User size={22} color={'#6B7280'} />
-//           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Profile</Text>
+//           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Profile</Text>
 //         </TouchableOpacity>
 
 //         <TouchableOpacity
@@ -1127,7 +1127,7 @@
 //           onPress={() => navigation.navigate('MedicalRecords')}
 //         >
 //           <FileText size={22} color={'#6B7280'} />
-//           <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Medical Records</Text>
+//           <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Medical Records</Text>
 //         </TouchableOpacity>
 //       </View>
 
@@ -1136,7 +1136,7 @@
 //         onPress={() => setModalVisible(true)}
 //         activeOpacity={0.8}
 //       >
-//         <View style={tw`w-[70px] h-[70px] rounded-full bg-green-600 justify-center items-center border-4 border-green-50`}>
+//         <View style={tw`w-[70px] h-[70px] rounded-full bg-blue-600 justify-center items-center border-4 border-blue-50`}>
 //           <Stethoscope size={32} color="#fff" />
 //         </View>
 //       </TouchableOpacity>
@@ -1190,9 +1190,9 @@ const Footer = () => {
         onRequestClose={() => setModalVisible(false)}
         onShow={() => setLoading(false)}
       >
-        <View style={tw`flex-1 bg-green-900/10 justify-center items-center`}>
-          <View style={tw`w-[95%] h-[80%] bg-green-50 rounded-2xl p-5 items-center`}>
-            <Text style={tw`text-lg font-bold mb-2.5 text-green-400`}>
+        <View style={tw`flex-1 bg-blue-900/10 justify-center items-center`}>
+          <View style={tw`w-[95%] h-[80%] bg-blue-50 rounded-2xl p-5 items-center`}>
+            <Text style={tw`text-lg font-bold mb-2.5 text-blue-400`}>
               Choose a Specialty
             </Text>
 
@@ -1206,14 +1206,14 @@ const Footer = () => {
                     navigation.navigate('ConsultOptionsScreen', { specialty: item.name });
                   }}
                 >
-                  <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-green-100`}>
+                  <View style={tw`w-16 h-16 rounded-xl mb-1.5 justify-center items-center bg-blue-100`}>
                     <Image
                       source={item.image}
                       style={{ width: '95%', height: '95%', borderRadius: 12 }}
                       resizeMode="contain"
                     />
                   </View>
-                  <Text style={tw`text-xs text-center font-semibold text-green-800`}>
+                  <Text style={tw`text-xs text-center font-semibold text-blue-800`}>
                     {item.name}
                   </Text>
                 </TouchableOpacity>
@@ -1221,7 +1221,7 @@ const Footer = () => {
             </ScrollView>
 
             <Pressable
-              style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-green-600`}
+              style={tw`mt-2.5 py-2.5 px-6 rounded-lg bg-blue-600`}
               onPress={() => setModalVisible(false)}
             >
               <Text style={tw`text-white font-bold`}>Cancel</Text>
@@ -1231,14 +1231,14 @@ const Footer = () => {
       </Modal>
 
       <View
-        style={tw`flex-row bg-green-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
+        style={tw`flex-row bg-blue-50 py-2.5 px-7.5 rounded-t-2xl shadow-md absolute bottom-0 left-0 right-0 justify-between items-center h-15 border-t-0`}
       >
         <TouchableOpacity
           style={tw`flex-1 items-center`}
           onPress={() => navigation.navigate('Home')}
         >
           <Home size={22} color={'#6B7280'} />
-          <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Home</Text>
+          <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Home</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -1246,7 +1246,7 @@ const Footer = () => {
           onPress={() => navigation.navigate('Profile')}
         >
           <User size={22} color={'#6B7280'} />
-          <Text style={tw`text-[10px] mt-0.5 text-green-700`}>Profile</Text>
+          <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>Profile</Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -1254,7 +1254,7 @@ const Footer = () => {
           onPress={() => navigation.navigate('MedicalRecords')}
         >
           <FileText size={22} color={'#6B7280'} />
-          <Text style={tw`text-[10px] mt-0.5 text-green-700`}>
+          <Text style={tw`text-[10px] mt-0.5 text-blue-700`}>
             Medical Records
           </Text>
         </TouchableOpacity>
@@ -1265,7 +1265,7 @@ const Footer = () => {
         onPress={() => setModalVisible(true)}
         activeOpacity={0.8}
       >
-        <View style={tw`w-[70px] h-[70px] rounded-full bg-green-600 justify-center items-center border-4 border-green-50`}>
+        <View style={tw`w-[70px] h-[70px] rounded-full bg-blue-600 justify-center items-center border-4 border-blue-50`}>
           <Stethoscope size={32} color="#fff" />
         </View>
       </TouchableOpacity>

@@ -83,21 +83,21 @@ const SearchScreen = () => {
   };
 
   return (
-    <View style={tw`flex-1 bg-green-50`}>
+    <View style={tw`flex-1 bg-blue-50`}>
       {/* Safe area and header container */}
-      <View style={tw`bg-green-50 pt-12 px-4 shadow-sm`}>
+      <View style={tw`bg-blue-50 pt-12 px-4 shadow-sm`}>
         {/* Header */}
         <View style={tw`flex-row items-center justify-between mb-4`}>
           <View style={tw`flex-row items-center flex-1`}>
-            <Pressable 
-              onPress={() => navigation.goBack()} 
+            <Pressable
+              onPress={() => navigation.goBack()}
               style={tw`p-2 mr-3`}
             >
               <ArrowLeft size={24} color="#202b6d" />
             </Pressable>
             <Pressable
               onPress={() => setShowLocationModal(true)}
-              style={tw`flex-row items-center bg-green-100 px-3 py-1.5 rounded-full max-w-[140px]`}
+              style={tw`flex-row items-center bg-blue-100 px-3 py-1.5 rounded-full max-w-[140px]`}
             >
               <MapPin size={16} color="#202b6d" />
               <Text style={tw`ml-1 font-medium text-[#202b6d] text-sm`} numberOfLines={1}>
@@ -109,12 +109,12 @@ const SearchScreen = () => {
 
         {/* Search Bar */}
         <View style={tw`mb-3`}>
-          <View style={tw`flex-row items-center bg-green-100 rounded-lg px-3 py-2.5`}>
+          <View style={tw`flex-row items-center bg-blue-100 rounded-lg px-3 py-2.5`}>
             <Search size={18} color="#666" />
             <TextInput
               placeholder="Search for doctors, services, labs..."
               placeholderTextColor="#666"
-              style={tw`ml-2 flex-1 text-sm text-green-800`}
+              style={tw`ml-2 flex-1 text-sm text-blue-800`}
               value={searchText}
               onChangeText={setSearchText}
               returnKeyType="search"
@@ -124,15 +124,15 @@ const SearchScreen = () => {
       </View>
 
       {/* Search Results / History */}
-      <View style={tw`flex-1 px-4 bg-green-50`}>
+      <View style={tw`flex-1 px-4 bg-blue-50`}>
         <View style={tw`mt-6`}> {/* Results section */}
           {(searchText.length > 0 ? filteredResults : searchHistory).length > 0 && (
             <>
               <View style={tw`flex-row justify-between mb-2`}> {/* Section title */}
-                <Text style={tw`text-green-800 font-semibold`}>{searchText.length > 0 ? 'Results' : 'Recent Searches'}</Text>
+                <Text style={tw`text-blue-800 font-semibold`}>{searchText.length > 0 ? 'Results' : 'Recent Searches'}</Text>
                 {searchText.length === 0 && (
                   <Pressable onPress={clearAll}>
-                    <Text style={tw`text-green-600 text-sm font-semibold`}>CLEAR</Text>
+                    <Text style={tw`text-blue-600 text-sm font-semibold`}>CLEAR</Text>
                   </Pressable>
                 )}
               </View>
@@ -143,19 +143,19 @@ const SearchScreen = () => {
                 renderItem={({ item, index }) => (
                   <Pressable
                     onPress={() => onResultSelect(item)}
-                    style={tw`flex-row items-center justify-between py-3 border-b border-green-100 bg-green-50 rounded-lg px-2 mb-1`}
+                    style={tw`flex-row items-center justify-between py-3 border-b border-blue-100 bg-blue-50 rounded-lg px-2 mb-1`}
                   >
                     <View style={tw`flex-row items-start`}>
                       {item.icon}
                       <View style={tw`ml-3`}>
-                        <Text style={tw`text-green-900 font-semibold text-base`}>{item.title}</Text>
-                        <Text style={tw`text-xs text-green-600 mt-0.5`}>{item.type}</Text>
+                        <Text style={tw`text-blue-900 font-semibold text-base`}>{item.title}</Text>
+                        <Text style={tw`text-xs text-blue-600 mt-0.5`}>{item.type}</Text>
                       </View>
                     </View>
                     {searchText.length === 0 && (
                       <Pressable onPress={() => removeItem(index)}>
                         {/* You may want to use a Lucide icon here for consistency */}
-                        <Text style={tw`text-lg text-green-400`}>×</Text>
+                        <Text style={tw`text-lg text-blue-400`}>×</Text>
                       </Pressable>
                     )}
                   </Pressable>
@@ -164,14 +164,14 @@ const SearchScreen = () => {
             </>
           )}
           {searchText.length > 0 && filteredResults.length === 0 && (
-            <Text style={tw`text-center text-green-400 mt-10`}>No results found. Try another search.</Text>
+            <Text style={tw`text-center text-blue-400 mt-10`}>No results found. Try another search.</Text>
           )}
         </View>
 
         {/* Location Picker Modal */}
         <Modal visible={showLocationModal} transparent animationType="slide">
-          <View style={tw`flex-1 justify-end bg-green-900/10`}>
-            <View style={tw`bg-green-50 rounded-t-2xl p-4`}>
+          <View style={tw`flex-1 justify-end bg-blue-900/10`}>
+            <View style={tw`bg-blue-50 rounded-t-2xl p-4`}>
               <Text style={tw`text-lg font-semibold mb-4`}>Select Location</Text>
               {locations.map(loc => (
                 <TouchableOpacity
@@ -182,11 +182,11 @@ const SearchScreen = () => {
                   }}
                   style={tw`py-2`}
                 >
-                  <Text style={tw`text-base text-green-800`}>{loc}</Text>
+                  <Text style={tw`text-base text-blue-800`}>{loc}</Text>
                 </TouchableOpacity>
               ))}
               <TouchableOpacity onPress={() => setShowLocationModal(false)} style={tw`mt-4`}>
-                <Text style={tw`text-center text-green-600 font-semibold`}>Cancel</Text>
+                <Text style={tw`text-center text-blue-600 font-semibold`}>Cancel</Text>
               </TouchableOpacity>
             </View>
           </View>

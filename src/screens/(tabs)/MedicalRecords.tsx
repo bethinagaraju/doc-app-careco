@@ -119,7 +119,7 @@ const MedicalRecordsScreen = () => {
   const renderRecordCard = (item: Record, index: number) => (
     <TouchableOpacity
       key={index}
-      style={tw`bg-green-50 rounded-2xl mb-4 shadow-md border border-green-100 overflow-hidden`}
+      style={tw`bg-blue-50 rounded-2xl mb-4 shadow-md border border-blue-100 overflow-hidden`}
       onPress={() => console.log('Handle record press')}
       activeOpacity={0.7}
     >
@@ -136,18 +136,18 @@ const MedicalRecordsScreen = () => {
             </View>
             <View style={tw`ml-3 flex-1`}>
               <View style={tw`flex-row items-center`}>
-                <Text style={tw`text-base font-semibold text-green-800 flex-1`}>
+                <Text style={tw`text-base font-semibold text-blue-800 flex-1`}>
                   {item.title}
                 </Text>
                 {item.status && (
-                  <View style={tw`bg-green-100 px-2 py-0.5 rounded-full ml-2`}>
-                    <Text style={tw`text-xs font-medium text-green-600`}>{item.status}</Text>
+                  <View style={tw`bg-blue-100 px-2 py-0.5 rounded-full ml-2`}>
+                    <Text style={tw`text-xs font-medium text-blue-600`}>{item.status}</Text>
                   </View>
                 )}
               </View>
               <View style={tw`flex-row items-center mt-1`}>
                 <Calendar size={14} color="#059669" />
-                <Text style={tw`text-sm text-green-600 ml-1`}>{item.date}</Text>
+                <Text style={tw`text-sm text-blue-600 ml-1`}>{item.date}</Text>
               </View>
             </View>
           </View>
@@ -156,9 +156,9 @@ const MedicalRecordsScreen = () => {
           </TouchableOpacity>
         </View>
 
-        <View style={tw`flex-row items-center justify-between mt-4 pt-4 border-t border-green-100`}>
+        <View style={tw`flex-row items-center justify-between mt-4 pt-4 border-t border-blue-100`}>
           <View style={tw`flex-row items-center`}>
-            <Text style={tw`text-sm text-green-700`}>
+            <Text style={tw`text-sm text-blue-700`}>
               {item.files} files • {item.size}
             </Text>
             <View style={tw`flex-row ml-2`}>
@@ -166,7 +166,7 @@ const MedicalRecordsScreen = () => {
                 <View
                   key={i}
                   style={[
-                    tw`w-6 h-6 rounded-full items-center justify-center bg-green-100 border-2 border-green-50`,
+                    tw`w-6 h-6 rounded-full items-center justify-center bg-blue-100 border-2 border-blue-50`,
                     { marginLeft: i === 0 ? 0 : -8 },
                   ]}
                 >
@@ -177,13 +177,13 @@ const MedicalRecordsScreen = () => {
           </View>
           <View style={tw`flex-row gap-2`}>
             <TouchableOpacity 
-              style={tw`p-2 rounded-xl bg-green-100`}
+              style={tw`p-2 rounded-xl bg-blue-100`}
               onPress={() => console.log('Download pressed')}
             >
               <Download size={18} color="#059669" />
             </TouchableOpacity>
             <TouchableOpacity 
-              style={tw`p-2 rounded-xl bg-green-100`}
+              style={tw`p-2 rounded-xl bg-blue-100`}
               onPress={() => console.log('Share pressed')}
             >
               <Share2 size={18} color="#059669" />
@@ -197,7 +197,7 @@ const MedicalRecordsScreen = () => {
   return (
     <PageLayout
       title="Medical Records"
-      headerBackgroundColor="#219f4dff"
+      headerBackgroundColor="#21479fff"
       leftComponent={canGoBack ? (
         <TouchableOpacity
           onPress={() => navigation.goBack()}
@@ -213,17 +213,17 @@ const MedicalRecordsScreen = () => {
           <Bell size={22} color="#fff" />
         </TouchableOpacity>
       }      headerContent={
-        <View style={tw`flex-row items-center bg-green-50 rounded-xl px-3 h-12 mt-2 mb-2 shadow-sm`}>
+        <View style={tw`flex-row items-center bg-blue-50 rounded-xl px-3 h-12 mt-2 mb-2 shadow-sm`}>
           <Search size={20} color="#202b6d" />
           <TextInput
             placeholder="Search medical records..."
             placeholderTextColor="#64748b"
-            style={tw`flex-1 mx-2 text-base font-medium text-green-800`}
+            style={tw`flex-1 mx-2 text-base font-medium text-blue-800`}
             value={searchText}
             onChangeText={setSearchText}
           />
           <TouchableOpacity 
-            style={tw`p-2 rounded-lg active:bg-green-100`}
+            style={tw`p-2 rounded-lg active:bg-blue-100`}
             activeOpacity={0.7}
           >
             <SlidersHorizontal size={20} color="#202b6d" />
@@ -233,7 +233,7 @@ const MedicalRecordsScreen = () => {
       scrollable={true}
     >
       {/* Categories and Content */}
-      <View style={tw`bg-green-50 rounded-t-3xl mt-4`}>
+      <View style={tw`bg-blue-50 rounded-t-3xl mt-4`}>
         {/* Categories */}
         <View style={tw`px-4 py-4`}>
           <ScrollView
@@ -250,8 +250,8 @@ const MedicalRecordsScreen = () => {
                   style={[
                     tw`mr-2 flex-row items-center border rounded-xl px-3 py-1.5`,
                     isActive 
-                      ? tw`bg-green-600 border-green-600` 
-                      : tw`bg-green-100 border-green-100`
+                      ? tw`bg-blue-600 border-blue-600` 
+                      : tw`bg-blue-100 border-blue-100`
                   ]}
                   onPress={() => setActiveCategory(category.id)}
                   activeOpacity={0.7}
@@ -264,7 +264,7 @@ const MedicalRecordsScreen = () => {
                   <Text
                     style={[
                       tw`text-xs font-medium`,
-                      isActive ? tw`text-white` : tw`text-green-700`
+                      isActive ? tw`text-white` : tw`text-blue-700`
                     ]}
                   >
                     {category.label}
@@ -275,19 +275,19 @@ const MedicalRecordsScreen = () => {
           </ScrollView>
         </View>
 
-        <View style={tw`h-[1px] bg-green-100 mx-4 -mt-1 mb-3`} />
+        <View style={tw`h-[1px] bg-blue-100 mx-4 -mt-1 mb-3`} />
 
         {/* Stats Row */}
         <View style={tw`flex-row justify-between px-4 py-4`}>
-          <View style={tw`bg-green-100 px-4 py-3 rounded-xl flex-1 mr-3`}>
-            <Text style={tw`text-sm text-green-700`}>Total Records</Text>
-            <Text style={tw`text-xl font-bold text-green-700`}>
+          <View style={tw`bg-blue-100 px-4 py-3 rounded-xl flex-1 mr-3`}>
+            <Text style={tw`text-sm text-blue-700`}>Total Records</Text>
+            <Text style={tw`text-xl font-bold text-blue-700`}>
               {filteredRecords.length}
             </Text>
           </View>
-          <View style={tw`bg-green-50 px-4 py-3 rounded-xl flex-1`}>
-            <Text style={tw`text-sm text-green-700`}>Total Files</Text>
-            <Text style={tw`text-xl font-bold text-green-700`}>
+          <View style={tw`bg-blue-50 px-4 py-3 rounded-xl flex-1`}>
+            <Text style={tw`text-sm text-blue-700`}>Total Files</Text>
+            <Text style={tw`text-xl font-bold text-blue-700`}>
               {filteredRecords.reduce((sum, record) => sum + record.files, 0)}
             </Text>
           </View>
@@ -304,7 +304,7 @@ const MedicalRecordsScreen = () => {
           ) : (
             <View style={tw`items-center justify-center py-8`}>
               <Folder size={48} color="#94A3B8" />
-              <Text style={tw`text-green-400 mt-4 text-base`}>No records found</Text>
+              <Text style={tw`text-blue-400 mt-4 text-base`}>No records found</Text>
             </View>
           )}
         </ScrollView>

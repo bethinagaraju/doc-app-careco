@@ -87,7 +87,7 @@ export default function AppointmentHistoryScreen() {
   return (
     <PageLayout
       title="My Appointments"
-      headerBackgroundColor="#16a34a"
+      headerBackgroundColor="#164aa3ff"
       scrollable={true}
     >
       {/* Tabs */}
@@ -97,7 +97,7 @@ export default function AppointmentHistoryScreen() {
             key={tab}
             onPress={() => setSelectedTab(tab)}
             style={tw`px-4 py-2 rounded-full ${
-              selectedTab === tab ? 'bg-green-600' : 'bg-gray-200'
+              selectedTab === tab ? 'bg-blue-600' : 'bg-gray-200'
             }`}
           >
             <Text
@@ -123,7 +123,7 @@ export default function AppointmentHistoryScreen() {
               key={item.id}
               style={tw`bg-white p-4 mb-4 rounded-xl shadow-sm border border-gray-200`}
             >
-              <Text style={tw`text-lg font-bold text-green-700`}>
+              <Text style={tw`text-lg font-bold text-blue-700`}>
                 Doctor ID: #{item.doctor_id}
               </Text>
               <Text style={tw`text-gray-800`}>

@@ -87,7 +87,7 @@
 //   return (
 //     <PageLayout
 //       title="My Appointments"
-//       headerBackgroundColor="#16a34a"
+//       headerBackgroundColor="#164aa3ff"
 //       scrollable={true}
 //     >
 //       {/* Tabs */}
@@ -298,7 +298,7 @@ export default function AppointmentsScreen() {
   return (
     <PageLayout
       title="My Appointments"
-      headerBackgroundColor="#16a34a"
+      headerBackgroundColor="#164aa3ff"
       scrollable={true}
     >
       {/* Tabs */}

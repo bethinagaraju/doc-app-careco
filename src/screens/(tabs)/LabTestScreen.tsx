@@ -14,20 +14,20 @@ const LabTestScreen = () => {
   const { test } = route.params;
 
       return (
-        <View style={tw`flex-1 bg-green-50`}>
+        <View style={tw`flex-1 bg-blue-50`}>
           <PageHeader
             title={test.name}
-            backgroundColor="#16a34a"
+            backgroundColor="#164aa3ff"
             textColor="#fff"
             onBackPress={() => navigation.goBack()}
           />
           <View style={tw`flex-1 justify-center items-center px-6`}>
-            <View style={tw`bg-green-50 rounded-3xl shadow-lg p-7 w-full max-w-xl items-center`}>
-              <Text style={tw`text-2xl font-bold text-green-800 mb-2 text-center`}>{test.name}</Text>
-              <Text style={tw`text-base text-green-700 mb-4 text-center`}>{test.description}</Text>
-              <Text style={tw`text-xl font-bold text-green-600 mb-6`}>{test.price}</Text>
+            <View style={tw`bg-blue-50 rounded-3xl shadow-lg p-7 w-full max-w-xl items-center`}>
+              <Text style={tw`text-2xl font-bold text-blue-800 mb-2 text-center`}>{test.name}</Text>
+              <Text style={tw`text-base text-blue-700 mb-4 text-center`}>{test.description}</Text>
+              <Text style={tw`text-xl font-bold text-blue-600 mb-6`}>{test.price}</Text>
               <TouchableOpacity
-                style={tw`bg-green-600 px-8 py-3 rounded-xl`}
+                style={tw`bg-blue-600 px-8 py-3 rounded-xl`}
                 activeOpacity={0.85}
                 onPress={() => { console.log('handle booking or add to cart here ') }}
               >

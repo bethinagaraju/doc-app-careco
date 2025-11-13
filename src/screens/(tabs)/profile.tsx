@@ -103,26 +103,26 @@
 // // //           <ActivityIndicator size="large" color="#059669" />
 // // //         ) : (
 // // //           <>
-// // //             <View style={tw`w-28 h-28 rounded-full mb-4 shadow-md bg-green-100 items-center justify-center`}>
+// // //             <View style={tw`w-28 h-28 rounded-full mb-4 shadow-md bg-blue-100 items-center justify-center`}>
 // // //               {user?.username ? (
-// // //                 <Text style={tw`text-green-700 text-4xl font-bold`}>
+// // //                 <Text style={tw`text-blue-700 text-4xl font-bold`}>
 // // //                   {user.username.split(' ').map((part) => part[0]).join('').toUpperCase().slice(0, 2)}
 // // //                 </Text>
 // // //               ) : (
 // // //                 <User size={96} color="#059669" strokeWidth={1.2} />
 // // //               )}
 // // //             </View>
-// // //             <Text style={tw`font-semibold text-xl text-green-800 mb-1`}>{user?.username || 'Unknown User'}</Text>
-// // //             <Text style={tw`font-normal text-sm text-green-500 mb-4`}>{user?.email || 'No Email'}</Text>
+// // //             <Text style={tw`font-semibold text-xl text-blue-800 mb-1`}>{user?.username || 'Unknown User'}</Text>
+// // //             <Text style={tw`font-normal text-sm text-blue-500 mb-4`}>{user?.email || 'No Email'}</Text>
 // // //             <View style={tw`flex-row justify-center gap-4`}>
 // // //               <TouchableOpacity
-// // //                 style={tw`bg-green-100 px-5 py-2 rounded-full`}
+// // //                 style={tw`bg-blue-100 px-5 py-2 rounded-full`}
 // // //                 onPress={() => navigation.navigate('EditProfilePage')}
 // // //               >
-// // //                 <Text style={tw`font-medium text-sm text-green-600`}>Edit Profile</Text>
+// // //                 <Text style={tw`font-medium text-sm text-blue-600`}>Edit Profile</Text>
 // // //               </TouchableOpacity>
 // // //               <TouchableOpacity
-// // //                 style={tw`bg-green-600 px-5 py-2 rounded-full`}
+// // //                 style={tw`bg-blue-600 px-5 py-2 rounded-full`}
 // // //                 onPress={() => navigation.navigate('CompleteProfile')}
 // // //               >
 // // //                 <Text style={tw`font-medium text-sm text-white`}>Complete Profile</Text>
@@ -135,25 +135,25 @@
 // // //       {/* Menu Options */}
 // // //       <View style={tw`px-4 mb-4`}>
 // // //         {[
-// // //           { label: 'Appointments', icon: CalendarCheck, color: '#059669', bg: 'bg-green-100', screen: 'Appointments' },
+// // //           { label: 'Appointments', icon: CalendarCheck, color: '#059669', bg: 'bg-blue-100', screen: 'Appointments' },
 // // //           { label: 'Personal Details', icon: User, color: '#10B981', bg: 'bg-emerald-100', screen: 'PersonalDetails' },
-// // //           { label: 'My Medical Records', icon: Folder, color: '#34D399', bg: 'bg-green-200', screen: 'MedicalRecords' },
-// // //           { label: 'Payment Methods', icon: CreditCard, color: '#059669', bg: 'bg-green-100', screen: 'PaymentMethods' },
-// // //           { label: 'Notifications', icon: Bell, color: '#86EFAC', bg: 'bg-green-100', screen: 'Notification' },
+// // //           { label: 'My Medical Records', icon: Folder, color: '#34D399', bg: 'bg-blue-200', screen: 'MedicalRecords' },
+// // //           { label: 'Payment Methods', icon: CreditCard, color: '#059669', bg: 'bg-blue-100', screen: 'PaymentMethods' },
+// // //           { label: 'Notifications', icon: Bell, color: '#86EFAC', bg: 'bg-blue-100', screen: 'Notification' },
 // // //           { label: 'Privacy & Security', icon: Shield, color: '#10B981', bg: 'bg-emerald-100', screen: 'PrivacySecurity' },
-// // //           { label: 'Test Bookings', icon: CalendarCheck, color: '#34D399', bg: 'bg-green-200', screen: 'TestBooking' },
-// // //           { label: 'Help Center', icon: HelpCircle, color: '#059669', bg: 'bg-green-100', screen: 'HelpCenter' },
+// // //           { label: 'Test Bookings', icon: CalendarCheck, color: '#34D399', bg: 'bg-blue-200', screen: 'TestBooking' },
+// // //           { label: 'Help Center', icon: HelpCircle, color: '#059669', bg: 'bg-blue-100', screen: 'HelpCenter' },
 // // //         ].map(({ label, icon: Icon, color, bg, screen }, index) => (
 // // //           <TouchableOpacity
 // // //             key={index}
-// // //             style={tw`flex-row items-center bg-green-50 rounded-2xl p-4 mb-3 shadow-sm`}
+// // //             style={tw`flex-row items-center bg-blue-50 rounded-2xl p-4 mb-3 shadow-sm`}
 // // //             onPress={() => navigation.navigate(screen as keyof RootStackParamList)}
 // // //           >
 // // //             <View style={tw`w-10 h-10 rounded-full ${bg} justify-center items-center mr-4`}>
 // // //               <Icon size={20} color={color} />
 // // //             </View>
 // // //             <View style={tw`flex-1 flex-row justify-between items-center`}>
-// // //               <Text style={tw`font-medium text-base text-green-800`}>{label}</Text>
+// // //               <Text style={tw`font-medium text-base text-blue-800`}>{label}</Text>
 // // //               <ChevronRight size={20} color="#059669" />
 // // //             </View>
 // // //           </TouchableOpacity>
@@ -170,12 +170,12 @@
 
 
 // // //       {/* Footer */}
-// // //       <View style={tw`items-center mb-20 pt-2 border-t border-green-100`}>
-// // //         <Text style={tw`font-normal text-xs text-green-500 mb-2`}>App Version 1.0.0</Text>
+// // //       <View style={tw`items-center mb-20 pt-2 border-t border-blue-100`}>
+// // //         <Text style={tw`font-normal text-xs text-blue-500 mb-2`}>App Version 1.0.0</Text>
 // // //         <View style={tw`flex-row items-center justify-center`}>
-// // //           <Text style={tw`font-normal text-[10px] text-green-400`}>Developed by </Text>
-// // //           <Text style={tw`font-semibold text-[10px] text-green-700 mx-1`}>ZYNLOGIC</Text>
-// // //           <Text style={tw`font-normal text-[10px] text-green-400`}>• © {new Date().getFullYear()} All Rights Reserved</Text>
+// // //           <Text style={tw`font-normal text-[10px] text-blue-400`}>Developed by </Text>
+// // //           <Text style={tw`font-semibold text-[10px] text-blue-700 mx-1`}>ZYNLOGIC</Text>
+// // //           <Text style={tw`font-normal text-[10px] text-blue-400`}>• © {new Date().getFullYear()} All Rights Reserved</Text>
 // // //         </View>
 // // //       </View>
 // // //     </PageLayout>
@@ -278,7 +278,7 @@
 // //         ) : (
 // //           <>
 // //             {/* MODIFIED SECTION TO DISPLAY REAL IMAGE */}
-// //             <View style={tw`w-28 h-28 rounded-full mb-4 shadow-md bg-green-100`}>
+// //             <View style={tw`w-28 h-28 rounded-full mb-4 shadow-md bg-blue-100`}>
 // //               {user?.generalUser?.profile_picture ? (
 // //                 <Image
 // //                   source={{ uri: user.generalUser.profile_picture }}
@@ -286,7 +286,7 @@
 // //                 />
 // //               ) : user?.username ? (
 // //                 <View style={tw`w-full h-full items-center justify-center`}>
-// //                   <Text style={tw`text-green-700 text-4xl font-bold`}>
+// //                   <Text style={tw`text-blue-700 text-4xl font-bold`}>
 // //                     {user.username.split(' ').map((part) => part[0]).join('').toUpperCase().slice(0, 2)}
 // //                   </Text>
 // //                 </View>
@@ -297,17 +297,17 @@
 // //               )}
 // //             </View>
 
-// //             <Text style={tw`font-semibold text-xl text-green-800 mb-1`}>{user?.username || 'Unknown User'}</Text>
-// //             <Text style={tw`font-normal text-sm text-green-500 mb-4`}>{user?.email || 'No Email'}</Text>
+// //             <Text style={tw`font-semibold text-xl text-blue-800 mb-1`}>{user?.username || 'Unknown User'}</Text>
+// //             <Text style={tw`font-normal text-sm text-blue-500 mb-4`}>{user?.email || 'No Email'}</Text>
 // //             <View style={tw`flex-row justify-center gap-4`}>
 // //               <TouchableOpacity
-// //                 style={tw`bg-green-100 px-5 py-2 rounded-full`}
+// //                 style={tw`bg-blue-100 px-5 py-2 rounded-full`}
 // //                 onPress={() => navigation.navigate('EditProfilePage')}
 // //               >
-// //                 <Text style={tw`font-medium text-sm text-green-600`}>Edit Profile</Text>
+// //                 <Text style={tw`font-medium text-sm text-blue-600`}>Edit Profile</Text>
 // //               </TouchableOpacity>
 // //               <TouchableOpacity
-// //                 style={tw`bg-green-600 px-5 py-2 rounded-full`}
+// //                 style={tw`bg-blue-600 px-5 py-2 rounded-full`}
 // //                 onPress={() => navigation.navigate('CompleteProfile')}
 // //               >
 // //                 <Text style={tw`font-medium text-sm text-white`}>Complete Profile</Text>
@@ -320,25 +320,25 @@
 // //       {/* Menu Options */}
 // //       <View style={tw`px-4 mb-4`}>
 // //         {[
-// //           { label: 'Appointments', icon: CalendarCheck, color: '#059669', bg: 'bg-green-100', screen: 'Appointments' },
+// //           { label: 'Appointments', icon: CalendarCheck, color: '#059669', bg: 'bg-blue-100', screen: 'Appointments' },
 // //           { label: 'Personal Details', icon: User, color: '#10B981', bg: 'bg-emerald-100', screen: 'PersonalDetails' },
-// //           { label: 'My Medical Records', icon: Folder, color: '#34D399', bg: 'bg-green-200', screen: 'MedicalRecords' },
-// //           { label: 'Payment Methods', icon: CreditCard, color: '#059669', bg: 'bg-green-100', screen: 'PaymentMethods' },
-// //           { label: 'Notifications', icon: Bell, color: '#86EFAC', bg: 'bg-green-100', screen: 'Notification' },
+// //           { label: 'My Medical Records', icon: Folder, color: '#34D399', bg: 'bg-blue-200', screen: 'MedicalRecords' },
+// //           { label: 'Payment Methods', icon: CreditCard, color: '#059669', bg: 'bg-blue-100', screen: 'PaymentMethods' },
+// //           { label: 'Notifications', icon: Bell, color: '#86EFAC', bg: 'bg-blue-100', screen: 'Notification' },
 // //           { label: 'Privacy & Security', icon: Shield, color: '#10B981', bg: 'bg-emerald-100', screen: 'PrivacySecurity' },
-// //           { label: 'Test Bookings', icon: CalendarCheck, color: '#34D399', bg: 'bg-green-200', screen: 'TestBooking' },
-// //           { label: 'Help Center', icon: HelpCircle, color: '#059669', bg: 'bg-green-100', screen: 'HelpCenter' },
+// //           { label: 'Test Bookings', icon: CalendarCheck, color: '#34D399', bg: 'bg-blue-200', screen: 'TestBooking' },
+// //           { label: 'Help Center', icon: HelpCircle, color: '#059669', bg: 'bg-blue-100', screen: 'HelpCenter' },
 // //         ].map(({ label, icon: Icon, color, bg, screen }, index) => (
 // //           <TouchableOpacity
 // //             key={index}
-// //             style={tw`flex-row items-center bg-green-50 rounded-2xl p-4 mb-3 shadow-sm`}
+// //             style={tw`flex-row items-center bg-blue-50 rounded-2xl p-4 mb-3 shadow-sm`}
 // //             onPress={() => navigation.navigate(screen as keyof RootStackParamList)}
 // //           >
 // //             <View style={tw`w-10 h-10 rounded-full ${bg} justify-center items-center mr-4`}>
 // //               <Icon size={20} color={color} />
 // //             </View>
 // //             <View style={tw`flex-1 flex-row justify-between items-center`}>
-// //               <Text style={tw`font-medium text-base text-green-800`}>{label}</Text>
+// //               <Text style={tw`font-medium text-base text-blue-800`}>{label}</Text>
 // //               <ChevronRight size={20} color="#059669" />
 // //             </View>
 // //           </TouchableOpacity>
@@ -355,12 +355,12 @@
 
 
 // //       {/* Footer */}
-// //       <View style={tw`items-center mb-20 pt-2 border-t border-green-100`}>
-// //         <Text style={tw`font-normal text-xs text-green-500 mb-2`}>App Version 1.0.0</Text>
+// //       <View style={tw`items-center mb-20 pt-2 border-t border-blue-100`}>
+// //         <Text style={tw`font-normal text-xs text-blue-500 mb-2`}>App Version 1.0.0</Text>
 // //         <View style={tw`flex-row items-center justify-center`}>
-// //           <Text style={tw`font-normal text-[10px] text-green-400`}>Developed by </Text>
-// //           <Text style={tw`font-semibold text-[10px] text-green-700 mx-1`}>ZYNLOGIC</Text>
-// //           <Text style={tw`font-normal text-[10px] text-green-400`}>• © {new Date().getFullYear()} All Rights Reserved</Text>
+// //           <Text style={tw`font-normal text-[10px] text-blue-400`}>Developed by </Text>
+// //           <Text style={tw`font-semibold text-[10px] text-blue-700 mx-1`}>ZYNLOGIC</Text>
+// //           <Text style={tw`font-normal text-[10px] text-blue-400`}>• © {new Date().getFullYear()} All Rights Reserved</Text>
 // //         </View>
 // //       </View>
 // //     </PageLayout>
@@ -481,7 +481,7 @@
 //         ) : (
 //           <>
 //             {/* ✅ Profile Picture */}
-//             <View style={tw`w-28 h-28 rounded-full mb-4 shadow-md bg-green-100`}>
+//             <View style={tw`w-28 h-28 rounded-full mb-4 shadow-md bg-blue-100`}>
 //               {user?.generalUser?.profile_picture ? (
 //                 <Image
 //                   source={{ uri: user.generalUser.profile_picture }}
@@ -489,7 +489,7 @@
 //                 />
 //               ) : user?.username ? (
 //                 <View style={tw`w-full h-full items-center justify-center`}>
-//                   <Text style={tw`text-green-700 text-4xl font-bold`}>
+//                   <Text style={tw`text-blue-700 text-4xl font-bold`}>
 //                     {user.username.split(' ').map((part) => part[0]).join('').toUpperCase().slice(0, 2)}
 //                   </Text>
 //                 </View>
@@ -501,23 +501,23 @@
 //             </View>
 
 //             {/* ✅ User Info */}
-//             <Text style={tw`font-semibold text-xl text-green-800 mb-1`}>
+//             <Text style={tw`font-semibold text-xl text-blue-800 mb-1`}>
 //               {user?.username || 'Unknown User'}
 //             </Text>
-//             <Text style={tw`font-normal text-sm text-green-500 mb-4`}>
+//             <Text style={tw`font-normal text-sm text-blue-500 mb-4`}>
 //               {user?.email || 'No Email'}
 //             </Text>
 
 //             {/* ✅ Buttons */}
 //             <View style={tw`flex-row justify-center gap-4`}>
 //               <TouchableOpacity
-//                 style={tw`bg-green-100 px-5 py-2 rounded-full`}
+//                 style={tw`bg-blue-100 px-5 py-2 rounded-full`}
 //                 onPress={() => navigation.navigate('EditProfilePage')}
 //               >
-//                 <Text style={tw`font-medium text-sm text-green-600`}>Edit Profile</Text>
+//                 <Text style={tw`font-medium text-sm text-blue-600`}>Edit Profile</Text>
 //               </TouchableOpacity>
 //               <TouchableOpacity
-//                 style={tw`bg-green-600 px-5 py-2 rounded-full`}
+//                 style={tw`bg-blue-600 px-5 py-2 rounded-full`}
 //                 onPress={() => navigation.navigate('CompleteProfile')}
 //               >
 //                 <Text style={tw`font-medium text-sm text-white`}>Complete Profile</Text>
@@ -530,25 +530,25 @@
 //       {/* ✅ Menu Options */}
 //       <View style={tw`px-4 mb-4`}>
 //         {[
-//           { label: 'Appointments', icon: CalendarCheck, color: '#059669', bg: 'bg-green-100', screen: 'Appointments' },
+//           { label: 'Appointments', icon: CalendarCheck, color: '#059669', bg: 'bg-blue-100', screen: 'Appointments' },
 //           { label: 'Personal Details', icon: User, color: '#10B981', bg: 'bg-emerald-100', screen: 'PersonalDetails' },
-//           { label: 'My Medical Records', icon: Folder, color: '#34D399', bg: 'bg-green-200', screen: 'MedicalRecords' },
-//           { label: 'Payment Methods', icon: CreditCard, color: '#059669', bg: 'bg-green-100', screen: 'PaymentMethods' },
-//           { label: 'Notifications', icon: Bell, color: '#86EFAC', bg: 'bg-green-100', screen: 'Notification' },
+//           { label: 'My Medical Records', icon: Folder, color: '#34D399', bg: 'bg-blue-200', screen: 'MedicalRecords' },
+//           { label: 'Payment Methods', icon: CreditCard, color: '#059669', bg: 'bg-blue-100', screen: 'PaymentMethods' },
+//           { label: 'Notifications', icon: Bell, color: '#86EFAC', bg: 'bg-blue-100', screen: 'Notification' },
 //           { label: 'Privacy & Security', icon: Shield, color: '#10B981', bg: 'bg-emerald-100', screen: 'PrivacySecurity' },
-//           { label: 'Test Bookings', icon: CalendarCheck, color: '#34D399', bg: 'bg-green-200', screen: 'TestBooking' },
-//           { label: 'Help Center', icon: HelpCircle, color: '#059669', bg: 'bg-green-100', screen: 'HelpCenter' },
+//           { label: 'Test Bookings', icon: CalendarCheck, color: '#34D399', bg: 'bg-blue-200', screen: 'TestBooking' },
+//           { label: 'Help Center', icon: HelpCircle, color: '#059669', bg: 'bg-blue-100', screen: 'HelpCenter' },
 //         ].map(({ label, icon: Icon, color, bg, screen }, index) => (
 //           <TouchableOpacity
 //             key={index}
-//             style={tw`flex-row items-center bg-green-50 rounded-2xl p-4 mb-3 shadow-sm`}
+//             style={tw`flex-row items-center bg-blue-50 rounded-2xl p-4 mb-3 shadow-sm`}
 //             onPress={() => navigation.navigate(screen as keyof RootStackParamList)}
 //           >
 //             <View style={tw`w-10 h-10 rounded-full ${bg} justify-center items-center mr-4`}>
 //               <Icon size={20} color={color} />
 //             </View>
 //             <View style={tw`flex-1 flex-row justify-between items-center`}>
-//               <Text style={tw`font-medium text-base text-green-800`}>{label}</Text>
+//               <Text style={tw`font-medium text-base text-blue-800`}>{label}</Text>
 //               <ChevronRight size={20} color="#059669" />
 //             </View>
 //           </TouchableOpacity>
@@ -564,12 +564,12 @@
 //       </TouchableOpacity>
 
 //       {/* ✅ Footer */}
-//       <View style={tw`items-center mb-20 pt-2 border-t border-green-100`}>
-//         <Text style={tw`font-normal text-xs text-green-500 mb-2`}>App Version 1.0.0</Text>
+//       <View style={tw`items-center mb-20 pt-2 border-t border-blue-100`}>
+//         <Text style={tw`font-normal text-xs text-blue-500 mb-2`}>App Version 1.0.0</Text>
 //         <View style={tw`flex-row items-center justify-center`}>
-//           <Text style={tw`font-normal text-[10px] text-green-400`}>Developed by </Text>
-//           <Text style={tw`font-semibold text-[10px] text-green-700 mx-1`}>ZYNLOGIC</Text>
-//           <Text style={tw`font-normal text-[10px] text-green-400`}>
+//           <Text style={tw`font-normal text-[10px] text-blue-400`}>Developed by </Text>
+//           <Text style={tw`font-semibold text-[10px] text-blue-700 mx-1`}>ZYNLOGIC</Text>
+//           <Text style={tw`font-normal text-[10px] text-blue-400`}>
 //             • © {new Date().getFullYear()} All Rights Reserved
 //           </Text>
 //         </View>
@@ -690,7 +690,7 @@
 //         ) : (
 //           <>
 //             {/* Profile Picture */}
-//             <View style={tw`w-28 h-28 rounded-full mb-4 shadow-md bg-green-100`}>
+//             <View style={tw`w-28 h-28 rounded-full mb-4 shadow-md bg-blue-100`}>
 //               {user?.generalUser?.profile_picture ? (
 //                 <Image
 //                   source={{ uri: user.generalUser.profile_picture }}
@@ -698,7 +698,7 @@
 //                 />
 //               ) : user?.username ? (
 //                 <View style={tw`w-full h-full items-center justify-center`}>
-//                   <Text style={tw`text-green-700 text-4xl font-bold`}>
+//                   <Text style={tw`text-blue-700 text-4xl font-bold`}>
 //                     {user.username.split(' ').map((part) => part[0]).join('').toUpperCase().slice(0, 2)}
 //                   </Text>
 //                 </View>
@@ -710,23 +710,23 @@
 //             </View>
 
 //             {/* User Info */}
-//             <Text style={tw`font-semibold text-xl text-green-800 mb-1`}>
+//             <Text style={tw`font-semibold text-xl text-blue-800 mb-1`}>
 //               {user?.username || 'Unknown User'}
 //             </Text>
-//             <Text style={tw`font-normal text-sm text-green-500 mb-4`}>
+//             <Text style={tw`font-normal text-sm text-blue-500 mb-4`}>
 //               {user?.email || 'No Email'}
 //             </Text>
 
 //             {/* Buttons */}
 //             <View style={tw`flex-row justify-center gap-4`}>
 //               <TouchableOpacity
-//                 style={tw`bg-green-100 px-5 py-2 rounded-full`}
+//                 style={tw`bg-blue-100 px-5 py-2 rounded-full`}
 //                 onPress={() => navigation.navigate('EditProfilePage')}
 //               >
-//                 <Text style={tw`font-medium text-sm text-green-600`}>Edit Profile</Text>
+//                 <Text style={tw`font-medium text-sm text-blue-600`}>Edit Profile</Text>
 //               </TouchableOpacity>
 //               <TouchableOpacity
-//                 style={tw`bg-green-600 px-5 py-2 rounded-full`}
+//                 style={tw`bg-blue-600 px-5 py-2 rounded-full`}
 //                 onPress={() => navigation.navigate('CompleteProfile')}
 //               >
 //                 <Text style={tw`font-medium text-sm text-white`}>Complete Profile</Text>
@@ -739,25 +739,25 @@
 //       {/* Menu Options */}
 //       <View style={tw`px-4 mb-4`}>
 //         {[
-//           { label: 'Appointments', icon: CalendarCheck, color: '#059669', bg: 'bg-green-100', screen: 'Appointments' },
+//           { label: 'Appointments', icon: CalendarCheck, color: '#059669', bg: 'bg-blue-100', screen: 'Appointments' },
 //           { label: 'Personal Details', icon: User, color: '#10B981', bg: 'bg-emerald-100', screen: 'PersonalDetails' },
-//           { label: 'My Medical Records', icon: Folder, color: '#34D399', bg: 'bg-green-200', screen: 'MedicalRecords' },
-//           { label: 'Payment Methods', icon: CreditCard, color: '#059669', bg: 'bg-green-100', screen: 'PaymentMethods' },
-//           { label: 'Notifications', icon: Bell, color: '#86EFAC', bg: 'bg-green-100', screen: 'Notification' },
+//           { label: 'My Medical Records', icon: Folder, color: '#34D399', bg: 'bg-blue-200', screen: 'MedicalRecords' },
+//           { label: 'Payment Methods', icon: CreditCard, color: '#059669', bg: 'bg-blue-100', screen: 'PaymentMethods' },
+//           { label: 'Notifications', icon: Bell, color: '#86EFAC', bg: 'bg-blue-100', screen: 'Notification' },
 //           { label: 'Privacy & Security', icon: Shield, color: '#10B981', bg: 'bg-emerald-100', screen: 'PrivacySecurity' },
-//           { label: 'Test Bookings', icon: CalendarCheck, color: '#34D399', bg: 'bg-green-200', screen: 'TestBooking' },
-//           { label: 'Help Center', icon: HelpCircle, color: '#059669', bg: 'bg-green-100', screen: 'HelpCenter' },
+//           { label: 'Test Bookings', icon: CalendarCheck, color: '#34D399', bg: 'bg-blue-200', screen: 'TestBooking' },
+//           { label: 'Help Center', icon: HelpCircle, color: '#059669', bg: 'bg-blue-100', screen: 'HelpCenter' },
 //         ].map(({ label, icon: Icon, color, bg, screen }, index) => (
 //           <TouchableOpacity
 //             key={index}
-//             style={tw`flex-row items-center bg-green-50 rounded-2xl p-4 mb-3 shadow-sm`}
+//             style={tw`flex-row items-center bg-blue-50 rounded-2xl p-4 mb-3 shadow-sm`}
 //             onPress={() => navigation.navigate(screen as keyof RootStackParamList)}
 //           >
 //             <View style={tw`w-10 h-10 rounded-full ${bg} justify-center items-center mr-4`}>
 //               <Icon size={20} color={color} />
 //             </View>
 //             <View style={tw`flex-1 flex-row justify-between items-center`}>
-//               <Text style={tw`font-medium text-base text-green-800`}>{label}</Text>
+//               <Text style={tw`font-medium text-base text-blue-800`}>{label}</Text>
 //               <ChevronRight size={20} color="#059669" />
 //             </View>
 //           </TouchableOpacity>
@@ -773,12 +773,12 @@
 //       </TouchableOpacity>
 
 //       {/* Footer */}
-//       <View style={tw`items-center mb-20 pt-2 border-t border-green-100`}>
-//         <Text style={tw`font-normal text-xs text-green-500 mb-2`}>App Version 1.0.0</Text>
+//       <View style={tw`items-center mb-20 pt-2 border-t border-blue-100`}>
+//         <Text style={tw`font-normal text-xs text-blue-500 mb-2`}>App Version 1.0.0</Text>
 //         <View style={tw`flex-row items-center justify-center`}>
-//           <Text style={tw`font-normal text-[10px] text-green-400`}>Developed by </Text>
-//           <Text style={tw`font-semibold text-[10px] text-green-700 mx-1`}>ZYNLOGIC</Text>
-//           <Text style={tw`font-normal text-[10px] text-green-400`}>
+//           <Text style={tw`font-normal text-[10px] text-blue-400`}>Developed by </Text>
+//           <Text style={tw`font-semibold text-[10px] text-blue-700 mx-1`}>ZYNLOGIC</Text>
+//           <Text style={tw`font-normal text-[10px] text-blue-400`}>
 //             • © {new Date().getFullYear()} All Rights Reserved
 //           </Text>
 //         </View>
@@ -925,7 +925,7 @@ export default function ProfileScreen() {
   return (
     <PageLayout
       title="Profile"
-      headerBackgroundColor="#219f4dff"
+      headerBackgroundColor="#21439fff"
       headerRight={
         <TouchableOpacity
           style={tw`p-2 rounded-full`}
@@ -944,7 +944,7 @@ export default function ProfileScreen() {
           ) : (
             <>
               {/* ✅ Profile Picture */}
-              <View style={tw`w-28 h-28 rounded-full mb-4 shadow-md bg-green-100 overflow-hidden`}>
+              <View style={tw`w-28 h-28 rounded-full mb-4 shadow-md bg-blue-100 overflow-hidden`}>
                 {user?.generalUser?.profile_picture ? (
                   <Image
                     source={{ uri: user.generalUser.profile_picture }}
@@ -953,7 +953,7 @@ export default function ProfileScreen() {
                   />
                 ) : user?.username ? (
                   <View style={tw`w-full h-full items-center justify-center`}>
-                    <Text style={tw`text-green-700 text-4xl font-bold`}>
+                    <Text style={tw`text-blue-700 text-4xl font-bold`}>
                       {user.username
                         .split(' ')
                         .map((part) => part[0])
@@ -970,23 +970,23 @@ export default function ProfileScreen() {
               </View>
 
               {/* ✅ User Info */}
-              <Text style={tw`font-semibold text-xl text-green-800 mb-1`}>
+              <Text style={tw`font-semibold text-xl text-blue-800 mb-1`}>
                 {user?.username || 'Unknown User'}
               </Text>
-              <Text style={tw`font-normal text-sm text-green-500 mb-4`}>
+              <Text style={tw`font-normal text-sm text-blue-500 mb-4`}>
                 {user?.email || 'No Email'}
               </Text>
 
               {/* ✅ Buttons */}
               <View style={tw`flex-row justify-center gap-4`}>
                 <TouchableOpacity
-                  style={tw`bg-green-100 px-5 py-2 rounded-full`}
+                  style={tw`bg-blue-100 px-5 py-2 rounded-full`}
                   onPress={() => navigation.navigate('EditProfilePage')}
                 >
-                  <Text style={tw`font-medium text-sm text-green-600`}>Edit Profile</Text>
+                  <Text style={tw`font-medium text-sm text-blue-600`}>Edit Profile</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                  style={tw`bg-green-600 px-5 py-2 rounded-full`}
+                  style={tw`bg-blue-600 px-5 py-2 rounded-full`}
                   onPress={() => navigation.navigate('CompleteProfile')}
                 >
                   <Text style={tw`font-medium text-sm text-white`}>Complete Profile</Text>
@@ -999,25 +999,25 @@ export default function ProfileScreen() {
         {/* ✅ Menu Options */}
         <View style={tw`px-4 mb-4`}>
           {[
-            { label: 'Appointments', icon: CalendarCheck, color: '#059669', bg: 'bg-green-100', screen: 'Appointments' },
-            { label: 'Personal Details', icon: User, color: '#10B981', bg: 'bg-emerald-100', screen: 'PersonalDetails' },
-            { label: 'My Medical Records', icon: Folder, color: '#34D399', bg: 'bg-green-200', screen: 'MedicalRecords' },
-            { label: 'Payment Methods', icon: CreditCard, color: '#059669', bg: 'bg-green-100', screen: 'PaymentMethods' },
-            { label: 'Notifications', icon: Bell, color: '#86EFAC', bg: 'bg-green-100', screen: 'Notification' },
-            { label: 'Privacy & Security', icon: Shield, color: '#10B981', bg: 'bg-emerald-100', screen: 'PrivacySecurity' },
-            { label: 'Test Bookings', icon: CalendarCheck, color: '#34D399', bg: 'bg-green-200', screen: 'TestBooking' },
-            { label: 'Help Center', icon: HelpCircle, color: '#059669', bg: 'bg-green-100', screen: 'HelpCenter' },
+            { label: 'Appointments', icon: CalendarCheck, color: '#051396ff', bg: 'bg-blue-100', screen: 'Appointments' },
+            { label: 'Personal Details', icon: User, color: '#051396ff', bg: 'bg-blue-200', screen: 'PersonalDetails' },
+            { label: 'My Medical Records', icon: Folder, color: '#051396ff', bg: 'bg-blue-200', screen: 'MedicalRecords' },
+            { label: 'Payment Methods', icon: CreditCard, color: '#051396ff', bg: 'bg-blue-100', screen: 'PaymentMethods' },
+            { label: 'Notifications', icon: Bell, color: '#051396ff', bg: 'bg-blue-100', screen: 'Notification' },
+            { label: 'Privacy & Security', icon: Shield, color: '#051396', bg: 'bg-blue-200', screen: 'PrivacySecurity' },
+            { label: 'Test Bookings', icon: CalendarCheck, color: '#051396ff', bg: 'bg-blue-200', screen: 'TestBooking' },
+            { label: 'Help Center', icon: HelpCircle, color: '#051396ff', bg: 'bg-blue-100', screen: 'HelpCenter' },
           ].map(({ label, icon: Icon, color, bg, screen }, index) => (
             <TouchableOpacity
               key={index}
-              style={tw`flex-row items-center bg-green-50 rounded-2xl p-4 mb-3 shadow-sm`}
+              style={tw`flex-row items-center bg-blue-50 rounded-2xl p-4 mb-3 shadow-sm`}
               onPress={() => navigation.navigate(screen as keyof RootStackParamList)}
             >
               <View style={tw`w-10 h-10 rounded-full ${bg} justify-center items-center mr-4`}>
                 <Icon size={20} color={color} />
               </View>
               <View style={tw`flex-1 flex-row justify-between items-center`}>
-                <Text style={tw`font-medium text-base text-green-800`}>{label}</Text>
+                <Text style={tw`font-medium text-base text-blue-800`}>{label}</Text>
                 <ChevronRight size={20} color="#059669" />
               </View>
             </TouchableOpacity>
@@ -1033,12 +1033,12 @@ export default function ProfileScreen() {
         </TouchableOpacity>
 
         {/* ✅ Footer */}
-        <View style={tw`items-center mb-20 pt-2 border-t border-green-100`}>
-          <Text style={tw`font-normal text-xs text-green-500 mb-2`}>App Version 1.0.0</Text>
+        <View style={tw`items-center mb-20 pt-2 border-t border-blue-100`}>
+          <Text style={tw`font-normal text-xs text-blue-500 mb-2`}>App Version 1.0.0</Text>
           <View style={tw`flex-row items-center justify-center`}>
-            <Text style={tw`font-normal text-[10px] text-green-400`}>Developed by </Text>
-            <Text style={tw`font-semibold text-[10px] text-green-700 mx-1`}>ZYNLOGIC</Text>
-            <Text style={tw`font-normal text-[10px] text-green-400`}>
+            <Text style={tw`font-normal text-[10px] text-blue-400`}>Developed by </Text>
+            <Text style={tw`font-semibold text-[10px] text-blue-700 mx-1`}>ZYNLOGIC</Text>
+            <Text style={tw`font-normal text-[10px] text-blue-400`}>
               • © {new Date().getFullYear()} All Rights Reserved
             </Text>
           </View>

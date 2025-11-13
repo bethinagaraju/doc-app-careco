@@ -94,11 +94,11 @@
 //   };
 
 //   return (
-//     <View style={tw`flex-1 bg-green-50`}>
+//     <View style={tw`flex-1 bg-blue-50`}>
 //       <DoctorHeader title="Calendar" showSettings showNotifications />
 //       <ScrollView contentContainerStyle={tw`p-4 pb-10`}>
-//         <Text style={tw`text-2xl font-bold text-green-700 mb-4 text-center`}>Your Calendar</Text>
-//         <Text style={tw`text-base text-green-600 mb-4 text-center`}>
+//         <Text style={tw`text-2xl font-bold text-blue-700 mb-4 text-center`}>Your Calendar</Text>
+//         <Text style={tw`text-base text-blue-600 mb-4 text-center`}>
 //           View and manage your upcoming meetings and appointments.
 //         </Text>
 
@@ -133,26 +133,26 @@
 //                 selectedDayTextColor: '#fff',
 //                 dotColor: '#059669',
 //               }}
-//               style={tw`rounded-2xl bg-green-100 shadow-sm mb-6`}
+//               style={tw`rounded-2xl bg-blue-100 shadow-sm mb-6`}
 //               enableSwipeMonths={true}
 //             />
 
 //             <View style={tw`mt-2`}>
-//               <Text style={tw`text-lg font-semibold text-green-700 mb-2`}>
+//               <Text style={tw`text-lg font-semibold text-blue-700 mb-2`}>
 //                 Meetings on {selected}
 //               </Text>
 
 //               {Array.isArray(appointments[selected]) ? (
 //                 appointments[selected].map((meeting, idx) => (
-//                   <View key={idx} style={tw`bg-green-100 rounded-xl p-4 mb-3 shadow-sm`}>
-//                     <Text style={tw`text-green-700 font-bold text-base`}>
+//                   <View key={idx} style={tw`bg-blue-100 rounded-xl p-4 mb-3 shadow-sm`}>
+//                     <Text style={tw`text-blue-700 font-bold text-base`}>
 //                       {meeting.time} - {meeting.title}
 //                     </Text>
-//                     <Text style={tw`text-green-600 text-sm mt-1`}>{meeting.description}</Text>
+//                     <Text style={tw`text-blue-600 text-sm mt-1`}>{meeting.description}</Text>
 
 //                     <TouchableOpacity
 //                       onPress={() => initiateCall(meeting.userId)}
-//                       style={tw`mt-3 bg-green-600 rounded-full px-4 py-2 items-center flex-row justify-center`}
+//                       style={tw`mt-3 bg-blue-600 rounded-full px-4 py-2 items-center flex-row justify-center`}
 //                       activeOpacity={0.8}
 //                     >
 //                       <Text style={tw`text-white font-bold mr-2`}>Start Call</Text>
@@ -161,7 +161,7 @@
 //                   </View>
 //                 ))
 //               ) : (
-//                 <Text style={tw`text-green-400 text-center mt-4`}>
+//                 <Text style={tw`text-blue-400 text-center mt-4`}>
 //                   No meetings scheduled for this day.
 //                 </Text>
 //               )}
