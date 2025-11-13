@@ -332,7 +332,7 @@ const Login = () => {
       />
 
       <Text style={styles.title}>
-        {isLoginMode ? 'Welcome to DocApp' : 'Create an Account'}
+        {isLoginMode ? 'Welcome to Carequo' : 'Create an Account'}
       </Text>
 
       {/* Conditional rendering for Registration fields */}

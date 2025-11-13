@@ -1,3 +1,1103 @@
+// // import React, { useEffect, useState } from 'react';
+// // import {
+// //   View,
+// //   Text,
+// //   ScrollView,
+// //   TouchableOpacity,
+// //   SafeAreaView,
+// //   Platform,
+// //   Image,
+// //   NativeSyntheticEvent,
+// //   NativeScrollEvent,
+// //   Dimensions,
+// //   TextInput,
+// // } from 'react-native';
+// // import { useNavigation, NavigationProp } from '@react-navigation/native';
+// // import { 
+// //   Home, 
+// //   Calendar, 
+// //   User, 
+// //   PieChart, 
+// //   MessageCircle, 
+// //   Search, 
+// //   Hospital, 
+// //   Pill, 
+// //   Bell, 
+// //   Settings, 
+// //   LogOut, 
+// //   ChevronLeft, 
+// //   ChevronRight, 
+// //   ChevronDown, 
+// //   Plus, 
+// //   Edit, 
+// //   FileText, 
+// //   Video, 
+// //   Phone, 
+// //   MapPin, 
+// //   CreditCard, 
+// //   Lock, 
+// //   HelpCircle, 
+// //   Star, 
+// //   Stethoscope, 
+// //   Heart, 
+// //   ClipboardList, 
+// //   FilePlus, 
+// //   FileCheck, 
+// //   FileX, 
+// //   FileMinus, 
+// //   File, 
+// //   Camera, 
+// //   Upload, 
+// //   Download, 
+// //   Trash, 
+// //   Eye, 
+// //   EyeOff, 
+// //   Mail, 
+// //   Phone as PhoneIcon, 
+// //   Globe 
+// // } from 'lucide-react-native';
+// // import tw from 'twrnc'; // Import twrnc
+// // import Modal from 'react-native-modal'; // or 'react-native' if you use the built-in Modal
+// // import Footer from './Footer';
+// // import { IoLocationSharp } from "react-icons/io5";
+
+
+
+// // import { useUser } from '../contexts/UserContext';
+
+// // const { width: screenWidth } = Dimensions.get('window');
+
+// // // Define your stack param list for navigation typing
+// // export type RootStackParamList = {
+// //   index: undefined;
+// //   AllHospitals: undefined;
+// //   AllPharmacies: undefined;
+// //   Onboarding: undefined;
+// //   Search: undefined;
+// //   VideoCall: undefined;
+// //   Profile: undefined;
+// //   Language: undefined;
+// //   Notification: undefined;
+// //   Searcheverything: undefined;
+// //   AllSpecialtiesScreen: { mode?: string } | undefined;
+// //   Doctors: { specialty?: string; mode?: string };
+// //   ConsultOptionsScreen: { specialty: string };
+// //   HospitalDetailsScreen: { id: number; name: string; location: string; image: string };
+// //   PharmacyDetailsScreen: { id: number; name: string; location: string; image: string };
+// //   LabTestCategoriesScreen: undefined;
+// //   pharmacytestcategories: undefined;
+// //   AllOffersScreen: undefined;
+// //   // ...add more as needed
+// // };
+
+// // const HomeScreen = () => {
+
+// //   const [userData, setUserData] = useState<any>(null);
+
+// //   const user = useUser();
+// //   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+// //   const profileImageUri = userData?.generalUser?.profile_picture || 'https://randomuser.me/api/portraits/men/4.jpg';
+// //   const [selectedLanguage, setSelectedLanguage] = useState('English');
+// //   const [showLanguageModal, setShowLanguageModal] = useState(false);
+
+
+// //   useEffect(() => {
+// //     const fetchUserData = async () => {
+// //       try {
+// //         const response = await fetch('https://landing.docapp.co.in/api/auth/get-user-data', {
+// //           method: 'GET',
+// //           headers: {
+// //             'Authorization': `bearer ${user?.token}`,
+// //             'Content-Type': 'application/json',
+// //           },
+// //         });
+
+// //         const result = await response.json();
+
+// //         if (!response.ok) {
+// //           console.error('Fetch failed:', result);
+// //           return;
+// //         }
+
+// //         if (result?.userData) {
+// //           setUserData(result.userData);
+// //           console.log('User Data in HomeScreen:', result.userData);
+// //         } else {
+// //           console.log('No user data found');
+// //         }
+// //       } catch (error) {
+// //         console.error('Error fetching user data:', error);
+// //       }
+// //     };
+
+// //     fetchUserData();
+// //   }, [user?.token]);
+
+// //   const languages = [
+// //     { name: 'English', code: 'en' },
+// //     { name: 'हिंदी', code: 'hi' },
+// //     { name: 'తెలుగు', code: 'te' },
+// //     { name: 'தமிழ்', code: 'ta' },
+// //     { name: 'ಕನ್ನಡ', code: 'kn' },
+// //     { name: 'മലയാളം', code: 'ml' },
+// //     { name: 'বাংলা', code: 'bn' },
+// //     { name: 'ગુજરાતી', code: 'gu' }
+// //   ];
+
+// //   const banners = [
+// //     require('../../assets/images/unnamed.webp'),
+// //     require('../../assets/images/unnamed-banner.webp'),
+// //      require('../../assets/images/9786325ef35b05c91053c663067481ff_screen.jpg'),
+// //     // require('../Images/Banner3.jpg'),
+// //   ];
+
+// //   const specialties = [
+// //     { name: 'General Physician', image: require('../Images/PopUpICons/general_physician.png') },
+// //     { name: 'Skin & Hair', image: require('../Images/PopUpICons/spots.png') },
+// //     { name: "Women's Health", image: require('../Images/PopUpICons/prenatal-care.png') },
+// //     { name: 'Dental Care', image: require('../Images/PopUpICons/tooth.png') },
+// //     { name: 'Cardiologist', image: require('../Images/PopUpICons/cardiology.png') },
+// //     { name: 'ENT', image: require('../Images/PopUpICons/medical.png') },
+// //     { name: 'Mental Health', image: require('../Images/PopUpICons/brain.png') },
+// //     // { name: 'Orthopedic', image: require('../Images/PopUpICons/arthritis.png') },
+// //     // { name: 'Neurology', image: require('../Images/PopUpICons/brain.png') },
+// //     // { name: 'Gastroenterology', image: require('../Images/PopUpICons/medical.png') },
+// //     // { name: 'Urology', image: require('../Images/PopUpICons/cardiology.png') },
+// //   ];
+// // const cityList = [
+// //   'Bangalore',
+// //   'Hyderabad',
+// //   'Delhi',
+// //   'Mumbai',
+// //   'Chennai',
+// //   'Kolkata',
+// //   'Pune',
+// //   'Ahmedabad',
+// //   'Jaipur',
+// //   'Lucknow',
+// // ];
+// // const [selectedLocation, setSelectedLocation] = useState('Bangalore');
+// // const [showLocationModal, setShowLocationModal] = useState(false);
+
+// //   const bottomBanners = [
+// //     require('../Images/BottomBanner1.jpg'),
+// //     require('../Images/BottomBanner2.jpg'),
+// //     require('../Images/BottomBanner3.jpg'),
+// //   ];
+
+// //   const hospitals = [
+// //     {
+// //       id: 1,
+// //       name: 'Apollo Hospital',
+// //       location: 'Delhi, India',
+// //       image: require('../../assets/images/Logo-medicover.png'),
+// //     },
+// //     {
+// //       id: 2,
+// //       name: 'Fortis Healthcare',
+// //       location: 'Mumbai, India',
+// //       image: require('../../assets/images/Logo-medicover.png'),
+// //     },
+// //     {
+// //       id: 3,
+// //       name: 'AIIMS',
+// //       location: 'New Delhi, India',
+// //       image: require('../../assets/images/Logo-medicover.png'),
+// //     },
+// //   ];
+
+// //   const pharmacies = [
+// //     {
+// //       id: 1,
+// //       name: 'Apollo Pharmacy',
+// //       location: 'Delhi, India',
+// //       image: 'https://images.unsplash.com/photo-1606813902532-0fdd8b6a3caa',
+// //     },
+// //     {
+// //       id: 2,
+// //       name: 'MedPlus',
+// //       location: 'Bangalore, India',
+// //       image: 'https://images.unsplash.com/photo-1601022353923-5226cb45e8f4',
+// //     },
+// //     {
+// //       id: 3,
+// //       name: '1MG Pharmacy',
+// //       location: 'Hyderabad, India',
+// //       image: 'https://images.unsplash.com/photo-1580281657527-47aab76dfdc1',
+// //     },
+// //   ];
+
+// //   const [activeBannerIndex, setActiveBannerIndex] = useState(0);
+// //   const bannerWidth = screenWidth - 40;
+
+// //   const onBannerScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+// //     const x = event.nativeEvent.contentOffset.x;
+// //     setActiveBannerIndex(Math.round(x / bannerWidth));
+// //   };
+
+
+
+
+
+
+
+
+
+// //   const iconMap: Record<string, React.ElementType> = {
+// //     'doctor': Stethoscope,
+// //     'calendar': Calendar,
+// //     'user': User,
+// //     'pie-chart': PieChart,
+// //     'message-circle': MessageCircle,
+// //     // add more mappings as needed
+// //   };
+
+// //   const FeatureCard = ({
+// //     iconName,
+// //     iconSet = 'FontAwesome5',
+// //     label,
+// //     badge,
+// //     onPress,
+// //     image,
+// //   }: {
+// //     iconName?: string;
+// //     iconSet?: string;
+// //     label: string;
+// //     badge?: string;
+// //     onPress?: () => void;
+// //     image?: any;
+// //   }) => {
+// //     return (
+// //       <TouchableOpacity
+// //         style={tw`w-[22%] mb-4 items-center justify-center`}
+// //         onPress={onPress}
+// //       >
+// //         <View
+// //           style={tw`relative bg-blue-50 w-[70px] h-[70px] rounded-[10px] items-center justify-center overflow-hidden shadow-sm`}
+// //         >
+// //           {image ? (
+// //             <Image
+// //               source={image}
+// //               style={tw`w-[80%] h-[80%]`}
+// //               resizeMode="contain"
+// //             />
+// //           ) : (
+// //             iconName && iconMap[iconName] ? (
+// //               React.createElement(iconMap[iconName], { size: 24, color: '#FFFFFF' })
+// //             ) : null
+// //           )}
+// //           {badge && (
+// //             <View style={tw`absolute top-0 right-0 bg-emerald-500 rounded-full px-2 py-1`}>
+// //               <Text style={tw`text-white text-xs text-center`}>{badge}</Text>
+// //             </View>
+// //           )}
+// //         </View>
+// //         {/* <Text style={tw`text-xs mt-2 text-center text-gray-600 font-medium`}> */}
+// //         <Text   style={tw`text-xs mt-2 text-center text-gray-600 font-medium h-10`}
+// //   numberOfLines={2}
+// //   ellipsizeMode="tail">
+// //           {label}
+// //         </Text>
+// //       </TouchableOpacity>
+// //     );
+// //   };
+
+// //   return (
+// //     <SafeAreaView style={tw`flex-1 bg-orange-30`}>
+// //       {/* Fixed Header */}
+// //       <View
+// //         style={[
+// //           tw`px-4 pb-4 bg-[#0052CC] bg-gradient-to-b from-[#0066E3] to-[#0052CC]`,
+// //           {
+// //             borderBottomLeftRadius: 25,
+// //             borderBottomRightRadius: 25,
+// //             paddingTop: Platform.OS === 'android' ? 35 : 60,
+// //             height: Platform.OS === 'android' ? 170 : 180,
+// //           },
+// //         ]}
+// //       >
+// //         <View style={tw`h-full justify-between`}>
+// //           {/* Top Row: Profile | Location | Language & Notification */}
+// //           <View style={tw`flex-row items-center justify-between mt-3`}>
+// //             {/* Profile Image */}
+// //             <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+// //               <Image
+// //                 source={require('../../assets/images/uifaces-popular-avatar(1).jpg')}
+// //                 style={tw`w-12 h-12 border-blue-200 border-2 rounded-full`}
+// //               />
+// //             </TouchableOpacity>
+
+// //             {/* Location */}
+// //             <TouchableOpacity
+// //               onPress={() => setShowLocationModal(true)}
+// //               style={tw`flex-row items-center mx-3`}
+// //             >
+// //               <MapPin size={24} color="white" />
+
+// //               {/* <IoLocationSharp size={16} color="white" /> */}
+// //               <Text style={tw`ml-1 text-white font-semibold text-base`}>
+// //                 {selectedLocation}
+// //               </Text>
+
+// //               <ChevronDown size={24} color="white" style={tw`ml-1`} />
+// //             </TouchableOpacity>
+// //             <Modal isVisible={showLocationModal} onBackdropPress={() => setShowLocationModal(false)}>
+// //               <View style={tw`bg-white p-6 rounded-2xl items-center`}>
+// //                 <Text style={tw`text-base font-semibold mb-2`}>Select your city</Text>
+// //                 {cityList.map((city) => (
+// //                   <TouchableOpacity
+// //                     key={city}
+// //                     style={tw`py-2 w-full items-center`}
+// //                     onPress={() => {
+// //                       setSelectedLocation(city);
+// //                       setShowLocationModal(false);
+// //                     }}
+// //                   >
+// //                     <Text style={tw`text-lg ${selectedLocation === city ? 'text-blue-700 font-bold' : 'text-blue-800'}`}>{city}</Text>
+// //                   </TouchableOpacity>
+// //                 ))}
+// //                 <TouchableOpacity style={tw`mt-4`} onPress={() => setShowLocationModal(false)}>
+// //                   <Text style={tw`text-blue-700 font-bold`}>Close</Text>
+// //                 </TouchableOpacity>
+// //               </View>
+// //             </Modal>
+
+// //             <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+// //               <Image
+// //                 source={require('../../assets/images/chat-bot-icon-design-robot-600nw-2476207303.jpg')}
+// //                 style={tw`w-12 h-12 border-blue-200 border-2 rounded-full bg-white`}
+// //               />
+// //             </TouchableOpacity>
+// //           </View>
+
+// //           <View
+// //             style={tw`mt-4 mb-4 flex-row items-center px-4 py-0 bg-white rounded-full shadow-sm border border-gray-200 h-12`}
+// //           >
+// //             <Search size={18} color="#051196ff" />
+// //             <TextInput
+// //               placeholder="Search doctors, clinics, tests...."
+// //               placeholderTextColor="#1d68d8ff"
+// //               style={tw`ml-3 flex-1 text-blue-700 text-sm`}
+// //             />
+// //           </View>
+// //         </View>
+// //       </View>
+
+// //       {/* Scrollable Content */}
+// //       <ScrollView
+// //         contentContainerStyle={tw`pb-20`}
+// //         showsVerticalScrollIndicator={false}
+// //       >
+
+
+
+
+
+// // <View style={tw`flex-row flex-wrap justify-between mx-4 mt-6`}>
+// //   {/* Top Row - 2 items */}
+// //   {[require('../../assets/images/homecare.jpg'), require('../../assets/images/tele.jpg')].map((img, index) => (
+// //     <TouchableOpacity
+// //       key={index}
+// //       style={tw`mb-2 relative`}
+// //       onPress={() => {
+// //         user.setConsultationMode('online');
+// //         navigation.navigate('AllSpecialtiesScreen', { mode: 'video' });
+// //       }}
+// //     >
+// //       <Image
+// //         source={img}
+// //         style={{
+// //           width: (screenWidth - 40) / 2,
+// //           height: 130,
+// //           borderRadius: 10,
+// //         }}
+// //         resizeMode="cover"
+// //       />
+// //     </TouchableOpacity>
+// //   ))}
+
+// //   {/* Bottom Row - 3 items */}
+// //   <View style={tw`flex-row justify-between w-full`}>
+// //     {[require('../../assets/images/secondopi.jpg'), require('../../assets/images/homecares.jpg'), require('../../assets/images/insurances.jpg')].map((img, index) => (
+      
+      
+      
+// //       <TouchableOpacity
+// //         key={index}
+// //         style={tw`relative`}
+// //         onPress={() => {
+// //           // user.setConsultationMode('online');
+// //           // navigation.navigate('AllSpecialtiesScreen', { mode: 'video' });
+// //           navigation.navigate('pharmacytestcategories')
+// //         }}
+// //       >
+// //         <Image
+// //           source={img}
+// //           style={{
+// //             width: (screenWidth - 45) / 3,
+// //             height: 160,
+// //             borderRadius: 10,
+// //           }}
+// //           resizeMode="cover"
+// //         />
+// //       </TouchableOpacity>
+// //     ))}
+// //   </View>
+// // </View>
+
+
+
+
+
+
+
+
+
+// // {/* Quick Actions Grid - Images only */}
+
+
+
+
+
+// //         {/* Banner Section */}
+// //         <View style={tw`mt-6`}>
+// //           <ScrollView
+// //             horizontal
+// //             showsHorizontalScrollIndicator={false}
+// //             onScroll={onBannerScroll}
+// //             scrollEventThrottle={16}
+// //             snapToInterval={bannerWidth}
+// //             decelerationRate="fast"
+// //             contentContainerStyle={tw`px-4`}
+// //           >
+// //             {banners.map((source, index) => (
+// //               <View
+// //                 key={index}
+// //                 style={tw`w-[${screenWidth - 32}px] h-40 rounded-3xl overflow-hidden mr-4 shadow-sm`}
+// //               >
+// //                 <Image
+// //                   source={typeof source === 'string' ? { uri: source } : source}
+// //                   style={tw`w-full h-full`}
+// //                   resizeMode="cover"
+// //                 />
+// //               </View>
+// //             ))}
+// //           </ScrollView>
+// //           <View style={tw`flex-row justify-center mt-3`}>
+// //             {banners.map((_, index) => (
+// //               <View
+// //                 key={index}
+// //                 style={tw`w-2 h-2 bg-gray-300 rounded-full mx-1 ${
+// //                   activeBannerIndex === index ? 'bg-blue-800 w-4 shadow-sm' : ''
+// //                 }`}
+// //               />
+// //             ))}
+// //           </View>
+// //         </View>
+
+// //         {/* Specialties */}
+// //         <View style={tw`mt-6 px-6`}>
+          
+// // {/* 
+// //           <View style={tw`flex-row justify-center mt-6 gap-x-6 max-w-xs`}>
+// //           <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left border border-blue-700 pb-1`}>
+// //             Find a Doctor
+// //           </Text>
+
+// //           <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left border border-blue-700`}>
+// //             View All
+// //           </Text>
+// //           </View> */}
+
+// //           <View style={tw`flex-row items-center justify-between mt-6 px-0 pb-2`}>
+// //   <Text style={tw`text-lg font-semibold text-gray-900`}>
+// //     Find a Doctor for you
+// //   </Text>
+// //   <Text style={tw`text-lg font-semibold text-blue-800`}>
+// //     View All
+// //   </Text>
+// // </View>
+
+
+
+// //           <View style={tw`mt-2`}>
+// //             <View style={tw`flex-row flex-wrap justify-between`}>
+// //               {specialties.slice(0, 12).map((item, index) => (
+// //                 <FeatureCard
+// //                   key={index}
+// //                   label={item.name}
+// //                   image={item.image}
+// //                   onPress={() =>
+// //                     navigation.navigate('ConsultOptionsScreen', { specialty: item.name })
+// //                   }
+// //                 />
+// //               ))}
+
+
+
+
+
+
+// //               <TouchableOpacity
+// //                 style={[tw`w-[20%] mb-4 items-center justify-center pb-5`]} 
+// //                 onPress={() => navigation.navigate('AllSpecialtiesScreen')}
+// //               >
+// //                 <View style={tw`bg-blue-100 w-[70px] h-[70px] rounded-[10px] items-center justify-center`}>
+// //                   <ChevronRight size={18} color="#059669" />
+// //                 </View>
+// //                 <Text style={tw`text-xs mt-2 text-center text-blue-700 font-bold`}>
+// //                   View More
+// //                 </Text>
+// //               </TouchableOpacity>
+
+
+
+
+
+
+
+
+
+
+
+              
+// //             </View>
+// //           </View>
+// //         </View>
+
+
+
+
+        
+
+// //         {/* Explore Hospitals */}
+// //         <View style={tw`mt-6 px-6`}>
+// //           <View style={tw`flex-row justify-between items-center mb-2`}>
+// //             <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left`}>
+// //               Top Hospitals
+// //             </Text>
+// //             <TouchableOpacity
+// //               onPress={() => navigation.navigate('AllHospitals')}
+// //               activeOpacity={0.7}
+// //             >
+// //               <Text style={tw`text-xs text-blue-700 font-semibold py-2 px-2`}>
+// //                 View All
+// //               </Text>
+// //             </TouchableOpacity>
+// //           </View>
+// //           <ScrollView
+// //             horizontal
+// //             showsHorizontalScrollIndicator={false}
+// //             contentContainerStyle={tw`px-2`}
+// //           >
+
+            
+// //               <TouchableOpacity
+// //                 // key={hospital.id}
+// //                 style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
+// //                 activeOpacity={0.8}
+// //                 // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
+// //               >
+// //                 <Image
+// //                   source={require('../../assets/images/Applo.jpg')}
+// //                   style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //                   resizeMode="cover"
+// //                 />
+
+// //             {/* <Image
+// //             source={{ uri: hospital.image }}
+// //             style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //             resizeMode="cover"
+// //           /> */}
+// //                 <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+// //                   <Text style={tw`text-sm font-bold text-white`}>Apollo Hospitals</Text>
+// //                   <View style={tw`flex-row items-center mt-0.5`}>
+// //                     <MapPin size={10} color="#bbf7d0" />
+// //                     <Text style={tw`text-xs text-blue-100 ml-1`}>Hyderabad</Text>
+// //                   </View>
+// //                 </View>
+// //               </TouchableOpacity> 
+            
+// //               <TouchableOpacity
+// //                 // key={hospital.id}
+// //                 style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
+// //                 activeOpacity={0.8}
+// //                 // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
+// //               >
+// //                 <Image
+// //                   source={require('../../assets/images/yashoda.jpg')}
+// //                   style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //                   resizeMode="cover"
+// //                 />
+
+// //             {/* <Image
+// //             source={{ uri: hospital.image }}
+// //             style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //             resizeMode="cover"
+// //           /> */}
+// //                 <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+// //                   <Text style={tw`text-sm font-bold text-white`}>Yashoda Hospitals</Text>
+// //                   <View style={tw`flex-row items-center mt-0.5`}>
+// //                     <MapPin size={10} color="#bbf7d0" />
+// //                     <Text style={tw`text-xs text-blue-100 ml-1`}>Hyderabad</Text>
+// //                   </View>
+// //                 </View>
+// //               </TouchableOpacity> 
+
+
+// //                             <TouchableOpacity
+// //                 // key={hospital.id}
+// //                 style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
+// //                 activeOpacity={0.8}
+// //                 // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
+// //               >
+// //                 <Image
+// //                   source={require('../../assets/images/aig.jpg')}
+// //                   style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //                   resizeMode="cover"
+// //                 />
+
+// //             {/* <Image
+// //             source={{ uri: hospital.image }}
+// //             style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //             resizeMode="cover"
+// //           /> */}
+// //                 <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+// //                   <Text style={tw`text-sm font-bold text-white`}>AIG Hospitals</Text>
+// //                   <View style={tw`flex-row items-center mt-0.5`}>
+// //                     <MapPin size={10} color="#bbf7d0" />
+// //                     <Text style={tw`text-xs text-blue-100 ml-1`}>Hyderabad</Text>
+// //                   </View>
+// //                 </View>
+// //               </TouchableOpacity> 
+
+            
+// //           </ScrollView>
+// //         </View>
+
+
+
+
+
+
+// //                 <View style={tw`mt-6 px-6`}>
+// //           <View style={tw`flex-row justify-between items-center mb-2`}>
+// //             <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left`}>
+// //               Nearby Pharmacies
+// //             </Text>
+// //             <TouchableOpacity
+// //               onPress={() => navigation.navigate('AllHospitals')}
+// //               activeOpacity={0.7}
+// //             >
+// //               <Text style={tw`text-xs text-blue-700 font-semibold py-2 px-2`}
+// //               onPress={() => navigation.navigate('AllPharmacies')}>
+// //                 View All
+// //               </Text>
+// //             </TouchableOpacity>
+// //           </View>
+// //           <ScrollView
+// //             horizontal
+// //             showsHorizontalScrollIndicator={false}
+// //             contentContainerStyle={tw`px-2`}
+// //           >
+
+            
+// //               <TouchableOpacity
+// //                 // key={hospital.id}
+// //                 style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
+// //                 activeOpacity={0.8}
+// //                 // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
+// //               >
+// //                 <Image
+// //                   source={require('../../assets/images/onemg.png')}
+// //                   style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //                   resizeMode="cover"
+// //                 />
+
+// //             {/* <Image
+// //             source={{ uri: hospital.image }}
+// //             style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //             resizeMode="cover"
+// //           /> */}
+// //                 <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+// //                   <Text style={tw`text-sm font-bold text-white`}>TATA 1MG</Text>
+// //                   <View style={tw`flex-row items-center mt-0.5`}>
+// //                     <MapPin size={10} color="#bbf7d0" />
+// //                     <Text style={tw`text-xs text-blue-100 ml-1`}>Secundrabad</Text>
+// //                   </View>
+// //                 </View>
+// //               </TouchableOpacity> 
+            
+// //               <TouchableOpacity
+// //                 // key={hospital.id}
+// //                 style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
+// //                 activeOpacity={0.8}
+// //                 // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
+// //               >
+// //                 <Image
+// //                   source={require('../../assets/images/medicare.png')}
+// //                   style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //                   resizeMode="cover"
+// //                 />
+
+// //             {/* <Image
+// //             source={{ uri: hospital.image }}
+// //             style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //             resizeMode="cover"
+// //           /> */}
+// //                 <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+// //                   <Text style={tw`text-sm font-bold text-white`}>Medicare Pharmacy</Text>
+// //                   <View style={tw`flex-row items-center mt-0.5`}>
+// //                     <MapPin size={10} color="#bbf7d0" />
+// //                     <Text style={tw`text-xs text-blue-100 ml-1`}>Hyderabad</Text>
+// //                   </View>
+// //                 </View>
+// //               </TouchableOpacity> 
+
+
+// //                             <TouchableOpacity
+// //                 // key={hospital.id}
+// //                 style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
+// //                 activeOpacity={0.8}
+// //                 // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
+// //               >
+// //                 <Image
+// //                   source={require('../../assets/images/atena.png')}
+// //                   style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //                   resizeMode="cover"
+// //                 />
+
+// //             {/* <Image
+// //             source={{ uri: hospital.image }}
+// //             style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+// //             resizeMode="cover"
+// //           /> */}
+// //                 <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+// //                   <Text style={tw`text-sm font-bold text-white`}>Aetna</Text>
+// //                   <View style={tw`flex-row items-center mt-0.5`}>
+// //                     <MapPin size={10} color="#bbf7d0" /> 
+// //                     <Text style={tw`text-xs text-blue-100 ml-1`}>Begumpet</Text>
+// //                   </View>
+// //                 </View>
+// //               </TouchableOpacity> 
+
+            
+// //           </ScrollView>
+// //         </View>
+
+
+
+        
+
+// //         {/* Explore Pharmacies */}
+// //         {/* <View style={tw`mt-6 px-6`}>
+// //           <View style={tw`flex-row justify-between items-center mb-2`}>
+// //             <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left`}>
+// //               Nearby Pharmacies
+// //             </Text>
+// //             <TouchableOpacity
+// //               onPress={() => navigation.navigate('AllPharmacies')}
+// //               activeOpacity={0.7}
+// //             >
+// //               <Text style={tw`text-xs text-blue-700 font-semibold py-2 px-2`}>
+// //                 View All
+// //               </Text>
+// //             </TouchableOpacity>
+// //           </View>
+// //           <ScrollView
+// //             horizontal
+// //             showsHorizontalScrollIndicator={false}
+// //             contentContainerStyle={tw`px-2`}
+// //           >
+// //             {pharmacies.map((pharmacy) => (
+// //               <TouchableOpacity
+// //                 key={pharmacy.id}
+// //                 style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
+// //                 activeOpacity={0.8}
+// //                 onPress={() => navigation.navigate('PharmacyDetailsScreen', { id: pharmacy.id, name: pharmacy.name, location: pharmacy.location, image: pharmacy.image })}
+// //               >
+// //                 <Image
+// //                   source={require('../Images/medpluse1.jpg')}
+// //                   style={tw`w-full h-full absolute top-0 left-0`}
+// //                   resizeMode="cover"
+// //                 />
+// //                 <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+// //                   <Text style={tw`text-sm font-bold text-white`}>{pharmacy.name}</Text>
+// //                   <View style={tw`flex-row items-center mt-0.5`}>
+// //                     <MapPin size={12} color="#bbf7d0" />
+// //                     <Text style={tw`text-xs text-blue-100 ml-1`}>{pharmacy.location}</Text>
+// //                   </View>
+// //                 </View>
+// //               </TouchableOpacity>
+// //             ))}
+// //           </ScrollView>
+// //         </View> */}
+
+// //         {/* Bottom Banners */}
+// //         <View style={tw`mt-6 px-6`}>
+          
+// //           <View style={tw`flex-row justify-between items-center mb-2`}>
+// //             <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left`}>
+// //               Special Offers
+// //             </Text>
+// //             <TouchableOpacity
+// //               onPress={() => navigation.navigate('AllOffersScreen')}
+// //               activeOpacity={0.7}
+// //             >
+// //               <Text style={tw`text-xs text-blue-700 font-semibold py-2 px-2`}>
+// //                 View All
+// //               </Text>
+// //             </TouchableOpacity>
+// //           </View>
+
+// //           <ScrollView
+// //             horizontal
+// //             showsHorizontalScrollIndicator={false}
+// //             contentContainerStyle={tw`px-2`}
+// //           >
+// //             {bottomBanners.map((imgSrc, index) => (
+// //               <TouchableOpacity
+// //                 key={index}
+// //                 activeOpacity={0.8}
+// //                 style={tw`w-70 h-30 rounded-3xl overflow-hidden mr-4 shadow-sm`}
+// //               >
+// //                 <Image
+// //                   source={imgSrc}
+// //                   style={tw`w-full h-full rounded-3xl`}f
+// //                   resizeMode="cover"
+// //                 />
+// //               </TouchableOpacity>
+// //             ))}
+// //           </ScrollView>
+// //         </View>
+// //         </ScrollView>
+// //       </ScrollView>
+ 
+// //     </SafeAreaView>
+
+// //   );
+
+// // };
+
+// // export default HomeScreen;
+
+
+
+
+
+
+
+
+// import React, { useState } from 'react';
+// import {
+//   View,
+//   Text,
+//   TouchableOpacity,
+//   Image,
+//   TextInput,
+//   ScrollView,
+//   Dimensions,
+//   Platform,
+// } from 'react-native';
+// import Modal from 'react-native-modal';
+// import { MapPin, ChevronDown, Search } from 'lucide-react-native';
+// import tw from 'twrnc';
+
+// const { width: screenWidth } = Dimensions.get('window');
+
+// export default function HomeScreen({ navigation }) {
+//   const [selectedLocation, setSelectedLocation] = useState('Hyderabad');
+//   const [showLocationModal, setShowLocationModal] = useState(false);
+
+//   const cityList = ['Hyderabad', 'Bangalore', 'Chennai', 'Delhi'];
+
+//   return (
+//     <View style={tw`flex-1 bg-gray-100`}>
+//       {/* ✅ Fixed Header */}
+//       <View
+//         style={[
+//           tw`px-4 pb-4 bg-[#0052CC] absolute`,
+//           {
+//             top: 0,
+//             left: 0,
+//             right: 0,
+//             zIndex: 20,
+//             borderBottomLeftRadius: 25,
+//             borderBottomRightRadius: 25,
+//             paddingTop: Platform.OS === 'android' ? 35 : 60,
+//             height: Platform.OS === 'android' ? 170 : 180,
+//           },
+//         ]}
+//       >
+//         <View style={tw`h-full justify-between`}>
+//           {/* Top Row */}
+//           <View style={tw`flex-row items-center justify-between mt-3`}>
+//             {/* Profile */}
+//             <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+//               <Image
+//                 source={require('../../assets/images/uifaces-popular-avatar(1).jpg')}
+//                 style={tw`w-12 h-12 border-blue-200 border-2 rounded-full`}
+//               />
+//             </TouchableOpacity>
+
+//             {/* Location Selector */}
+//             <TouchableOpacity
+//               onPress={() => setShowLocationModal(true)}
+//               style={tw`flex-row items-center mx-3`}
+//             >
+//               <MapPin size={24} color="white" />
+//               <Text style={tw`ml-1 text-white font-semibold text-base`}>
+//                 {selectedLocation}
+//               </Text>
+//               <ChevronDown size={24} color="white" style={tw`ml-1`} />
+//             </TouchableOpacity>
+
+//             {/* Chatbot */}
+//             <TouchableOpacity onPress={() => navigation.navigate('Chat')}>
+//               <Image
+//                 source={require('../../assets/images/chat-bot-icon-design-robot-600nw-2476207303.jpg')}
+//                 style={tw`w-12 h-12 border-blue-200 border-2 rounded-full bg-white`}
+//               />
+//             </TouchableOpacity>
+//           </View>
+
+//           {/* Search Bar */}
+//           <View
+//             style={tw`mt-4 mb-4 flex-row items-center px-4 py-0 bg-white rounded-full shadow-sm border border-gray-200 h-12`}
+//           >
+//             <Search size={18} color="#051196ff" />
+//             <TextInput
+//               placeholder="Search doctors, clinics, tests...."
+//               placeholderTextColor="#1d68d8ff"
+//               style={tw`ml-3 flex-1 text-blue-700 text-sm`}
+//             />
+//           </View>
+//         </View>
+//       </View>
+
+//       {/* ✅ Scrollable Body Content */}
+//       <ScrollView
+//         style={{ marginTop: Platform.OS === 'android' ? 180 : 190 }}
+//         showsVerticalScrollIndicator={false}
+//       >
+//         <View style={tw`p-4`}>
+//           <Text style={tw`text-xl font-bold text-blue-800 mb-3`}>
+//             Top Hospitals
+//           </Text>
+//           <ScrollView
+//             horizontal
+//             showsHorizontalScrollIndicator={false}
+//             style={tw`flex-row`}
+//           >
+//             {['Apollo Hospitals', 'Care Hospitals', 'Yashoda Hospitals'].map(
+//               (name, index) => (
+//                 <TouchableOpacity
+//                   key={index}
+//                   style={[
+//                     tw`h-40 rounded-3xl overflow-hidden mr-4 shadow-sm`,
+//                     { width: screenWidth - 150 },
+//                   ]}
+//                   activeOpacity={0.8}
+//                 >
+//                   <Image
+//                     source={require('../../assets/images/Applo.jpg')}
+//                     style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+//                     resizeMode="cover"
+//                   />
+//                   <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+//                     <Text style={tw`text-sm font-bold text-white`}>{name}</Text>
+//                     <View style={tw`flex-row items-center mt-0.5`}>
+//                       <MapPin size={10} color="#bbf7d0" />
+//                       <Text style={tw`text-xs text-blue-100 ml-1`}>
+//                         {selectedLocation}
+//                       </Text>
+//                     </View>
+//                   </View>
+//                 </TouchableOpacity>
+//               ),
+//             )}
+//           </ScrollView>
+
+//           {/* Pharmacies */}
+//           <Text style={tw`text-xl font-bold text-blue-800 mt-6 mb-3`}>
+//             Nearby Pharmacies
+//           </Text>
+//           <ScrollView
+//             horizontal
+//             showsHorizontalScrollIndicator={false}
+//             style={tw`flex-row`}
+//           >
+//             {['MedPlus', 'Apollo Pharmacy', 'NetMeds'].map((name, index) => (
+//               <TouchableOpacity
+//                 key={index}
+//                 style={[
+//                   tw`h-40 rounded-3xl overflow-hidden mr-4 shadow-sm`,
+//                   { width: screenWidth - 150 },
+//                 ]}
+//                 activeOpacity={0.8}
+//               >
+//                 <Image
+//                   source={require('../../assets/images/pharmacy.jpg')}
+//                   style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+//                   resizeMode="cover"
+//                 />
+//                 <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+//                   <Text style={tw`text-sm font-bold text-white`}>{name}</Text>
+//                   <View style={tw`flex-row items-center mt-0.5`}>
+//                     <MapPin size={10} color="#bbf7d0" />
+//                     <Text style={tw`text-xs text-blue-100 ml-1`}>
+//                       {selectedLocation}
+//                     </Text>
+//                   </View>
+//                 </View>
+//               </TouchableOpacity>
+//             ))}
+//           </ScrollView>
+//         </View>
+//       </ScrollView>
+
+//       {/* ✅ Location Modal */}
+//       <Modal
+//         isVisible={showLocationModal}
+//         onBackdropPress={() => setShowLocationModal(false)}
+//       >
+//         <View style={tw`bg-white p-6 rounded-2xl items-center`}>
+//           <Text style={tw`text-base font-semibold mb-2`}>Select your city</Text>
+//           {cityList.map((city) => (
+//             <TouchableOpacity
+//               key={city}
+//               style={tw`py-2 w-full items-center`}
+//               onPress={() => {
+//                 setSelectedLocation(city);
+//                 setShowLocationModal(false);
+//               }}
+//             >
+//               <Text
+//                 style={tw`text-lg ${
+//                   selectedLocation === city
+//                     ? 'text-blue-700 font-bold'
+//                     : 'text-blue-800'
+//                 }`}
+//               >
+//                 {city}
+//               </Text>
+//             </TouchableOpacity>
+//           ))}
+//           <TouchableOpacity
+//             style={tw`mt-4`}
+//             onPress={() => setShowLocationModal(false)}
+//           >
+//             <Text style={tw`text-blue-700 font-bold`}>Close</Text>
+//           </TouchableOpacity>
+//         </View>
+//       </Modal>
+//     </View>
+//   );
+// }
+
+
+
+
 import React, { useEffect, useState } from 'react';
 import {
   View,
@@ -434,7 +1534,7 @@ const [showLocationModal, setShowLocationModal] = useState(false);
 
     {/* Search Bar */}
     <TouchableOpacity
-      onPress={() => navigation.navigate('Searcheverything')}
+      // onPress={() => navigation.navigate('Searcheverything')}
       activeOpacity={0.9}
       style={tw`mt-4 mb-4 flex-row items-center px-4 py-2.5 bg-white rounded-full shadow-sm border border-gray-200`}
     >
@@ -443,6 +1543,9 @@ const [showLocationModal, setShowLocationModal] = useState(false);
         Search doctors, clinics, tests...
       </Text>
     </TouchableOpacity>
+
+
+
   </View>
 </View>
 
@@ -796,47 +1899,95 @@ const [showLocationModal, setShowLocationModal] = useState(false);
             contentContainerStyle={tw`px-2`}
           >
 
-            {hospitals.map((hospital) => (
+            {/* {hospitals.map((hospital) => ( */}
               <TouchableOpacity
-                key={hospital.id}
+                // key={hospital.id}
                 style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
                 activeOpacity={0.8}
-                onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
+                // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
               >
                 <Image
-                  source={require('../../assets/images/Logo-medicover.png')}
+                  source={require('../../assets/images/Applo.jpg')}
                   style={tw`w-full h-full absolute top-0 left-0 bg-white`}
                   resizeMode="cover"
                 />
 
-            {/* <Image
-            source={{ uri: hospital.image }}
-            style={tw`w-full h-full absolute top-0 left-0 bg-white`}
-            resizeMode="cover"
-          /> */}
+  
                 <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
-                  <Text style={tw`text-sm font-bold text-white`}>{hospital.name}</Text>
+                  <Text style={tw`text-sm font-bold text-white`}>Apollo Hospitals</Text>
                   <View style={tw`flex-row items-center mt-0.5`}>
                     <MapPin size={10} color="#bbf7d0" />
-                    <Text style={tw`text-xs text-blue-100 ml-1`}>{hospital.location}</Text>
+                    <Text style={tw`text-xs text-blue-100 ml-1`}>Madhapur</Text>
                   </View>
                 </View>
               </TouchableOpacity> 
-            ))}
+            {/* ))} */}
+
+
+                          <TouchableOpacity
+                // key={hospital.id}
+                style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
+                activeOpacity={0.8}
+                // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
+              >
+                <Image
+                  source={require('../../assets/images/yashoda.jpg')}
+                  style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+                  resizeMode="cover"
+                />
+
+  
+                <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+                  <Text style={tw`text-sm font-bold text-white`}>Yashoda Hospitals</Text>
+                  <View style={tw`flex-row items-center mt-0.5`}>
+                    <MapPin size={10} color="#bbf7d0" />
+                    <Text style={tw`text-xs text-blue-100 ml-1`}>Secundrabad</Text>
+                  </View>
+                </View>
+              </TouchableOpacity>
+
+
+
+                            <TouchableOpacity
+                // key={hospital.id}
+                style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
+                activeOpacity={0.8}
+                // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
+              >
+                <Image
+                  source={require('../../assets/images/aig.jpg')}
+                  style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+                  resizeMode="cover"
+                />
+
+  
+                <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+                  <Text style={tw`text-sm font-bold text-white`}>AIG Hospitals</Text>
+                  <View style={tw`flex-row items-center mt-0.5`}>
+                    <MapPin size={10} color="#bbf7d0" />
+                    <Text style={tw`text-xs text-blue-100 ml-1`}>Secundrabad</Text>
+                  </View>
+                </View>
+              </TouchableOpacity>  
 
 
             
           </ScrollView>
+
+
+
         </View>
 
-        {/* Explore Pharmacies */}
-        <View style={tw`mt-6 px-6`}>
+
+
+
+                <View style={tw`mt-6 px-6`}>
           <View style={tw`flex-row justify-between items-center mb-2`}>
             <Text style={tw`text-lg font-semibold text-gray-900 flex-1 text-left`}>
-              Nearby Pharmacies
+              Top Hospitals
             </Text>
             <TouchableOpacity
-              onPress={() => navigation.navigate('AllPharmacies')}
+              onPress={() => navigation.navigate('AllHospitals')}
               activeOpacity={0.7}
             >
               <Text style={tw`text-xs text-blue-700 font-semibold py-2 px-2`}>
@@ -849,29 +2000,90 @@ const [showLocationModal, setShowLocationModal] = useState(false);
             showsHorizontalScrollIndicator={false}
             contentContainerStyle={tw`px-2`}
           >
-            {pharmacies.map((pharmacy) => (
+
+            {/* {hospitals.map((hospital) => ( */}
               <TouchableOpacity
-                key={pharmacy.id}
+                // key={hospital.id}
                 style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
                 activeOpacity={0.8}
-                onPress={() => navigation.navigate('PharmacyDetailsScreen', { id: pharmacy.id, name: pharmacy.name, location: pharmacy.location, image: pharmacy.image })}
+                // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
               >
                 <Image
-                  source={require('../Images/medpluse1.jpg')}
-                  style={tw`w-full h-full absolute top-0 left-0`}
+                  source={require('../../assets/images/medicare.png')}
+                  style={tw`w-full h-full absolute top-0 left-0 bg-white`}
                   resizeMode="cover"
                 />
+
+  
                 <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
-                  <Text style={tw`text-sm font-bold text-white`}>{pharmacy.name}</Text>
+                  <Text style={tw`text-sm font-bold text-white`}>Medicare Pharmacy</Text>
                   <View style={tw`flex-row items-center mt-0.5`}>
-                    <MapPin size={12} color="#bbf7d0" />
-                    <Text style={tw`text-xs text-blue-100 ml-1`}>{pharmacy.location}</Text>
+                    <MapPin size={10} color="#bbf7d0" />
+                    <Text style={tw`text-xs text-blue-100 ml-1`}>Hyderabad</Text>
+                  </View>
+                </View>
+              </TouchableOpacity> 
+            {/* ))} */}
+
+
+                          <TouchableOpacity
+                // key={hospital.id}
+                style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
+                activeOpacity={0.8}
+                // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
+              >
+                <Image
+                  source={require('../../assets/images/onemg.png')}
+                  style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+                  resizeMode="cover"
+                />
+
+  
+                <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+                  <Text style={tw`text-sm font-bold text-white`}>1 mg</Text>
+                  <View style={tw`flex-row items-center mt-0.5`}>
+                    <MapPin size={10} color="#bbf7d0" />
+                    <Text style={tw`text-xs text-blue-100 ml-1`}>Begumpet</Text>
                   </View>
                 </View>
               </TouchableOpacity>
-            ))}
+
+
+
+                            <TouchableOpacity
+                // key={hospital.id}
+                style={tw`w-[${screenWidth - 150}px] h-40 rounded-3xl overflow-hidden mr-6 shadow-sm`}
+                activeOpacity={0.8}
+                // onPress={() => navigation.navigate('HospitalDetailsScreen', { id: hospital.id, name: hospital.name, location: hospital.location, image: hospital.image })}
+              >
+                <Image
+                  source={require('../../assets/images/atena.png')}
+                  style={tw`w-full h-full absolute top-0 left-0 bg-white`}
+                  resizeMode="cover"
+                />
+
+  
+                <View style={tw`absolute bottom-0 left-0 right-0 bg-black/50 py-1.5 px-2`}>
+                  <Text style={tw`text-sm font-bold text-white`}>Atena</Text>
+                  <View style={tw`flex-row items-center mt-0.5`}>
+                    <MapPin size={10} color="#bbf7d0" />
+                    <Text style={tw`text-xs text-blue-100 ml-1`}>Dilsuk nagar</Text>
+                  </View>
+                </View>
+              </TouchableOpacity>  
+
+
+            
           </ScrollView>
+
+
+          
         </View>
+
+
+        
+
+
 
         {/* Bottom Banners */}
         <View style={tw`mt-6 px-6`}>
